@@ -26,7 +26,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass, field
 from enum import StrEnum
 
-from astra_nutrition.text import fold
+from astra_nutrition.text import EATING_VERBS, MEAL_TIME_WORDS, fold
 
 
 class Unit(StrEnum):
@@ -124,6 +124,9 @@ _FILLER_WORDS = {
     "orta",
     "kucuk",
     "boy",
+    # "Menemen [sabah]": a meal time or a verb is no amount; the amount is missing.
+    *MEAL_TIME_WORDS,
+    *EATING_VERBS,
 }
 
 _UNICODE_FRACTIONS = {"½": " 0.5 ", "¼": " 0.25 ", "¾": " 0.75 "}

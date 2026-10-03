@@ -1,0 +1,1950 @@
+{
+ "summary": {
+  "label": "after",
+  "meals": 95,
+  "gold_foods": 106,
+  "found": 88,
+  "recall": 0.83,
+  "false_matches": 3
+ },
+ "meals": [
+  {
+   "line": 1,
+   "meal": "akşam 2 lahmacun ve ayran içtim",
+   "found": [
+    "lahmacun",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Lahmacun",
+     "2",
+     "ok",
+     "lahmacun"
+    ],
+    [
+     "Ayran",
+     "1",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 2,
+   "meal": "öğlen bir tabak mercimek çorbası",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Çorbası",
+     "bir tabak",
+     "ok",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 3,
+   "meal": "sabah menemen ve ekmek yedim",
+   "found": [
+    "menemen",
+    "white_bread"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Menemen",
+     "sabah",
+     "estimated",
+     "menemen"
+    ],
+    [
+     "Ekmek",
+     "yedim",
+     "estimated",
+     "white_bread"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 4,
+   "meal": "akşam 4 adet köfte biraz çoban salatası",
+   "found": [
+    "izgara_kofte",
+    "coban_salatasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Köfte",
+     "4 adet",
+     "ok",
+     "izgara_kofte"
+    ],
+    [
+     "Çoban Salatası",
+     "biraz",
+     "estimated",
+     "coban_salatasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 5,
+   "meal": "öğlen yaprak sarma ve ayran",
+   "found": [
+    "grape_leaves_rice",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yaprak Sarma",
+     "1 porsiyon (150g)",
+     "estimated",
+     "grape_leaves_rice"
+    ],
+    [
+     "Ayran",
+     "1 adet (250ml)",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 6,
+   "meal": "sabah peynirli omlet yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Peynirli Omlet",
+     "1 porsiyi (180g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 7,
+   "meal": "akşam falafel ve tabule yedim",
+   "found": [
+    "falafel",
+    "tabbouleh"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Falafel",
+     "1 porsiyon (180g)",
+     "estimated",
+     "falafel"
+    ],
+    [
+     "Tabule",
+     "1 porsiyon (150g)",
+     "estimated",
+     "tabbouleh"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 8,
+   "meal": "öğlen 1 porsiyon makarna",
+   "found": [
+    "pasta"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Makarna",
+     "1 porsiyon",
+     "ok",
+     "pasta"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 9,
+   "meal": "akşam biber dolması yedim",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolması",
+     "Yedim",
+     "estimated",
+     "stuffed_pepper_meat"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 10,
+   "meal": "sabah simit ve çay",
+   "found": [
+    "black_tea"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Simit",
+     "1 adet (100g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Çay",
+     "1 porsiyon (250ml)",
+     "estimated",
+     "black_tea"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 11,
+   "meal": "öğlen 200 gr tavuk ızgara",
+   "found": [
+    "chicken_breast|chicken_thigh"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tavuk Izgara",
+     "200 gr",
+     "ok",
+     "chicken_breast"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 12,
+   "meal": "akşam baklava yedim",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Baklava",
+     "1 porsiyi",
+     "amount_unknown",
+     "baklava"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 13,
+   "meal": "öğlen mercimek çorbası ve lahmacun",
+   "found": [
+    "mercimek_corbasi",
+    "lahmacun"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Çorbası",
+     "1 porsiyon (250ml)",
+     "estimated",
+     "mercimek_corbasi"
+    ],
+    [
+     "Lahmacun",
+     "1 porsiyon (80g)",
+     "estimated",
+     "lahmacun"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 14,
+   "meal": "sabah yoğurt ve muz yedim",
+   "found": [
+    "yogurt",
+    "banana"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yoğurt",
+     "Sabah",
+     "estimated",
+     "yogurt"
+    ],
+    [
+     "Muz",
+     "Sabah",
+     "estimated",
+     "banana"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 15,
+   "meal": "akşam 1 tabak kuru fasulye",
+   "found": [
+    "white_beans"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Kuru Fasulye",
+     "1 tabak",
+     "ok",
+     "white_beans"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 16,
+   "meal": "öğlen köfte biraz pilav",
+   "found": [
+    "izgara_kofte",
+    "rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Köfte",
+     "biraz",
+     "estimated",
+     "izgara_kofte"
+    ],
+    [
+     "Pilav",
+     "biraz",
+     "estimated",
+     "rice"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 17,
+   "meal": "akşam 2 adet yaprak sarma ve ayran",
+   "found": [
+    "grape_leaves_rice",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yaprak Sarma",
+     "2 adet",
+     "amount_unknown",
+     "grape_leaves_rice"
+    ],
+    [
+     "Ayran",
+     "1 porsiyon (250ml)",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 18,
+   "meal": "sabah tost yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tost",
+     "1 adet (100g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 19,
+   "meal": "öğlen çoban salatası ve ekmek",
+   "found": [
+    "coban_salatasi",
+    "white_bread"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Çoban Salatası",
+     "1 porsiyon (150g)",
+     "estimated",
+     "coban_salatasi"
+    ],
+    [
+     "Ekmek",
+     "1 porsiyon (100g)",
+     "estimated",
+     "white_bread"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 20,
+   "meal": "akşam mantı yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mantı",
+     "Akşam",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 21,
+   "meal": "öğlen falafel dürüm yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Falafel Dürüm",
+     "1 porsiyon (150g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 22,
+   "meal": "akşam biber dolması ve yoğurt",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice",
+    "yogurt"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolması",
+     "1 porsiyon (150g)",
+     "estimated",
+     "stuffed_pepper_meat"
+    ],
+    [
+     "Yoğurt",
+     "1 adet (150g)",
+     "estimated",
+     "yogurt"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 23,
+   "meal": "sabah granola ve süt",
+   "found": [
+    "milk_whole"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Granola",
+     "1 adet (40g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Süt",
+     "1 porsiyon (200ml)",
+     "estimated",
+     "milk_whole"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 24,
+   "meal": "öğlen 1 tabak sebzeli noodle",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Sebzeli Noodle",
+     "1 tabak",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 25,
+   "meal": "2 lahmacun 1 ayran",
+   "found": [
+    "lahmacun",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Lahmacun",
+     "2",
+     "ok",
+     "lahmacun"
+    ],
+    [
+     "Ayran",
+     "1",
+     "ok",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 26,
+   "meal": "sabah 2 yumurta biraz peynir zeytin",
+   "found": [
+    "egg",
+    "feta",
+    "black_olives|green_olives"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yumurta",
+     "2",
+     "ok",
+     "egg"
+    ],
+    [
+     "Peynir",
+     "biraz",
+     "estimated",
+     "feta"
+    ],
+    [
+     "Zeytin",
+     "1",
+     "estimated",
+     "black_olives"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 27,
+   "meal": "ogle 1 tabak mercimek corbasi",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Corbasi",
+     "1 tabak",
+     "ok",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 28,
+   "meal": "bir dilim su böreği yendim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Su Böreği",
+     "bir dilim",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 29,
+   "meal": "aksam 1 porsiyon kofte pilav",
+   "found": [],
+   "missed": [
+    "izgara_kofte",
+    "rice"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Kofte Pilav",
+     "1 porsiyon (250g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 30,
+   "meal": "kahvalti menemen ve 2 dilim ekmek",
+   "found": [
+    "menemen"
+   ],
+   "missed": [
+    "white_bread"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Menemen",
+     "kahvalti",
+     "estimated",
+     "menemen"
+    ]
+   ],
+   "rejected": [
+    "not in the meal text: ekme"
+   ]
+  },
+  {
+   "line": 31,
+   "meal": "1 dilim fıstıklı baklava",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Fıstıklı Baklava",
+     "1 dilim (60g)",
+     "amount_unknown",
+     "baklava"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 32,
+   "meal": "biraz yaprak sarmasi yedim",
+   "found": [
+    "grape_leaves_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yaprak Sarmasi",
+     "biraz",
+     "estimated",
+     "grape_leaves_rice"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 33,
+   "meal": "1 bowl acai smoothie",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Acai Smoothie",
+     "1 bowl",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 34,
+   "meal": "aksam 2 biber dolma yanina yoğurt",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice",
+    "yogurt"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolma",
+     "2 biber",
+     "amount_unknown",
+     "stuffed_pepper_meat"
+    ],
+    [
+     "Yoğurt",
+     "1 porsiyon (150g)",
+     "estimated",
+     "yogurt"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 35,
+   "meal": "1 porsiyon tabule salatasi",
+   "found": [
+    "tabbouleh"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tabule Salatasi",
+     "1 porsiyon (200g)",
+     "ok",
+     "tabbouleh"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 36,
+   "meal": "1 bardak soğuk ayran",
+   "found": [
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Soğuk Ayran",
+     "1 bardak",
+     "ok",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 37,
+   "meal": "oglen falafel wrap ve cola",
+   "found": [
+    "cola"
+   ],
+   "missed": [],
+   "false_matches": [
+    "falafel"
+   ],
+   "items": [
+    [
+     "Falafel Wrap",
+     "1 item (180g)",
+     "amount_unknown",
+     "falafel"
+    ],
+    [
+     "Cola",
+     "1 can (330ml)",
+     "amount_unknown",
+     "cola"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 38,
+   "meal": "aksam ciger kavurma pilav",
+   "found": [],
+   "missed": [
+    "rice"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Ciger Kavurma Pilav",
+     "aksam",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 39,
+   "meal": "bir kase coban salatasi",
+   "found": [
+    "coban_salatasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Coban Salatasi",
+     "bir kase",
+     "ok",
+     "coban_salatasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 40,
+   "meal": "2 adet lahmacun bol yesillik",
+   "found": [
+    "lahmacun"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Lahmacun",
+     "2 adet",
+     "ok",
+     "lahmacun"
+    ],
+    [
+     "Yesillik",
+     "bol",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 41,
+   "meal": "sabah krep nutella",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Krep",
+     "1 porsiyi",
+     "unmatched",
+     null
+    ],
+    [
+     "Nutella",
+     "1 adet",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 42,
+   "meal": "3-4 tane sarma",
+   "found": [
+    "grape_leaves_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Sarma",
+     "3-4 tane",
+     "amount_unknown",
+     "grape_leaves_rice"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 43,
+   "meal": "aksam 200gr antrikot izgara",
+   "found": [],
+   "missed": [
+    "beef_steak"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Antrikot Izgara",
+     "200gr",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 44,
+   "meal": "1 tabak süzme mercimek",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Süzme Mercimek",
+     "1 tabak",
+     "ok",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 45,
+   "meal": "kahvaltida çılbır ve simit",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Çılbır",
+     "1 adet (150g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Simit",
+     "1 adet (100g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 46,
+   "meal": "oglen tavuk schnitzel patates",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tavuk Schnitzel",
+     "1 piece (150g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Patates",
+     "1 medium (100g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 47,
+   "meal": "tatli olarak 2 baklava",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Baklava",
+     "2",
+     "amount_unknown",
+     "baklava"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 48,
+   "meal": "sabah 2 yumurta biraz zeytin yedim",
+   "found": [
+    "egg",
+    "black_olives|green_olives"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yumurta",
+     "2",
+     "ok",
+     "egg"
+    ],
+    [
+     "Zeytin",
+     "biraz",
+     "estimated",
+     "black_olives"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 49,
+   "meal": "öğlen 1 dürüm falafel yanında ayran",
+   "found": [
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [
+    "falafel"
+   ],
+   "items": [
+    [
+     "Falafel",
+     "1 dürüm",
+     "amount_unknown",
+     "falafel"
+    ],
+    [
+     "Ayran",
+     "1",
+     "ok",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 50,
+   "meal": "akşam 3 dilim pizza yedim",
+   "found": [
+    "pizza"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Pizza",
+     "3 dilim",
+     "ok",
+     "pizza"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 51,
+   "meal": "öğlen mercimek corbasi içtim",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Corbasi",
+     "1 adet (150g)",
+     "estimated",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 52,
+   "meal": "sabah menemen yaptım ekmekle yedim",
+   "found": [
+    "menemen"
+   ],
+   "missed": [
+    "white_bread"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Menemen",
+     "Sabah",
+     "estimated",
+     "menemen"
+    ]
+   ],
+   "rejected": [
+    "not in the meal text: ekmek"
+   ]
+  },
+  {
+   "line": 53,
+   "meal": "akşam 200 gr köfte ve salata",
+   "found": [
+    "izgara_kofte"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Köfte",
+     "200 gr",
+     "ok",
+     "izgara_kofte"
+    ],
+    [
+     "Salata",
+     "1 porsiyon (150g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 54,
+   "meal": "öğlen tavuklu wrap yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tavuklu Wrap",
+     "1 porsiyon (180g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 55,
+   "meal": "akşam 2 parça baklava",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Baklava",
+     "2 parça",
+     "amount_unknown",
+     "baklava"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 56,
+   "meal": "sabah yulaf süt muz",
+   "found": [],
+   "missed": [
+    "oats",
+    "milk_whole",
+    "banana"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Yulaf Süt Muz",
+     "1 porsiyon (150g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 57,
+   "meal": "öğlen lahmacun + ayran",
+   "found": [
+    "lahmacun",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Lahmacun",
+     "1 porsiyon (120g)",
+     "estimated",
+     "lahmacun"
+    ],
+    [
+     "Ayran",
+     "1 adet (200ml)",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 58,
+   "meal": "akşam patates püresi ve tavuk",
+   "found": [
+    "chicken_breast|chicken_thigh"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Patates Püresi",
+     "1 porsiyon (200g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Tavuk",
+     "1 adet (200g)",
+     "estimated",
+     "chicken_thigh"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 59,
+   "meal": "öğlen biraz yaprak sarma yedim",
+   "found": [
+    "grape_leaves_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yaprak Sarma",
+     "biraz",
+     "estimated",
+     "grape_leaves_rice"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 60,
+   "meal": "sabah peynir domates ekmek",
+   "found": [
+    "feta"
+   ],
+   "missed": [
+    "tomato",
+    "white_bread"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Peynir",
+     "1 adet (40g)",
+     "estimated",
+     "feta"
+    ],
+    [
+     "Domates Ekmek",
+     "1 porsiyon (100g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 61,
+   "meal": "akşam tabule ve falafel",
+   "found": [
+    "tabbouleh",
+    "falafel"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tabule",
+     "1 porsiyon (250g)",
+     "estimated",
+     "tabbouleh"
+    ],
+    [
+     "Falafel",
+     "1 porsiyon (100g)",
+     "estimated",
+     "falafel"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 62,
+   "meal": "öğlen sebzeli pilav yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Sebzeli Pilav",
+     "1 porsiyi (250g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 63,
+   "meal": "akşam biber dolmasi 2 tane",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolmasi",
+     "2 tane",
+     "amount_unknown",
+     "stuffed_pepper_meat"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 64,
+   "meal": "sabah simit ayran",
+   "found": [
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Simit",
+     "1 adet (100g)",
+     "unmatched",
+     null
+    ],
+    [
+     "Ayran",
+     "1 porsiyon (200ml)",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 65,
+   "meal": "öğlen ton balıklı salata",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Balıklı Salata",
+     "1 adet (150g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 66,
+   "meal": "akşam çoban salatası ve köfte",
+   "found": [
+    "coban_salatasi",
+    "izgara_kofte"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Çoban Salatası",
+     "1 porsiyon (150g)",
+     "estimated",
+     "coban_salatasi"
+    ],
+    [
+     "Köfte",
+     "2 adet (100g)",
+     "estimated",
+     "izgara_kofte"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 67,
+   "meal": "öğlen bir tabak mantı yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mantı",
+     "bir tabak",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 68,
+   "meal": "akşam 1 kase mercimek çorbası",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Çorbası",
+     "1 kase",
+     "ok",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 69,
+   "meal": "sabah pankek ve bal",
+   "found": [
+    "honey"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Pankek",
+     "1 adet",
+     "unmatched",
+     null
+    ],
+    [
+     "Bal",
+     "1 adet",
+     "estimated",
+     "honey"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 70,
+   "meal": "öğlen nohutlu pilav yedim",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Nohutlu Pilav",
+     "1 porsiyi (250g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 71,
+   "meal": "akşam makarna ve yoğurt",
+   "found": [
+    "pasta",
+    "yogurt"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Makarna",
+     "1 porsiyon (150g)",
+     "estimated",
+     "pasta"
+    ],
+    [
+     "Yoğurt",
+     "1 adet (150g)",
+     "estimated",
+     "yogurt"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 72,
+   "meal": "kahvaltida 2 boyoz 1 cay",
+   "found": [
+    "black_tea"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Boyoz",
+     "2",
+     "unmatched",
+     null
+    ],
+    [
+     "Cay",
+     "1",
+     "ok",
+     "black_tea"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 73,
+   "meal": "ogle 1 tabak biber dolmasi",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolmasi",
+     "1 tabak",
+     "amount_unknown",
+     "stuffed_pepper_meat"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 74,
+   "meal": "2 tane lahmacun yanina ayran",
+   "found": [
+    "lahmacun",
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Lahmacun",
+     "2 tane",
+     "ok",
+     "lahmacun"
+    ],
+    [
+     "Ayran",
+     "1 porsiyon",
+     "estimated",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 75,
+   "meal": "1 porsiyon kore fried chicken",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Kore Fried Chicken",
+     "1 porsiyon (220g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 76,
+   "meal": "sabah menemen ekmek bandim",
+   "found": [],
+   "missed": [
+    "menemen",
+    "white_bread"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Menemen Ekmek",
+     "1 porsiyi (150g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 77,
+   "meal": "aksam mercimek corba salata",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Corba",
+     "1 porsiyi",
+     "amount_unknown",
+     "mercimek_corbasi"
+    ],
+    [
+     "Salata",
+     "1 porsiyi",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 78,
+   "meal": "1 kase tabule",
+   "found": [
+    "tabbouleh"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Tabule",
+     "1 kase",
+     "amount_unknown",
+     "tabbouleh"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 79,
+   "meal": "3 balli pancake",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Pancake",
+     "3 balli",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 80,
+   "meal": "oglen falafel pita",
+   "found": [],
+   "missed": [],
+   "false_matches": [
+    "falafel"
+   ],
+   "items": [
+    [
+     "Falafel Pita",
+     "1 porsiyon (180g)",
+     "estimated",
+     "falafel"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 81,
+   "meal": "aksam 150gr somon izgara",
+   "found": [
+    "salmon"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Somon Izgara",
+     "150gr",
+     "ok",
+     "salmon"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 82,
+   "meal": "3-4 fıstıklı baklava yedim",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Fıstıklı Baklava",
+     "3-4",
+     "amount_unknown",
+     "baklava"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 83,
+   "meal": "biraz yaprak sarma",
+   "found": [
+    "grape_leaves_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yaprak Sarma",
+     "biraz",
+     "estimated",
+     "grape_leaves_rice"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 84,
+   "meal": "biraz coban salata",
+   "found": [
+    "coban_salatasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Coban Salata",
+     "biraz",
+     "estimated",
+     "coban_salatasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 85,
+   "meal": "kahvalti granola süzme yogurt",
+   "found": [
+    "greek_yogurt"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Granola Süzme Yogurt",
+     "1 adet (150g)",
+     "estimated",
+     "greek_yogurt"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 86,
+   "meal": "aksam 1 tabak etli nohut pilav",
+   "found": [],
+   "missed": [
+    "rice"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Etli Nohut Pilav",
+     "1 tabak",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 87,
+   "meal": "oglen kofte ekmek",
+   "found": [],
+   "missed": [
+    "izgara_kofte",
+    "white_bread"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Kofte Ekmek",
+     "1 porsiyi (180g)",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 88,
+   "meal": "1 buyuk bardak ayran",
+   "found": [
+    "ayran"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Ayran",
+     "1 buyuk bardak",
+     "ok",
+     "ayran"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 89,
+   "meal": "sabah 2 pogaca 1 akitma",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Pogaca",
+     "2 akitma",
+     "unmatched",
+     null
+    ],
+    [
+     "Akitma",
+     "1",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 90,
+   "meal": "tatli 1 porsiyon san sebastian",
+   "found": [],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "San Sebastian",
+     "1 porsiyon",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 91,
+   "meal": "aksam 2 biber dolma",
+   "found": [
+    "stuffed_pepper_meat|stuffed_pepper_rice"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Biber Dolma",
+     "2 biber",
+     "amount_unknown",
+     "stuffed_pepper_meat"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 92,
+   "meal": "1 bowl mercimek corbasi",
+   "found": [
+    "mercimek_corbasi"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Mercimek Corbasi",
+     "1 bowl",
+     "ok",
+     "mercimek_corbasi"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 93,
+   "meal": "ara ogun 1 dilim fistikli baklava",
+   "found": [
+    "baklava"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Fistikli Baklava",
+     "1 porsiyon",
+     "ok",
+     "baklava"
+    ]
+   ],
+   "rejected": [
+    "not in the meal text: arab"
+   ]
+  },
+  {
+   "line": 94,
+   "meal": "oglen ramen icine yumurta",
+   "found": [
+    "egg"
+   ],
+   "missed": [],
+   "false_matches": [],
+   "items": [
+    [
+     "Yumurta",
+     "100g",
+     "estimated",
+     "egg"
+    ]
+   ],
+   "rejected": []
+  },
+  {
+   "line": 95,
+   "meal": "kahvaltida menemen kofte artiklari",
+   "found": [],
+   "missed": [
+    "menemen",
+    "izgara_kofte"
+   ],
+   "false_matches": [],
+   "items": [
+    [
+     "Menemen Kofte",
+     "1 porsiyi",
+     "unmatched",
+     null
+    ]
+   ],
+   "rejected": []
+  }
+ ]
+}

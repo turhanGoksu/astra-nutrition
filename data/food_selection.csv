@@ -2,12 +2,12 @@ id,fdc_id,name_en,name_tr,aliases,default_grams,portions,note
 egg,171287,Egg,Yumurta,eggs|whole egg,50,"piece=usda:large;cup=usda:cup",
 egg_boiled,173424,Hard-boiled egg,Haşlanmış yumurta,boiled egg|katı yumurta|rafadan yumurta,50,"piece=usda:large;tbsp=usda:tbsp",
 egg_fried,173423,Fried egg,Sahanda yumurta,yağda yumurta|kızarmış yumurta,46,"piece=usda:large",
-chicken_breast,171477,Chicken breast,Tavuk göğsü,tavuk fileto|chicken fillet,120,"piece=usda:breast;cup=usda:cup, chopped or diced",
+chicken_breast,171477,Chicken breast,Tavuk göğsü,tavuk fileto|chicken fillet|tavuk ızgara|ızgara tavuk,120,"piece=usda:breast;cup=usda:cup, chopped or diced",tavuk ızgara: grilled chicken defaults to breast
 chicken_thigh,172388,Chicken thigh,Tavuk but,tavuk budu,100,"piece=usda:thigh without skin",
 ground_beef,171799,Ground beef,Dana kıyma,kıyma|minced beef|beef mince,100,,80% lean; cooked
 beef_steak,168729,Beef steak,Biftek,dana biftek|steak|sirloin steak,150,,
 ground_lamb,172544,Ground lamb,Kuzu kıyma,minced lamb,100,,
-salmon,175168,Salmon,Somon,somon balığı|salmon fillet,150,,
+salmon,175168,Salmon,Somon,somon balığı|salmon fillet|somon ızgara|ızgara somon,150,,
 tuna_canned,173709,Canned tuna,Ton balığı,konserve ton balığı|tuna,100,"cup=usda:cup, solid or chunks",canned in water; drained
 anchovy,174182,Anchovy,Hamsi,hamsi balığı|european anchovy,150,,raw values; fried hamsi also has coating and oil
 sardines,175139,Sardines,Sardalya,sardine|sardalya balığı,90,"piece=usda:sardines",canned in oil; drained
@@ -69,7 +69,7 @@ corn,169214,Sweet corn (canned),Mısır,konserve mısır|corn|sweet corn,80,"cup
 peas,170017,Green peas,Bezelye,peas|green peas,80,"cup=usda:cup",
 garlic,169230,Garlic,Sarımsak,,3,"piece=usda:clove;tsp=usda:tsp",
 parsley,170416,Parsley,Maydanoz,,10,"tbsp=usda:tbsp;cup=usda:cup chopped",
-black_olives,169094,Black olives,Siyah zeytin,black olives,30,"piece=usda:large;tbsp=usda:tbsp",
+black_olives,169094,Black olives,Siyah zeytin,black olives|zeytin,30,"piece=usda:large;tbsp=usda:tbsp",zeytin alone: documented default black olives
 green_olives,169096,Green olives,Yeşil zeytin,green olives,30,"piece=usda:olive",
 arugula,169387,Arugula,Roka,rocket,20,"cup=usda:cup",
 leek,169246,Leek,Pırasa,leeks,89,"piece=usda:leek;cup=usda:cup",

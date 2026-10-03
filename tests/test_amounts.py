@@ -223,3 +223,8 @@ def test_bare_count_without_a_trusted_piece_size_is_unknown() -> None:
     result = to_grams(parse_amount("2"), us_pieces)
     assert (result.status, result.grams) == (AmountStatus.UNCONVERTIBLE, None)
     assert to_grams(parse_amount("200 g"), us_pieces).grams == 200
+
+
+@pytest.mark.parametrize("text", ["sabah", "Akşam", "yedim", "lunch"])
+def test_a_meal_time_or_verb_is_no_amount(text: str) -> None:
+    assert parse_amount(text).kind == AmountKind.MISSING

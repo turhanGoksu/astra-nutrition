@@ -27,6 +27,15 @@ A released version is never changed: fixes ship as a new version.
 - `foods.csv` has a `source` column naming the dataset and FDC id, and a
   `bare_count` column: a bare count of an FNDDS dish (`2 baklava`) is
   `amount_unknown` instead of two US-sized default portions.
+- Meal-time words are dropped from parsed names (`Akşam Biber Dolması` →
+  `Biber Dolması`) and read as no amount (`Menemen [sabah]`); an item that is
+  only meal-time words (`Öğle Yemeği`) is rejected.
+- v0.2 dev meals: 95 meals written by someone other than the alias author,
+  labeled per meal and scored end to end (`python -m eval.v02`). Found
+  foods went from 64% to 83%, false matches from 4 to 3. Aliases from them:
+  `süzme mercimek` (was raw lentils), `biber dolma(sı)` (was raw peppers),
+  `fıstıklı baklava`, `soğuk ayran`, `tabule salatası`, `zeytin`, `tavuk
+  ızgara`, `somon ızgara`; `1 adet ayran` is a 200 ml cup.
 - Amount check: a number in the parsed amount that the user never wrote
   (the parser's `2 adet` for a plain `köfte`) is treated as a missing amount,
   so the item is `estimated` with the default portion and says why.
@@ -44,6 +53,8 @@ A released version is never changed: fixes ship as a new version.
 - CI runs on a pinned `ubuntu-24.04` instead of the moving `ubuntu-latest`.
 - PostgreSQL `foods.fdc_id` may be NULL (recipe dishes); ingest upgrades a
   database created by v0.1.0.
+- One v0.1 test name changed with the new aliases: `Zeytin` now matches
+  black olives (correct; the alias came from the v0.2 dev meals).
 - Evaluation: eight dev names (mercimek çorbası, köfte, çoban salatası,
   menemen, ayran, lahmacun) now have their recipe as the gold food instead of
   none; dishes were chosen from dev names and the request log only, and no

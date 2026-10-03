@@ -1,0 +1,96 @@
+line,meal,gold,not_in_table,note
+1,akşam 2 lahmacun ve ayran içtim,lahmacun;ayran,,
+2,öğlen bir tabak mercimek çorbası,mercimek_corbasi,,
+3,sabah menemen ve ekmek yedim,menemen;white_bread,,
+4,akşam 4 adet köfte biraz çoban salatası,izgara_kofte;coban_salatasi,,
+5,öğlen yaprak sarma ve ayran,grape_leaves_rice;ayran,,
+6,sabah peynirli omlet yedim,,peynirli omlet,
+7,akşam falafel ve tabule yedim,falafel;tabbouleh,,
+8,öğlen 1 porsiyon makarna,pasta,,
+9,akşam biber dolması yedim,stuffed_pepper_meat|stuffed_pepper_rice,,biber dolması: meat or rice both acceptable
+10,sabah simit ve çay,black_tea,simit,
+11,öğlen 200 gr tavuk ızgara,chicken_breast|chicken_thigh,,"tavuk ızgara: grilled chicken, breast or thigh"
+12,akşam baklava yedim,baklava,,
+13,öğlen mercimek çorbası ve lahmacun,mercimek_corbasi;lahmacun,,
+14,sabah yoğurt ve muz yedim,yogurt;banana,,
+15,akşam 1 tabak kuru fasulye,white_beans,,documented approximation
+16,öğlen köfte biraz pilav,izgara_kofte;rice,,
+17,akşam 2 adet yaprak sarma ve ayran,grape_leaves_rice;ayran,,
+18,sabah tost yedim,,tost,
+19,öğlen çoban salatası ve ekmek,coban_salatasi;white_bread,,
+20,akşam mantı yedim,,mantı,
+21,öğlen falafel dürüm yedim,,falafel dürüm,"a wrap is not plain falafel, as in the v0.1 labels"
+22,akşam biber dolması ve yoğurt,stuffed_pepper_meat|stuffed_pepper_rice;yogurt,,
+23,sabah granola ve süt,milk_whole,granola,
+24,öğlen 1 tabak sebzeli noodle,,sebzeli noodle,
+25,2 lahmacun 1 ayran,lahmacun;ayran,,
+26,sabah 2 yumurta biraz peynir zeytin,egg;feta;black_olives|green_olives,,peynir: documented default feta
+27,ogle 1 tabak mercimek corbasi,mercimek_corbasi,,
+28,bir dilim su böreği yendim,,su böreği,
+29,aksam 1 porsiyon kofte pilav,izgara_kofte;rice,,two foods without a conjunction
+30,kahvalti menemen ve 2 dilim ekmek,menemen;white_bread,,
+31,1 dilim fıstıklı baklava,baklava,,fıstıklı is a kind of baklava
+32,biraz yaprak sarmasi yedim,grape_leaves_rice,,
+33,1 bowl acai smoothie,,acai smoothie,
+34,aksam 2 biber dolma yanina yoğurt,stuffed_pepper_meat|stuffed_pepper_rice;yogurt,,
+35,1 porsiyon tabule salatasi,tabbouleh,,
+36,1 bardak soğuk ayran,ayran,,
+37,oglen falafel wrap ve cola,cola,falafel wrap,
+38,aksam ciger kavurma pilav,rice,ciğer kavurma,two foods without a conjunction
+39,bir kase coban salatasi,coban_salatasi,,
+40,2 adet lahmacun bol yesillik,lahmacun,yeşillik,
+41,sabah krep nutella,,krep;nutella,
+42,3-4 tane sarma,grape_leaves_rice,,
+43,aksam 200gr antrikot izgara,beef_steak,,antrikot is a steak
+44,1 tabak süzme mercimek,mercimek_corbasi,,"süzme mercimek is the strained lentil soup, not raw lentils"
+45,kahvaltida çılbır ve simit,,çılbır;simit,
+46,oglen tavuk schnitzel patates,,tavuk schnitzel;patates,"plain patates is ambiguous (boiled, baked or fried)"
+47,tatli olarak 2 baklava,baklava,,
+48,sabah 2 yumurta biraz zeytin yedim,egg;black_olives|green_olives,,
+49,öğlen 1 dürüm falafel yanında ayran,ayran,falafel dürüm,
+50,akşam 3 dilim pizza yedim,pizza,,
+51,öğlen mercimek corbasi içtim,mercimek_corbasi,,
+52,sabah menemen yaptım ekmekle yedim,menemen;white_bread,,ekmekle: with bread
+53,akşam 200 gr köfte ve salata,izgara_kofte,salata,
+54,öğlen tavuklu wrap yedim,,tavuklu wrap,
+55,akşam 2 parça baklava,baklava,,
+56,sabah yulaf süt muz,oats;milk_whole;banana,,
+57,öğlen lahmacun + ayran,lahmacun;ayran,,
+58,akşam patates püresi ve tavuk,chicken_breast|chicken_thigh,patates püresi,"tavuk: chicken, breast or thigh"
+59,öğlen biraz yaprak sarma yedim,grape_leaves_rice,,
+60,sabah peynir domates ekmek,feta;tomato;white_bread,,
+61,akşam tabule ve falafel,tabbouleh;falafel,,
+62,öğlen sebzeli pilav yedim,,sebzeli pilav,hard negative for pilav
+63,akşam biber dolmasi 2 tane,stuffed_pepper_meat|stuffed_pepper_rice,,
+64,sabah simit ayran,ayran,simit,
+65,öğlen ton balıklı salata,,ton balıklı salata,
+66,akşam çoban salatası ve köfte,coban_salatasi;izgara_kofte,,
+67,öğlen bir tabak mantı yedim,,mantı,
+68,akşam 1 kase mercimek çorbası,mercimek_corbasi,,
+69,sabah pankek ve bal,honey,pankek,
+70,öğlen nohutlu pilav yedim,,nohutlu pilav,hard negative for pilav
+71,akşam makarna ve yoğurt,pasta;yogurt,,
+72,kahvaltida 2 boyoz 1 cay,black_tea,boyoz,
+73,ogle 1 tabak biber dolmasi,stuffed_pepper_meat|stuffed_pepper_rice,,
+74,2 tane lahmacun yanina ayran,lahmacun;ayran,,
+75,1 porsiyon kore fried chicken,,kore fried chicken,
+76,sabah menemen ekmek bandim,menemen;white_bread,,
+77,aksam mercimek corba salata,mercimek_corbasi,salata,
+78,1 kase tabule,tabbouleh,,
+79,3 balli pancake,,ballı pancake,honey is part of the dish
+80,oglen falafel pita,,falafel pita,
+81,aksam 150gr somon izgara,salmon,,
+82,3-4 fıstıklı baklava yedim,baklava,,
+83,biraz yaprak sarma,grape_leaves_rice,,
+84,biraz coban salata,coban_salatasi,,
+85,kahvalti granola süzme yogurt,greek_yogurt,granola,
+86,aksam 1 tabak etli nohut pilav,rice,etli nohut,two foods without a conjunction
+87,oglen kofte ekmek,izgara_kofte;white_bread,,köfte ekmek: köfte in bread
+88,1 buyuk bardak ayran,ayran,,
+89,sabah 2 pogaca 1 akitma,,poğaça;açma,akitma: typo of açma
+90,tatli 1 porsiyon san sebastian,,san sebastian,
+91,aksam 2 biber dolma,stuffed_pepper_meat|stuffed_pepper_rice,,
+92,1 bowl mercimek corbasi,mercimek_corbasi,,
+93,ara ogun 1 dilim fistikli baklava,baklava,,
+94,oglen ramen icine yumurta,egg,ramen,
+95,kahvaltida menemen kofte artiklari,menemen;izgara_kofte,,leftovers

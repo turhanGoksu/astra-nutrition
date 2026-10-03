@@ -1,8 +1,8 @@
 id,fdc_id,name_en,name_tr,aliases,default_grams,portions,note
-baklava,2708044,Baklava,Baklava,,usda:Quantity not specified,,"FNDDS dish; US piece sizes, so only weight and volume measures"
+baklava,2708044,Baklava,Baklava,fıstıklı baklava|cevizli baklava,usda:Quantity not specified,,"FNDDS dish; US piece sizes, so only weight and volume measures"
 grape_leaves_rice,2709064,Stuffed grape leaves with rice,Zeytinyağlı yaprak sarma,yaprak sarma|sarma|zeytinyağlı sarma|yaprak dolması,usda:Quantity not specified,,"FNDDS dish; US piece sizes, so only weight and volume measures"
 grape_leaves_beef,2706621,Stuffed grape leaves with beef and rice,Etli yaprak sarma,etli sarma|etli yaprak dolması,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures"
-stuffed_pepper_meat,2709073,Stuffed pepper with meat and rice,Etli biber dolması,,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures"
+stuffed_pepper_meat,2709073,Stuffed pepper with meat and rice,Etli biber dolması,biber dolması|biber dolma,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures; biber dolması alone: documented default with meat"
 stuffed_pepper_rice,2709074,Stuffed pepper with rice,Zeytinyağlı biber dolması,,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures"
 falafel,2707408,Falafel,Falafel,,usda:Quantity not specified,,"FNDDS dish; US piece sizes, so only weight and volume measures"
-tabbouleh,2709131,Tabbouleh,Tabule,tabouleh|tabbouli,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures"
+tabbouleh,2709131,Tabbouleh,Tabule,tabouleh|tabbouli|tabule salatası,usda:Quantity not specified,cup=usda:1 cup,"FNDDS dish; US piece sizes, so only weight and volume measures"

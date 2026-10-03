@@ -25,6 +25,24 @@ _TURKISH_FOLD = str.maketrans(
 )
 
 
+# Words that say when or how a meal was eaten, not what was eaten. The parser
+# sometimes glues them to a food name ("Akşam Biber Dolması") or uses them as
+# the amount ("Menemen [sabah]"). Folded (see fold).
+MEAL_TIME_WORDS = frozenset(
+    {
+        "sabah", "sabahleyin", "ogle", "oglen", "ogleden", "aksam", "aksamleyin",
+        "gece", "kahvalti", "kahvaltida", "kahvaltiya", "ara", "ogun", "yemegi",
+        "yemeginde", "breakfast", "lunch", "dinner", "brunch", "snack",
+    }
+)  # fmt: skip
+EATING_VERBS = frozenset(
+    {
+        "yedim", "yendim", "yedik", "ictim", "ictik", "yaptim", "yaptik", "aldim",
+        "atistirdim", "bandim",
+    }
+)  # fmt: skip
+
+
 def fold(text: str) -> str:
     """Lowercase, fold Turkish letters to ASCII and collapse whitespace.
 

@@ -3,6 +3,7 @@
 Defense in depth:
 - optionally, a grammar (built from ``MealParseSchema``) guarantees the SHAPE;
 - Pydantic validation checks the MEANING we can check here (e.g. blank names);
+- names lose meal-time words the model glued to them ("Akşam Falafel");
 - grounding: every word of an item name must appear in the meal text, so an
   invented food is rejected instead of counted;
 - every call ends in an explicit ``ParseStatus``, never a silent guess.
@@ -25,7 +26,7 @@ from typing import Any, Protocol
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
 from astra_nutrition.prompts import SYSTEM_PROMPT
-from astra_nutrition.text import fold
+from astra_nutrition.text import EATING_VERBS, MEAL_TIME_WORDS, fold
 
 logger = logging.getLogger(__name__)
 
@@ -123,23 +124,58 @@ def check_grounding(result: ParseResult, meal_text: str) -> ParseResult:
     rejected loudly, never counted silently.
     """
     kept: list[ParsedItem] = []
+    rejected: list[RejectedItem] = []
     for item in result.items:
         missing = ungrounded_words(item.name, meal_text)
         if missing:
-            result.rejected_items.append(
-                RejectedItem(
-                    raw=item.model_dump(),
-                    reason=f"not in the meal text: {', '.join(missing)}",
-                )
-            )
+            reason = f"not in the meal text: {', '.join(missing)}"
+            rejected.append(RejectedItem(raw=item.model_dump(), reason=reason))
         else:
             kept.append(item)
-    if len(kept) < len(result.items):
+    return _keep(result, kept, rejected, "no item name appears in the meal text")
+
+
+def strip_meal_words(name: str) -> str:
+    """Drop meal-time words before a name and eating verbs after it.
+
+    "Akşam Biber Dolması" -> "Biber Dolması", "Tabule Yedim" -> "Tabule".
+    """
+    words = name.split()
+    while words and fold(words[0]) in MEAL_TIME_WORDS:
+        words.pop(0)
+    while words and fold(words[-1]) in EATING_VERBS:
+        words.pop()
+    return " ".join(words)
+
+
+def drop_meal_words(result: ParseResult) -> ParseResult:
+    """Clean item names; an item that was only meal-time words is rejected."""
+    kept: list[ParsedItem] = []
+    rejected: list[RejectedItem] = []
+    for item in result.items:
+        name = strip_meal_words(item.name)
+        if name:
+            kept.append(item.model_copy(update={"name": name}))
+        else:
+            reason = "only meal-time words, no food"
+            rejected.append(RejectedItem(raw=item.model_dump(), reason=reason))
+    return _keep(result, kept, rejected, "no item names a food")
+
+
+def _keep(
+    result: ParseResult,
+    kept: list[ParsedItem],
+    rejected: list[RejectedItem],
+    error_if_none: str,
+) -> ParseResult:
+    """Keep the valid items; rejected ones are reported, never dropped silently."""
+    if rejected:
+        result.rejected_items.extend(rejected)
         if kept:
             result.status = ParseStatus.PARTIAL
         else:
             result.status = ParseStatus.INVALID_OUTPUT
-            result.error = "no item name appears in the meal text"
+            result.error = error_if_none
     result.items = kept
     return result
 
@@ -253,8 +289,9 @@ class MealParser:
         original amount; the others get an empty amount, which amount
         normalization flags as an assumed portion instead of guessing.
 
-        Finally, items whose name is not in ``meal_text`` are rejected (see
-        ``check_grounding``), including names from a second parse.
+        Then meal-time words are dropped from names ("Akşam Falafel" ->
+        "Falafel"), and items whose name is not in ``meal_text`` are rejected
+        (see ``check_grounding``), including names from a second parse.
         """
         start = time.perf_counter()
         result = self._parse_once(meal_text)
@@ -269,6 +306,8 @@ class MealParser:
                 else:
                     items.append(item)
             result.items = items
+        if result.items:
+            result = drop_meal_words(result)
         if self._check_grounding and result.items:
             result = check_grounding(result, meal_text)
         result.latency_ms = _elapsed_ms(start)

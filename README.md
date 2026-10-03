@@ -289,6 +289,30 @@ Reproduce (needs the PostgreSQL setup below): `python -m eval.run_eval sweep`
 and `python -m eval.run_eval report`; judge answers are cached in
 `eval/results/` so results reproduce without API keys.
 
+### v0.2 dev meals (end to end)
+
+For the new dishes, someone other than the alias author wrote 95 meals in their
+own words, without looking at the table (`data/eval/meals_v02.txt`). Each meal
+is labeled with the foods a correct system finds (`data/eval/labels_v02.csv`),
+and scoring runs the whole pipeline: parser, name and amount checks, matching.
+These meals were **used to find and fix problems**, so they are a dev set, not a
+held-out result; a fresh test set is planned before the v0.2 release.
+
+| v0.2 dev meals (106 foods) | Found | False matches |
+|---|---|---|
+| Before the fixes | 68 (64%) | 4 |
+| After the fixes | 88 (83%) | 3 |
+
+What they found and what was fixed: meal-time words glued to names
+(`Akşam Biber Dolması`), wrong dishes (`süzme mercimek` matched raw lentils,
+`biber dolma` raw peppers), missing names (`fıstıklı baklava`, `soğuk ayran`,
+`zeytin`), quantities the parser invented, and US piece sizes leaking through
+bare counts. What remains: foods listed without a conjunction (`kofte pilav`,
+`yulaf süt muz`), and wraps matched to their filling (`falafel wrap` →
+falafel). One old test name changed with the new aliases: `Zeytin` now matches
+black olives (correct). Rerun with `python -m eval.v02 --label <name>`; model
+answers are cached, so reruns are fast and machine-independent.
+
 ## Data and licenses
 
 | Part | Source | License |
@@ -350,8 +374,9 @@ redistributing the data in an open-source package.
   names (`Yarım Ekmek`), or invents weights in parentheses (`1 dilim (30g)`).
   Merged names with a conjunction are re-parsed; invented weights are used only
   if the user wrote them. Merges without a conjunction (`Tahin Pekmez`) remain.
-- **Strict name check.** When the model fixes a typo (`letuce` → `lettuce`),
-  the name is no longer in the text, so the item is rejected. On the 101 eval
+- **Strict name check.** When the model fixes a typo (`letuce` → `lettuce`)
+  or drops a Turkish suffix (`ekmekle` → `Ekmek`), the name is no longer in the
+  text, so the item is rejected. On the 101 eval
   meals, 5 of 220 items were rejected; 2 of them (`lettuce`, `tomatoes`) would
   have matched. A similarity rule would keep them, but would also let an
   invented `Elma` through on `elmas`.

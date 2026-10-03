@@ -199,3 +199,21 @@ def test_a_count_of_us_sized_dishes_is_unknown_but_local_pieces_count() -> None:
         (ItemStatus.AMOUNT_UNKNOWN, None),  # FNDDS: one piece is 80 g in the US
         (ItemStatus.OK, 250.0),  # recipe: a piece is 1/8 of the batch
     ]
+
+
+@pytest.mark.parametrize(
+    ("name", "food_id"),
+    [
+        # False matches found in the v0.2 dev meals (raw lentils, raw pepper)
+        ("Süzme Mercimek", "mercimek_corbasi"),
+        ("Biber Dolma", "stuffed_pepper_meat"),
+        # Misses found there
+        ("Fıstıklı Baklava", "baklava"),
+        ("Soğuk Ayran", "ayran"),
+        ("Tabule Salatası", "tabbouleh"),
+        ("Zeytin", "black_olives"),
+        ("Tavuk Izgara", "chicken_breast"),
+    ],
+)
+def test_v02_dev_names_match_the_right_dish(name: str, food_id: str) -> None:
+    assert ANALYZER.analyze_items([(name, "")]).items[0].food_id == food_id

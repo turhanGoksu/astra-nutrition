@@ -8,6 +8,7 @@ from astra_nutrition.parser import (
     MealParser,
     ParseStatus,
     looks_merged,
+    strip_meal_words,
     ungrounded_words,
     validate_output,
 )
@@ -242,3 +243,31 @@ def test_grounding_can_be_disabled() -> None:
     result = MealParser(FakeLlm(TWO_ITEMS), check_grounding=False).parse("2 yumurta")
     assert result.status == ParseStatus.SUCCESS
     assert [i.name for i in result.items] == ["Yumurta", "Ekmek"]
+
+
+@pytest.mark.parametrize(
+    ("name", "expected"),
+    [
+        ("Akşam Biber Dolması", "Biber Dolması"),
+        ("Oglen Falafel Wrap", "Falafel Wrap"),
+        ("Tabule Yedim", "Tabule"),
+        ("Ara Öğün Badem", "Badem"),
+        ("Sabah Menemen Ekmek Bandim", "Menemen Ekmek"),
+        ("Öğle Yemeği", ""),
+        ("Gece Yarısı Çorbası", "Yarısı Çorbası"),  # only leading words go
+        ("Mercimek Çorbası", "Mercimek Çorbası"),
+    ],
+)
+def test_strip_meal_words(name: str, expected: str) -> None:
+    assert strip_meal_words(name) == expected
+
+
+def test_meal_time_words_leave_the_name_and_a_meal_word_alone_is_rejected() -> None:
+    output = (
+        '{"items": [{"name": "Akşam Falafel", "amount": "2"},'
+        ' {"name": "Öğle Yemeği", "amount": ""}]}'
+    )
+    result = MealParser(FakeLlm(output)).parse("öğle yemeği: akşam 2 falafel")
+    assert [i.name for i in result.items] == ["Falafel"]
+    assert result.rejected_items[0].reason == "only meal-time words, no food"
+    assert result.status == ParseStatus.PARTIAL
