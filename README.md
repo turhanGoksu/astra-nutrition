@@ -293,14 +293,14 @@ Reproduce (needs the PostgreSQL setup below): `python -m eval.run_eval sweep`
 and `python -m eval.run_eval report`; judge answers are cached in
 `eval/results/` so results reproduce without API keys.
 
-### v0.2 dev meals (end to end)
+### v0.2 meals: dev and test (end to end)
 
 For the new dishes, someone other than the alias author wrote 95 meals in their
 own words, without looking at the table (`data/eval/meals_v02.txt`). Each meal
 is labeled with the foods a correct system finds (`data/eval/labels_v02.csv`),
 and scoring runs the whole pipeline: parser, name and amount checks, matching.
 These meals were **used to find and fix problems**, so they are a dev set, not a
-held-out result; a fresh test set is planned before the v0.2 release.
+held-out result; the test set below is.
 
 | v0.2 dev meals (106 foods) | Found | False matches |
 |---|---|---|
@@ -324,6 +324,27 @@ matches; the labels were not changed after seeing the results. One old test
 name changed with the new aliases: `Zeytin` now matches black olives
 (correct). Rerun with `python -m eval.v02 --label <name>`; model
 answers are cached, so reruns are fast and machine-independent.
+
+**Test.** The same person then wrote 73 new meals without looking at the
+table or any result; 15 that repeated dev or older eval meals were removed.
+The other 58 (`data/eval/meals_v02_test.txt`) were labeled from the text
+alone and committed **before** the system ever ran on them, then evaluated
+once; nothing was changed afterwards.
+
+| v0.2 test meals (49 foods, evaluated once) | Found | False matches |
+|---|---|---|
+| v0.1.0 (same cached model answers) | 7 (14%) | 1 |
+| v0.2 | 28 (57%) | 3 |
+
+On unseen phrasing v0.2 finds four times as many foods as v0.1.0, but far
+fewer than on dev (94%): the fixes fit the dev phrasing. Most misses are
+descriptive words the parser glued to a name (`Lahmacun Acili`, `Bol Kopuklu
+Ayran`, `Ev Yapımı Yaprak Sarması`, `Biber Dolması Yanina Cacik`), which the
+rule against added dish words turns into `unmatched`. Two foods were lost
+because the parser put them in the amount and the name was only meal-time
+words (`Ara Öğün` / `1 bardak koy ayrani`). The design held where it matters:
+of 31 matches, 28 are right, and nearly every miss is a visible `unmatched`,
+not a wrong food. Rerun: `python -m eval.v02 --set test --label final`.
 
 ## Data and licenses
 
@@ -411,8 +432,10 @@ redistributing the data in an open-source package.
 
 ## Roadmap
 
-- **v0.2:** a larger evaluation set for the new dishes, then the release.
-  (7 FNDDS dishes and 6 recipes are already in the table.)
+- **v0.3:** descriptive words in names (`acılı`, `bol köpüklü`, `ev yapımı`,
+  `yanında X`), the main source of misses on the v0.2 test meals; keep a food
+  the parser put in the amount when the name is only a meal time. Measure on
+  a new test set, since the v0.2 test set has now been seen.
 
 ## Repository layout and development
 

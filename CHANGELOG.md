@@ -43,6 +43,9 @@ A released version is never changed: fixes ship as a new version.
 - A parsed name that lists table foods without a conjunction is split
   (`Kofte Pilav` -> köfte + pilav) when every part is an exact table name.
   v0.2 dev meals: found foods 83% -> 94%.
+- v0.2 test meals: 58 new meals, labeled before the system ran on them and
+  evaluated once. Found foods: 57% (v0.1.0: 14%), false matches: 3 (v0.1.0:
+  1). Most misses are descriptive words glued to names (`Lahmacun Acili`).
 - Amount check: a number in the parsed amount that the user never wrote
   (the parser's `2 adet` for a plain `köfte`) is treated as a missing amount,
   so the item is `estimated` with the default portion and says why.

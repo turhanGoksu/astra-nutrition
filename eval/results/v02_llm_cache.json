@@ -2088,5 +2088,1281 @@
    "completion_tokens": 24,
    "total_tokens": 116
   }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah 2 gevrekle peynir\"}], null]": {
+  "id": "chatcmpl-24f66075-1012-4983-83d3-5dc64dd4d66e",
+  "object": "chat.completion",
+  "created": 1791050710,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Peynir\", \"amount\": \"2 gevrekle\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 22,
+   "total_tokens": 112
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon pad thai\"}], null]": {
+  "id": "chatcmpl-eaa6043f-78ed-4f5c-88c8-33fd06a081da",
+  "object": "chat.completion",
+  "created": 1791050711,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Pad Thai\", \"amount\": \"1 porsiyon\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 21,
+   "total_tokens": 107
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam ciger sis pilav\"}], null]": {
+  "id": "chatcmpl-6700cf71-7462-4a58-9ed5-5c60522d62a8",
+  "object": "chat.completion",
+  "created": 1791050712,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Ciger Sis Pilav\", \"amount\": \"aksam\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 22,
+   "total_tokens": 108
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"2-3 yaprak sarma atistirdim\"}], null]": {
+  "id": "chatcmpl-d2d350f5-3579-4b7a-a91b-a255e2083ca8",
+  "object": "chat.completion",
+  "created": 1791050712,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Sarma\", \"amount\": \"2-3 yaprak\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 22,
+   "total_tokens": 113
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvalti 2 sahanda yumurta\"}], null]": {
+  "id": "chatcmpl-52231455-d704-4a7b-8727-71d077fbf53c",
+  "object": "chat.completion",
+  "created": 1791050713,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Yumurta\", \"amount\": \"2 sahanda\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 22,
+   "total_tokens": 112
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen falafel burger ve patates\"}], null]": {
+  "id": "chatcmpl-b101e826-a4e9-40e8-be92-57d5ee1b8801",
+  "object": "chat.completion",
+  "created": 1791050713,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oglen Falafel Burger\", \"amount\": \"1 item (180g)\"}, {\"name\": \"Patates\", \"amount\": \"1 kg\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 88,
+   "completion_tokens": 43,
+   "total_tokens": 131
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon etli biber dolmasi\"}], null]": {
+  "id": "chatcmpl-291227c7-1d7b-45d6-aa46-4372b2ec35ae",
+  "object": "chat.completion",
+  "created": 1791050714,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Etli Biber Dolmasi\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 32,
+   "total_tokens": 123
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 200g kofte yanina ayran\"}], null]": {
+  "id": "chatcmpl-936ffcb7-6c6e-4a0a-861d-bc9e01bd9a7e",
+  "object": "chat.completion",
+  "created": 1791050715,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Kofte\", \"amount\": \"200g\"}, {\"name\": \"Ayran\", \"amount\": \"aksam\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 93,
+   "completion_tokens": 35,
+   "total_tokens": 128
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 tabak tabule\"}], null]": {
+  "id": "chatcmpl-e4f98678-4165-4038-93f8-b7c4775f543a",
+  "object": "chat.completion",
+  "created": 1791050716,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Tabule\", \"amount\": \"1 tabak\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 84,
+   "completion_tokens": 19,
+   "total_tokens": 103
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah avocado toast 1 poşe yumurta\"}], null]": {
+  "id": "chatcmpl-7428df46-7882-488f-9c43-37edfb175f46",
+  "object": "chat.completion",
+  "created": 1791050716,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Avocado Toast\", \"amount\": \"1 poşe yumurta\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 23,
+   "total_tokens": 114
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 kase mercimek corbasi bol limon\"}], null]": {
+  "id": "chatcmpl-10f85bba-04d8-435c-994f-9b41eeed5d7e",
+  "object": "chat.completion",
+  "created": 1791050717,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Mercimek Corbisi Bol Limon\", \"amount\": \"1 kase (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 32,
+   "total_tokens": 123
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"tatli 1 porsiyon baklava\"}], null]": {
+  "id": "chatcmpl-83942bd7-dc90-4b19-a802-14b6f11c6474",
+  "object": "chat.completion",
+  "created": 1791050717,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Baklava\", \"amount\": \"1 porsiyon\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 23,
+   "total_tokens": 113
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen beef stroganoff\"}], null]": {
+  "id": "chatcmpl-c0b320f4-e959-40e1-ba13-591741d6abf7",
+  "object": "chat.completion",
+  "created": 1791050719,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Beef Stroganoff\", \"amount\": \"1 serving (250g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 28,
+   "total_tokens": 114
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"3 adet yaprak sarmasi\"}], null]": {
+  "id": "chatcmpl-31de6e41-288f-4326-a848-000a705e960e",
+  "object": "chat.completion",
+  "created": 1791050719,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Yaprak Sarmasi\", \"amount\": \"3 adet\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 88,
+   "completion_tokens": 23,
+   "total_tokens": 111
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvalti bazlama tostu\"}], null]": {
+  "id": "chatcmpl-cf7ee996-4198-4ec0-97b1-1636db1e9efe",
+  "object": "chat.completion",
+  "created": 1791050721,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Bazlama Tostu\", \"amount\": \"1 adet (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 29,
+   "total_tokens": 115
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 2 biber dolma yogurtlu\"}], null]": {
+  "id": "chatcmpl-21ca81df-27ed-4d96-862b-2353d245749b",
+  "object": "chat.completion",
+  "created": 1791050726,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Biber Dolma Yogurtlu\", \"amount\": \"2 biber (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 89,
+   "completion_tokens": 30,
+   "total_tokens": 119
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon lahmacun bol sumakli sogan\"}], null]": {
+  "id": "chatcmpl-b7c97710-503e-4cef-a859-ae035cd942b1",
+  "object": "chat.completion",
+  "created": 1791050728,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Lahmacun\", \"amount\": \"1 porsiyon (180g)\"}, {\"name\": \"Sumakli Sogan\", \"amount\": \"1 porsiyon (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 93,
+   "completion_tokens": 55,
+   "total_tokens": 148
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 bowl chia puding\"}], null]": {
+  "id": "chatcmpl-0beb10ae-8bd8-47da-a396-6046e1412b8e",
+  "object": "chat.completion",
+  "created": 1791050729,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Chia Puding\", \"amount\": \"1 bowl\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 85,
+   "completion_tokens": 20,
+   "total_tokens": 105
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah 1 simit biraz tulum peyniri\"}], null]": {
+  "id": "chatcmpl-73be97dd-f87c-47cd-8e4e-2d9632ebe59c",
+  "object": "chat.completion",
+  "created": 1791050730,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Simit\", \"amount\": \"1 simit\"}, {\"name\": \"Tulum Peyniri\", \"amount\": \"biraz\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 93,
+   "completion_tokens": 36,
+   "total_tokens": 129
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen 1 porsiyon falafel salata\"}], null]": {
+  "id": "chatcmpl-ced50ff4-43ff-4ee6-abbf-3cee5345e01f",
+  "object": "chat.completion",
+  "created": 1791050730,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Falafel Salata\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 30,
+   "total_tokens": 122
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam kayseri mantisi bol yoğurtlu\"}], null]": {
+  "id": "chatcmpl-e4b2a076-9132-40bd-b968-9c4321f8ff20",
+  "object": "chat.completion",
+  "created": 1791050731,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Kayseri Mantisi\", \"amount\": \"1 porsiyon (100g)\"}, {\"name\": \"Yoğurtlu\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 55,
+   "total_tokens": 146
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvaltida menemen ve çay\"}], null]": {
+  "id": "chatcmpl-831b5869-1e62-4743-a750-889a91e03bb8",
+  "object": "chat.completion",
+  "created": 1791050732,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Menemen\", \"amount\": \"1 porsiyon (200g)\"}, {\"name\": \"Çay\", \"amount\": \"1 porsiyon (200ml)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 88,
+   "completion_tokens": 50,
+   "total_tokens": 138
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 dilim baklava kahve yanina\"}], null]": {
+  "id": "chatcmpl-6805ade4-db0b-4b0e-865c-ff6d1f01630c",
+  "object": "chat.completion",
+  "created": 1791050733,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Baklava Kahve Yanina\", \"amount\": \"1 dilim (40g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 30,
+   "total_tokens": 120
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen 1 biber dolmasi biraz pilav\"}], null]": {
+  "id": "chatcmpl-84aca684-068b-4a1d-a79f-ff7742aebdad",
+  "object": "chat.completion",
+  "created": 1791050734,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oglen\", \"amount\": \"1 biber dolmasi\"}, {\"name\": \"Biraz Pilav\", \"amount\": \"biraz\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 40,
+   "total_tokens": 132
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 bowl poke bowl somonlu\"}], null]": {
+  "id": "chatcmpl-1664dee8-7abc-4754-b4c4-5f4a994afd43",
+  "object": "chat.completion",
+  "created": 1791050734,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Poke Bowl Somonlu\", \"amount\": \"1 bowl\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 22,
+   "total_tokens": 108
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 200gr kofte ve coban salata\"}], null]": {
+  "id": "chatcmpl-5ced2f26-285c-4409-8794-c1873fba7d5b",
+  "object": "chat.completion",
+  "created": 1791050735,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Kofte\", \"amount\": \"200gr\"}, {\"name\": \"Coban Salata\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 94,
+   "completion_tokens": 47,
+   "total_tokens": 141
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon tabule\"}], null]": {
+  "id": "chatcmpl-8f493143-7b14-4374-a12e-2851c272c13a",
+  "object": "chat.completion",
+  "created": 1791050736,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Tabule\", \"amount\": \"1 porsiyon\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 21,
+   "total_tokens": 107
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah oatmeal muz fıstık ezmesi\"}], null]": {
+  "id": "chatcmpl-54fae708-8785-46f9-9710-5122489cee65",
+  "object": "chat.completion",
+  "created": 1791050736,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oatmeal\", \"amount\": \"1 serving (150g)\"}, {\"name\": \"Muz Fıstık Ezmesi\", \"amount\": \"1 piece (20g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 51,
+   "total_tokens": 143
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 1 tabak mercimek çorbası 1 dilim ekmek\"}], null]": {
+  "id": "chatcmpl-48514035-a22b-47fa-baca-87d77182f936",
+  "object": "chat.completion",
+  "created": 1791050737,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Mercimek Çorbası\", \"amount\": \"1 tabak (250ml)\"}, {\"name\": \"Ekmek\", \"amount\": \"1 dilim (30g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 99,
+   "completion_tokens": 51,
+   "total_tokens": 150
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvalti 2 yumurtali menemen\"}], null]": {
+  "id": "chatcmpl-56acccfa-9928-463a-86d0-2b68fe7cfe28",
+  "object": "chat.completion",
+  "created": 1791050738,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Yumurtali Menemen\", \"amount\": \"2 porsiyi\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 89,
+   "completion_tokens": 25,
+   "total_tokens": 114
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon falafel wrap\"}], null]": {
+  "id": "chatcmpl-776cfd39-2a24-4c6c-b39a-146ef05ccfd7",
+  "object": "chat.completion",
+  "created": 1791050738,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Falafel Wrap\", \"amount\": \"1 porsiyon (180g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 88,
+   "completion_tokens": 29,
+   "total_tokens": 117
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam kuzu pirzola patates püresi\"}], null]": {
+  "id": "chatcmpl-f77bd0f7-a8f2-4ffd-b7ea-5e9922bae8ee",
+  "object": "chat.completion",
+  "created": 1791050739,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Kuzu Pirzola Patates Püresi\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 36,
+   "total_tokens": 128
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"3-4 tane dolma sarma karisik\"}], null]": {
+  "id": "chatcmpl-b44bc276-72a8-462a-9284-a51f5f36809e",
+  "object": "chat.completion",
+  "created": 1791050740,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Dolma Sarma Karisik\", \"amount\": \"3-4 tane\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 27,
+   "total_tokens": 118
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen 1 lahmacun bol yesillikli\"}], null]": {
+  "id": "chatcmpl-fd52d40e-70f3-4322-9450-8af4be344878",
+  "object": "chat.completion",
+  "created": 1791050740,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Lahmacun\", \"amount\": \"1\"}, {\"name\": \"Yesillikli\", \"amount\": \"bol\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 34,
+   "total_tokens": 125
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam club sandwich ve cips\"}], null]": {
+  "id": "chatcmpl-0923e9e8-c29d-4673-bfbc-c6da1f60c00d",
+  "object": "chat.completion",
+  "created": 1791050741,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Club Sandwich\", \"amount\": \"aksam\"}, {\"name\": \"Cips\", \"amount\": \"ve\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 31,
+   "total_tokens": 117
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvalti 2 boyoz az tulum\"}], null]": {
+  "id": "chatcmpl-a9632a9d-6895-46ba-a653-2b346a24f744",
+  "object": "chat.completion",
+  "created": 1791050741,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Boyoz Az Tulum\", \"amount\": \"2 boyoz\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 89,
+   "completion_tokens": 22,
+   "total_tokens": 111
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 porsiyon falafel tabagi\"}], null]": {
+  "id": "chatcmpl-83cab5a5-0ba0-481e-b2d6-200fcf450828",
+  "object": "chat.completion",
+  "created": 1791050742,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Falafel Tabagi\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 89,
+   "completion_tokens": 30,
+   "total_tokens": 119
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen süzme mercimek çorbası 1 dilim ekmek\"}], null]": {
+  "id": "chatcmpl-9c032f2f-4e21-471b-9dec-61e26084ef11",
+  "object": "chat.completion",
+  "created": 1791050742,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oglen Süzme Mercimek Çorbası\", \"amount\": \"1 dilim (250ml)\"}, {\"name\": \"Ekmek\", \"amount\": \"1 porsiyon (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 98,
+   "completion_tokens": 60,
+   "total_tokens": 158
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 dilim treleçe\"}], null]": {
+  "id": "chatcmpl-9d33ff15-3c3f-41be-9d5f-1343a5b15050",
+  "object": "chat.completion",
+  "created": 1791050744,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Treleçe\", \"amount\": \"1 dilim\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 85,
+   "completion_tokens": 20,
+   "total_tokens": 105
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 1 tabak etli biber dolma\"}], null]": {
+  "id": "chatcmpl-fcd7c6d7-fdcc-4be4-975b-87ec5307ffdb",
+  "object": "chat.completion",
+  "created": 1791050744,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Etli Biber Dolma\", \"amount\": \"1 tabak\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 23,
+   "total_tokens": 114
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 kase cobansalatasi\"}], null]": {
+  "id": "chatcmpl-675dd199-de30-4ea5-a15c-ed37d0c1ecfe",
+  "object": "chat.completion",
+  "created": 1791050744,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Cobansalatasi\", \"amount\": \"1 kase\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 87,
+   "completion_tokens": 23,
+   "total_tokens": 110
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"ara ogun 1 bardak koy ayrani\"}], null]": {
+  "id": "chatcmpl-5a9d0e4d-3dc3-485c-bf40-047816d80958",
+  "object": "chat.completion",
+  "created": 1791050745,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Ara Ogun\", \"amount\": \"1 bardak\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 21,
+   "total_tokens": 111
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah krep akçaağaç şurubu\"}], null]": {
+  "id": "chatcmpl-6a187073-c64a-46fc-bc92-88dfbf46664e",
+  "object": "chat.completion",
+  "created": 1791050745,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Krep Akçaağaç Şurubu\", \"amount\": \"1 adet (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 93,
+   "completion_tokens": 34,
+   "total_tokens": 127
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen 2 tane lahmacun acili\"}], null]": {
+  "id": "chatcmpl-00e5f51f-3ed4-4a79-9a59-23ec80dd31f0",
+  "object": "chat.completion",
+  "created": 1791050746,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Lahmacun Acili\", \"amount\": \"2 tane\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 23,
+   "total_tokens": 113
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 tabak ev yapımı yaprak sarması\"}], null]": {
+  "id": "chatcmpl-4c84f23a-8607-4813-b48e-a6eed8523327",
+  "object": "chat.completion",
+  "created": 1791050746,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Ev Yapımı Yaprak Sarması\", \"amount\": \"1 tabak (200g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 32,
+   "total_tokens": 123
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam 150gr cızbız köfte pilav\"}], null]": {
+  "id": "chatcmpl-1846d1b9-5d6f-49a6-bb70-9a9e261598ba",
+  "object": "chat.completion",
+  "created": 1791050747,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Cızbız Köfte Pilav\", \"amount\": \"150gr\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 94,
+   "completion_tokens": 26,
+   "total_tokens": 120
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"kahvaltida çılbır 1 dilim siyez ekmeği\"}], null]": {
+  "id": "chatcmpl-0b03a0f1-88a3-4a9b-9b9b-b4a8fdd8ec30",
+  "object": "chat.completion",
+  "created": 1791050748,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Çılbır\", \"amount\": \"1 dilim (150g)\"}, {\"name\": \"Siyez Ekmeği\", \"amount\": \"1 porsiyon (40g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 96,
+   "completion_tokens": 53,
+   "total_tokens": 149
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen dim sum karisik\"}], null]": {
+  "id": "chatcmpl-348eae48-98f1-4fa4-b2d2-a7883a117e26",
+  "object": "chat.completion",
+  "created": 1791050749,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oglen Dim Sum Karisik\", \"amount\": \"1 porsiyi (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 86,
+   "completion_tokens": 33,
+   "total_tokens": 119
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 dilim cevizli baklava\"}], null]": {
+  "id": "chatcmpl-9cae2d75-7cfe-4109-b8d1-7df992e83b82",
+  "object": "chat.completion",
+  "created": 1791050750,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Cevizli Baklava\", \"amount\": \"1 dilim\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 88,
+   "completion_tokens": 24,
+   "total_tokens": 112
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"2 adet biber dolması yanina cacik\"}], null]": {
+  "id": "chatcmpl-21330408-54ea-4968-b124-660396859ba4",
+  "object": "chat.completion",
+  "created": 1791050750,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Biber Dolması Yanina Cacik\", \"amount\": \"2 adet (150ml)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 32,
+   "total_tokens": 122
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen 1 porsiyon tacos carne asada\"}], null]": {
+  "id": "chatcmpl-b0595734-ff92-4be7-afc7-0cd4ab80ffe6",
+  "object": "chat.completion",
+  "created": 1791050751,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Tacos Carne Asada\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 31,
+   "total_tokens": 122
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"3-4 tane zeytinyağlı sarma\"}], null]": {
+  "id": "chatcmpl-18fdc2a3-e4f8-4dc3-bec4-0e1f15618765",
+  "object": "chat.completion",
+  "created": 1791050752,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Zeytinyağlı Sarma\", \"amount\": \"3-4 tane\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 25,
+   "total_tokens": 115
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 kase mercimek corba bol pulbiber\"}], null]": {
+  "id": "chatcmpl-98a14659-1bd4-4847-b134-32a20d875109",
+  "object": "chat.completion",
+  "created": 1791050752,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Mercimek Corba Bol Pulbiber\", \"amount\": \"1 kase (200g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 91,
+   "completion_tokens": 32,
+   "total_tokens": 123
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"sabah smoothie bowl muzlu yulafli\"}], null]": {
+  "id": "chatcmpl-82d1de7b-ce5b-4caf-a2e9-e40fc7ccf842",
+  "object": "chat.completion",
+  "created": 1791050753,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Muzlu Yulafli\", \"amount\": \"1 porsiyon (150g)\"}, {\"name\": \"Sabah Smoothie Bowl\", \"amount\": \"1 porsiyon (150g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 58,
+   "total_tokens": 150
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"oglen falafel pita wrap\"}], null]": {
+  "id": "chatcmpl-a0772669-69de-47ac-9dc1-5db6ba979db6",
+  "object": "chat.completion",
+  "created": 1791050754,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Oglen Falafel Pita Wrap\", \"amount\": \"1 item (180g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 87,
+   "completion_tokens": 31,
+   "total_tokens": 118
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"tatli 2 fıstıklı baklava\"}], null]": {
+  "id": "chatcmpl-60bed836-15f0-4040-96f4-5e8bad2b8c2c",
+  "object": "chat.completion",
+  "created": 1791050755,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Baklava\", \"amount\": \"2 fıstıklı\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 89,
+   "completion_tokens": 22,
+   "total_tokens": 111
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"aksam fırın somon ve fırın patates\"}], null]": {
+  "id": "chatcmpl-4ee8a75c-4c68-449c-911c-0185e363a838",
+  "object": "chat.completion",
+  "created": 1791050756,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Fırın Somon\", \"amount\": \"1 porsiyon (150g)\"}, {\"name\": \"Fırın Patates\", \"amount\": \"1 porsiyon (100g)\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 92,
+   "completion_tokens": 56,
+   "total_tokens": 148
+  }
+ },
+ "[[{\"role\": \"system\", \"content\": \"You are a meal parser. Extract every food item and its amount from the user's meal description (Turkish or English). Return ONLY a strict JSON object of the form {\\\"items\\\": [{\\\"name\\\": string, \\\"amount\\\": string}]}. No macros, no calories, no conversational text, no markdown, only valid JSON.\"}, {\"role\": \"user\", \"content\": \"1 buyuk bardak bol kopuklu ayran\"}], null]": {
+  "id": "chatcmpl-2504d13c-40cf-4392-9521-dab864602351",
+  "object": "chat.completion",
+  "created": 1791050757,
+  "model": "models/astra-meal-parser-1.5b-q4_k_m.gguf",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"items\": [{\"name\": \"Bol Kopuklu Ayran\", \"amount\": \"1 buyuk bardak\"}]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 90,
+   "completion_tokens": 26,
+   "total_tokens": 116
+  }
  }
 }
