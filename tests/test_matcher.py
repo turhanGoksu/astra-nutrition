@@ -3,6 +3,7 @@
 from collections.abc import Sequence
 
 import numpy as np
+import pytest
 
 from astra_nutrition.matcher import (
     Candidate,
@@ -12,6 +13,7 @@ from astra_nutrition.matcher import (
     MatchConfig,
     MatchMethod,
     Strategy,
+    added_words,
 )
 
 
@@ -128,11 +130,26 @@ def test_design_c_fuzzy_catches_typos() -> None:
     )
 
 
-def test_design_c_fuzzy_can_produce_a_wrong_food() -> None:
-    # Known risk: "mercimek çorbası" is not in the table but shares a word
-    # with "mercimek" (lentils). The evaluation must measure this.
+def test_fuzzy_match_that_adds_a_dish_word_is_refused() -> None:
+    # "mercimek çorbası" contains the alias "mercimek" (lentils) and adds
+    # "çorbası": soup is another dish, so the fuzzy match is refused (v0.2).
     result = make_matcher(Strategy.HYBRID, **DATA).match("mercimek çorbası")
-    assert (result.food_id, result.method) == ("lentils", MatchMethod.FUZZY)
+    assert result.matched is False
+    assert result.note == "adds 'corbasi' to 'mercimek': another dish?"
+
+
+@pytest.mark.parametrize(
+    ("name", "alias", "added"),
+    [
+        ("Falafel Wrap", "Falafel", ["wrap"]),
+        ("Etli Kuru Fasulye", "kuru fasulye", ["etli"]),
+        ("Tavuk Göğsü Izgara", "Tavuk göğsü", []),  # a serving word
+        ("70% dark chocolate", "Dark chocolate", []),  # not a word
+        ("Mercimek Corba", "Mercimek çorbası", []),  # does not contain the alias
+    ],
+)
+def test_added_words(name: str, alias: str, added: list[str]) -> None:
+    assert added_words(name, alias) == added
 
 
 def test_design_c_below_both_thresholds_is_unmatched_with_best_candidate() -> None:

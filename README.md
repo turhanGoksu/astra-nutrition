@@ -281,7 +281,11 @@ How to read this honestly:
   retrieve candidates for the judge, not to decide.
 - The two test errors of Design C come from fuzzy matching on substrings
   (`Etli Kuru Fasulye → kuru fasulye`, `canned tuna in oil → canned tuna`).
-  They were found on test, so they were not tuned away (see Roadmap).
+  They were found on test, so they were not tuned away in v0.1. v0.2 refuses
+  such matches (motivated by `falafel wrap` in the v0.2 dev meals), which also
+  fixes these two names, and a test name (`70% dark chocolate`) shaped a detail
+  of that rule. So the v0.1 test numbers above are **no longer a clean held-out
+  result**; v0.2 gets a fresh test set.
 - 75% of the in-table "natural" names are exact alias copies (the same person
   wrote aliases and meals), against 30% in the "variants" set.
 
@@ -301,16 +305,24 @@ held-out result; a fresh test set is planned before the v0.2 release.
 | v0.2 dev meals (106 foods) | Found | False matches |
 |---|---|---|
 | Before the fixes | 68 (64%) | 4 |
-| After the fixes | 88 (83%) | 3 |
+| Meal-time words, wrong dishes, aliases | 88 (83%) | 3 |
+| + refuse fuzzy matches that add a dish word | 87 (82%) | 1 |
+| + split foods listed without a conjunction | 100 (94%) | 3 |
 
 What they found and what was fixed: meal-time words glued to names
 (`Akşam Biber Dolması`), wrong dishes (`süzme mercimek` matched raw lentils,
 `biber dolma` raw peppers), missing names (`fıstıklı baklava`, `soğuk ayran`,
 `zeytin`), quantities the parser invented, and US piece sizes leaking through
-bare counts. What remains: foods listed without a conjunction (`kofte pilav`,
-`yulaf süt muz`), and wraps matched to their filling (`falafel wrap` →
-falafel). One old test name changed with the new aliases: `Zeytin` now matches
-black olives (correct). Rerun with `python -m eval.v02 --label <name>`; model
+bare counts. A fuzzy match that adds a dish word to an alias is refused
+(`falafel wrap` is not falafel, `etli kuru fasulye` not plain beans), and a
+name that lists table foods without a conjunction is split (`kofte pilav`,
+`yulaf süt muz`). What remains: a bread lost to the strict name check
+(`ekmekle`), lists with a food missing from the table (`ciger kavurma pilav`),
+and the labels themselves: `kofte ekmek` is labeled as its parts but
+`falafel pita` as no table food, so splitting the latter counts as two false
+matches; the labels were not changed after seeing the results. One old test
+name changed with the new aliases: `Zeytin` now matches black olives
+(correct). Rerun with `python -m eval.v02 --label <name>`; model
 answers are cached, so reruns are fast and machine-independent.
 
 ## Data and licenses
@@ -373,11 +385,13 @@ redistributing the data in an open-source package.
 - **Parser errors.** The model sometimes merges items, puts amount words into
   names (`Yarım Ekmek`), or invents weights in parentheses (`1 dilim (30g)`).
   Merged names with a conjunction are re-parsed; invented weights are used only
-  if the user wrote them. Merges without a conjunction (`Tahin Pekmez`) remain.
+  if the user wrote them. A merge without a conjunction is split when every
+  part is a table name (`Tahin Pekmez`, `Kofte Pilav`); otherwise it stays whole
+  and unmatched (`Ciger Kavurma Pilav`).
 - **Strict name check.** When the model fixes a typo (`letuce` → `lettuce`)
   or drops a Turkish suffix (`ekmekle` → `Ekmek`), the name is no longer in the
-  text, so the item is rejected. On the 101 eval
-  meals, 5 of 220 items were rejected; 2 of them (`lettuce`, `tomatoes`) would
+  text, so the item is rejected. On the 101 eval meals, 5 of 220 items were
+  rejected; 2 of them (`lettuce`, `tomatoes`) would
   have matched. A similarity rule would keep them, but would also let an
   invented `Elma` through on `elmas`.
 - **Parser output depends on the llama.cpp build.** With the same weights and
@@ -387,8 +401,9 @@ redistributing the data in an open-source package.
   deterministic layers absorb part of it (an amount that repeats the item's
   name, `1 muz`, reads as `1`); the matching evaluation uses fixed parsed
   names, so its numbers do not depend on the build.
-- **Fuzzy matching on substrings** can match a modified dish to its base food
-  (`Etli Kuru Fasulye`).
+- **Modified dishes are left unmatched, not estimated.** A fuzzy match that
+  adds a dish word to an alias is refused (`Falafel Wrap`, `Etli Kuru Fasulye`);
+  with the LLM judge on, such names go to the judge instead.
 - **Small evaluation set** (193 names): treat the numbers as indicative.
 - **Resources.** ~1 s per meal on an Apple M3 CPU; peak memory ~2 GB on ARM
   (llama.cpp repacks the weights). With the judge, setup takes ~10 s and each
@@ -398,8 +413,6 @@ redistributing the data in an open-source package.
 
 - **v0.2:** a larger evaluation set for the new dishes, then the release.
   (7 FNDDS dishes and 6 recipes are already in the table.)
-- Send fuzzy matches that add words to the alias (`Etli Kuru Fasulye`) to the
-  judge; measure on a new dataset.
 
 ## Repository layout and development
 

@@ -15,6 +15,7 @@ UNMATCHED. We never fall back to the nearest neighbor: a wrong food is
 silent wrong data, an unmatched item is visible.
 """
 
+import re
 from dataclasses import dataclass
 from enum import StrEnum
 from typing import Protocol
@@ -23,6 +24,32 @@ import numpy as np
 
 from astra_nutrition.embeddings import Embedder
 from astra_nutrition.text import fold
+
+# Words that say how a food is served, not which food it is: a fuzzy match may
+# add them to an alias ("Tavuk Göğsü Izgara"). Folded.
+SERVING_WORDS = frozenset(
+    {
+        "izgara", "haslanmis", "haslama", "firinda", "firin", "taze", "soguk",
+        "sicak", "sade", "grilled", "boiled", "baked", "fresh", "cold", "hot",
+        "plain",
+    }
+)  # fmt: skip
+
+
+_WORD = re.compile(r"[a-z]+")
+
+
+def added_words(name: str, alias: str) -> list[str]:
+    """Words a name adds to an alias it fully contains, serving words aside.
+
+    "falafel wrap" adds "wrap" to "falafel", "etli kuru fasulye" adds "etli" to
+    "kuru fasulye": probably a different dish, so a fuzzy match is refused.
+    """
+    # Letters only: "70%" in "70% dark chocolate" is not another dish.
+    name_words, alias_words = _WORD.findall(fold(name)), _WORD.findall(fold(alias))
+    if not set(alias_words) <= set(name_words):
+        return []
+    return [w for w in name_words if w not in alias_words and w not in SERVING_WORDS]
 
 
 class Strategy(StrEnum):
@@ -159,24 +186,30 @@ class FoodMatcher:
                 return MatchResult(query=name, matched=False)
 
         best: Candidate | None = None
+        note: str | None = None
         if strategy == Strategy.HYBRID:
             fuzzy = self._index.fuzzy(folded, k=1)
             if fuzzy:
                 best = fuzzy[0]
                 if best.similarity >= self.config.fuzzy_threshold:
-                    return _matched(name, best)
+                    extra = added_words(name, best.alias)
+                    if not extra:
+                        return _matched(name, best)
+                    note = f"adds {' '.join(extra)!r} to {best.alias!r}: another dish?"
             if self._judge is not None:
                 return self._ask_judge(name)
 
         if not self.config.embedding_stage_on:
-            return MatchResult(query=name, matched=False, best_candidate=best)
+            return MatchResult(
+                query=name, matched=False, best_candidate=best, note=note
+            )
         nearest = self._index.nearest(self._embed(name), k=1)
         if nearest:
             best = nearest[0]
             assert self.config.embedding_threshold is not None
             if best.similarity >= self.config.embedding_threshold:
                 return _matched(name, best)
-        return MatchResult(query=name, matched=False, best_candidate=best)
+        return MatchResult(query=name, matched=False, best_candidate=best, note=note)
 
     def _embed(self, name: str) -> np.ndarray:
         assert self._embedder is not None  # checked in __init__

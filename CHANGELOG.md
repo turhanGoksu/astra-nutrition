@@ -36,6 +36,13 @@ A released version is never changed: fixes ship as a new version.
   `süzme mercimek` (was raw lentils), `biber dolma(sı)` (was raw peppers),
   `fıstıklı baklava`, `soğuk ayran`, `tabule salatası`, `zeytin`, `tavuk
   ızgara`, `somon ızgara`; `1 adet ayran` is a 200 ml cup.
+- A fuzzy match that adds a dish word to an alias is refused (`falafel wrap`
+  is not falafel, `etli kuru fasulye` not plain beans); serving words such
+  as `ızgara` or `soğuk` are allowed. With the judge on, such names go to
+  the judge.
+- A parsed name that lists table foods without a conjunction is split
+  (`Kofte Pilav` -> köfte + pilav) when every part is an exact table name.
+  v0.2 dev meals: found foods 83% -> 94%.
 - Amount check: a number in the parsed amount that the user never wrote
   (the parser's `2 adet` for a plain `köfte`) is treated as a missing amount,
   so the item is `estimated` with the default portion and says why.
@@ -55,6 +62,10 @@ A released version is never changed: fixes ship as a new version.
   database created by v0.1.0.
 - One v0.1 test name changed with the new aliases: `Zeytin` now matches
   black olives (correct; the alias came from the v0.2 dev meals).
+- The fuzzy rule also fixes two v0.1 test errors (`Etli Kuru Fasulye`,
+  `canned tuna in oil`), and a test name (`70% dark chocolate`) shaped a
+  detail of it, so the v0.1 test numbers are no longer a clean held-out
+  result.
 - Evaluation: eight dev names (mercimek çorbası, köfte, çoban salatası,
   menemen, ayran, lahmacun) now have their recipe as the gold food instead of
   none; dishes were chosen from dev names and the request log only, and no

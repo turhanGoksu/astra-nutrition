@@ -40,6 +40,7 @@ from astra_nutrition.matcher import (
 )
 from astra_nutrition.model import default_model_path
 from astra_nutrition.parser import MealParser, ParsedItem, ParseStatus, RejectedItem
+from astra_nutrition.text import fold
 
 if TYPE_CHECKING:  # httpx is only installed with the [judge] extra
     from astra_nutrition.judge import LlmProvider
@@ -139,6 +140,7 @@ class Analyzer:
     ) -> None:
         self.table = table or FoodTable.bundled()
         index = index or MemoryFoodIndex(self.table.rows, embedder)
+        self._index = index
         self._matcher = FoodMatcher(index, embedder, match_config, judge=judge)
         self._parser = parser
         self._model_path = Path(model_path) if model_path else None
@@ -216,7 +218,11 @@ class Analyzer:
     def analyze(self, meal_text: str) -> AnalysisResult:
         """Parse a meal description and compute its nutrition."""
         parsed = self.parser.parse(meal_text)
-        result = self.analyze_items(parsed.items, meal_text=meal_text)
+        items = [split for item in parsed.items for split in self._split_list(item)]
+        result = self.analyze_items([item for item, _ in items], meal_text=meal_text)
+        for item_result, (_, original) in zip(result.items, items, strict=True):
+            if original is not None and item_result.note is None:
+                item_result.note = f"split from {original!r}"
         result.parse_status = parsed.status
         result.parse_error = parsed.error
         result.rejected_items = parsed.rejected_items
@@ -225,6 +231,37 @@ class Analyzer:
             result.totals.rejected = len(parsed.rejected_items)
             result.totals.complete = False
         return result
+
+    def _split_list(self, item: ParsedItem) -> list[tuple[ParsedItem, str | None]]:
+        """Split a name that lists foods without a conjunction ("Kofte Pilav").
+
+        Only when the whole name is not a table name and every part is an
+        exact one; "Sebzeli Pilav" stays whole, since "sebzeli" is no food.
+        The first part keeps the amount; the others get none (an estimate).
+        Returns (item, original name if split) pairs.
+        """
+        if self._index.exact(fold(item.name)):
+            return [(item, None)]
+        parts = self._exact_parts(item.name.split())
+        if parts is None or len(parts) < 2:
+            return [(item, None)]
+        return [(ParsedItem(name=parts[0], amount=item.amount), item.name)] + [
+            (ParsedItem(name=part, amount=""), item.name) for part in parts[1:]
+        ]
+
+    def _exact_parts(self, words: list[str]) -> list[str] | None:
+        """Cover the words with exact table names, longest first, or None."""
+        parts, start = [], 0
+        while start < len(words):
+            for end in range(len(words), start, -1):
+                part = " ".join(words[start:end])
+                if len({hit.food_id for hit in self._index.exact(fold(part))}) == 1:
+                    parts.append(part)
+                    start = end
+                    break
+            else:
+                return None
+        return parts
 
     def analyze_items(
         self,

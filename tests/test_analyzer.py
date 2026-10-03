@@ -217,3 +217,33 @@ def test_a_count_of_us_sized_dishes_is_unknown_but_local_pieces_count() -> None:
 )
 def test_v02_dev_names_match_the_right_dish(name: str, food_id: str) -> None:
     assert ANALYZER.analyze_items([(name, "")]).items[0].food_id == food_id
+
+
+def _parsed(*items: tuple[str, str]) -> Analyzer:
+    """An analyzer whose fake parser returns these (name, amount) items."""
+    output = json.dumps({"items": [{"name": n, "amount": a} for n, a in items]})
+    return Analyzer(parser=MealParser(FakeLlm(output)))
+
+
+def test_foods_listed_without_a_conjunction_are_split() -> None:
+    result = _parsed(("Kofte Pilav", "1 porsiyon")).analyze(
+        "aksam 1 porsiyon kofte pilav"
+    )
+    rows = [(i.name, i.food_id, i.status, i.note) for i in result.items]
+    assert rows == [
+        ("Kofte", "izgara_kofte", ItemStatus.OK, "split from 'Kofte Pilav'"),
+        ("Pilav", "rice", ItemStatus.ESTIMATED, "split from 'Kofte Pilav'"),
+    ]
+
+
+@pytest.mark.parametrize(
+    ("name", "food_id"),
+    [
+        ("Sebzeli Pilav", None),  # "sebzeli" is no food: a different dish
+        ("Su Böreği", None),  # "su" is water, "böreği" no food
+        ("Kuru Fasulye", "white_beans"),  # a table name as a whole
+    ],
+)
+def test_names_that_are_not_lists_stay_whole(name: str, food_id: str | None) -> None:
+    items = _parsed((name, "")).analyze(name.lower()).items
+    assert [(i.name, i.food_id) for i in items] == [(name, food_id)]
