@@ -1,0 +1,59 @@
+line,meal,gold,not_in_table,note
+1,sabah 2 gevrekle peynir,feta,gevrek,peynir: documented default feta; gevrek is İzmir simit
+2,1 porsiyon pad thai,,pad thai,
+3,aksam ciger sis pilav,rice,ciğer şiş,two foods without a conjunction
+4,2-3 yaprak sarma atistirdim,grape_leaves_rice,,yaprak sarma: documented default with rice
+5,kahvalti 2 sahanda yumurta,egg_fried,,
+6,oglen falafel burger ve patates,,falafel burger;patates,"a burger is not plain falafel; plain patates is ambiguous, as in dev"
+7,1 porsiyon etli biber dolmasi,stuffed_pepper_meat,,etli: only the meat version
+8,aksam 200g kofte yanina ayran,izgara_kofte;ayran,,
+9,1 tabak tabule,tabbouleh,,
+10,sabah avocado toast 1 poşe yumurta,egg|egg_boiled,avocado toast,poached egg as in the v0.1 labels; avocado toast is none there too
+11,1 kase mercimek corbasi bol limon,mercimek_corbasi,limon,
+12,tatli 1 porsiyon baklava,baklava,,
+13,oglen beef stroganoff,,beef stroganoff,
+14,3 adet yaprak sarmasi,grape_leaves_rice,,
+15,kahvalti bazlama tostu,,bazlama tostu,
+16,aksam 2 biber dolma yogurtlu,stuffed_pepper_meat|stuffed_pepper_rice;?yogurt,,biber dolma: meat or rice; the yogurt on top is optional
+17,1 porsiyon lahmacun bol sumakli sogan,lahmacun;?onion,,the sumac onion on the side is optional
+18,1 bowl chia puding,,chia puding,
+19,sabah 1 simit biraz tulum peyniri,,simit;tulum peyniri,tulum is a different cheese from beyaz peynir
+20,oglen 1 porsiyon falafel salata,?falafel,falafel salata,falafel salad or falafel and salad: falafel optional
+21,aksam kayseri mantisi bol yoğurtlu,?yogurt,kayseri mantısı,the yogurt on mantı is optional
+22,kahvaltida menemen ve çay,menemen;black_tea,,
+23,1 dilim baklava kahve yanina,baklava;coffee,,
+24,oglen 1 biber dolmasi biraz pilav,stuffed_pepper_meat|stuffed_pepper_rice;rice,,
+25,1 bowl poke bowl somonlu,?salmon,poke bowl,the salmon in a poke bowl is optional
+26,aksam 200gr kofte ve coban salata,izgara_kofte;coban_salatasi,,
+27,1 porsiyon tabule,tabbouleh,,
+28,sabah oatmeal muz fıstık ezmesi,banana;peanut_butter,oatmeal,"oatmeal is none in the v0.1 labels (cooked, not dry oats)"
+29,aksam 1 tabak mercimek çorbası 1 dilim ekmek,mercimek_corbasi;white_bread,,
+30,kahvalti 2 yumurtali menemen,menemen;?egg,,the eggs are part of menemen
+31,1 porsiyon falafel wrap,,falafel wrap,"a wrap is not plain falafel, as in the v0.1 labels"
+32,aksam kuzu pirzola patates püresi,,kuzu pirzola;patates püresi,
+33,3-4 tane dolma sarma karisik,grape_leaves_rice;?stuffed_pepper_meat|stuffed_pepper_rice,,"sarma required; plain dolma is ambiguous, optional"
+34,oglen 1 lahmacun bol yesillikli,lahmacun,,
+35,aksam club sandwich ve cips,potato_chips,club sandwich,
+36,kahvalti 2 boyoz az tulum,,boyoz;tulum peyniri,
+37,1 porsiyon falafel tabagi,falafel,,a falafel plate is falafel with sides
+38,oglen süzme mercimek çorbası 1 dilim ekmek,mercimek_corbasi;white_bread,,
+39,1 dilim treleçe,,treleçe,
+40,aksam 1 tabak etli biber dolma,stuffed_pepper_meat,,
+41,1 kase cobansalatasi,coban_salatasi,,written as one word
+42,ara ogun 1 bardak koy ayrani,ayran,,köy ayranı is ayran
+43,sabah krep akçaağaç şurubu,,krep;akçaağaç şurubu,maple syrup is none in the v0.1 labels
+44,oglen 2 tane lahmacun acili,lahmacun,,
+45,1 tabak ev yapımı yaprak sarması,grape_leaves_rice,,homemade yaprak sarma
+46,aksam 150gr cızbız köfte pilav,izgara_kofte;rice,,cızbız köfte is a grilled köfte
+47,kahvaltida çılbır 1 dilim siyez ekmeği,,çılbır;siyez ekmeği,siyez bread is not white bread
+48,oglen dim sum karisik,,dim sum,
+49,1 dilim cevizli baklava,baklava,,
+50,2 adet biber dolması yanina cacik,stuffed_pepper_meat|stuffed_pepper_rice,cacık,
+51,oglen 1 porsiyon tacos carne asada,,tacos,
+52,3-4 tane zeytinyağlı sarma,grape_leaves_rice,,
+53,1 kase mercimek corba bol pulbiber,mercimek_corbasi,,
+54,sabah smoothie bowl muzlu yulafli,?banana;?oats,smoothie bowl,banana and oats are inside the bowl: optional
+55,oglen falafel pita wrap,,falafel pita wrap,a wrap is not plain falafel
+56,tatli 2 fıstıklı baklava,baklava,,
+57,aksam fırın somon ve fırın patates,salmon;potato_baked,,
+58,1 buyuk bardak bol kopuklu ayran,ayran,,

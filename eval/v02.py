@@ -1,9 +1,12 @@
-"""End-to-end evaluation on the v0.2 dev meals: meal text -> foods.
+"""End-to-end evaluation on the v0.2 meals: meal text -> foods.
 
-The user wrote these meals (data/eval/meals_v02.txt) without looking at the
-table; data/eval/labels_v02.csv lists, per meal, the foods a correct system
-finds ("a|b": either is right). They were used to find and fix problems, so
-they are a DEV set: their numbers are not a held-out result.
+Someone other than the alias author wrote these meals without looking at the
+table. Per meal, the labels list the foods a correct system finds ("a|b":
+either is right; "?a": allowed but not required, e.g. the yogurt on mantı).
+- dev  (data/eval/meals_v02.txt): used to find and fix problems, so its
+  numbers are not a held-out result;
+- test (data/eval/meals_v02_test.txt): labeled and committed before the
+  system ever ran on it, evaluated once, nothing fixed afterwards.
 
 Scoring is per food, through the whole pipeline (parser, name and amount
 checks, matching), so fixes that change parsed names are measured too:
@@ -15,7 +18,8 @@ Model completions are cached (eval/results/v02_llm_cache.json), so reruns are
 fast and do not depend on the machine's llama.cpp build.
 
 Usage (from the project root):
-    python -m eval.v02 --label baseline
+    python -m eval.v02 --label baseline            # dev set
+    python -m eval.v02 --set test --label final     # test set, once
 """
 
 import argparse
@@ -28,8 +32,13 @@ from app.config import get_settings
 from astra_nutrition import Analyzer
 from astra_nutrition.parser import MealParser
 
-MEALS_PATH = Path("data/eval/meals_v02.txt")
-LABELS_PATH = Path("data/eval/labels_v02.csv")
+SETS = {
+    "dev": (Path("data/eval/meals_v02.txt"), Path("data/eval/labels_v02.csv")),
+    "test": (
+        Path("data/eval/meals_v02_test.txt"),
+        Path("data/eval/labels_v02_test.csv"),
+    ),
+}
 RESULTS_DIR = Path("eval/results")
 CACHE_PATH = RESULTS_DIR / "v02_llm_cache.json"
 
@@ -67,10 +76,15 @@ class CachedChatModel:
         return self._cache[key]
 
 
-def score(gold: list[set[str]], matched: list[str]) -> dict[str, list[str]]:
-    """Found, missed and falsely matched foods for one meal."""
+def score(
+    gold: list[set[str]], matched: list[str], optional: list[set[str]] = ()
+) -> dict[str, list[str]]:
+    """Found, missed and falsely matched foods for one meal.
+
+    Optional foods are never missed, and matching them is no false match.
+    """
     found = [alts for alts in gold if alts & set(matched)]
-    allowed = set().union(*gold) if gold else set()
+    allowed = set().union(*gold, *optional)
     return {
         "found": ["|".join(sorted(a)) for a in found],
         "missed": ["|".join(sorted(a)) for a in gold if a not in found],
@@ -80,20 +94,24 @@ def score(gold: list[set[str]], matched: list[str]) -> dict[str, list[str]]:
 
 def main() -> None:
     args = argparse.ArgumentParser(description=__doc__)
+    args.add_argument("--set", choices=list(SETS), default="dev")
     args.add_argument("--label", required=True, help="name for the results file")
-    label = args.parse_args().label
+    parsed = args.parse_args()
+    label, meals_path, labels_path = parsed.label, *SETS[parsed.set]
 
-    meals = MEALS_PATH.read_text(encoding="utf-8").splitlines()
-    with open(LABELS_PATH, encoding="utf-8") as f:
+    meals = meals_path.read_text(encoding="utf-8").splitlines()
+    with open(labels_path, encoding="utf-8") as f:
         labels = list(csv.DictReader(f))
     analyzer = Analyzer(parser=MealParser(CachedChatModel(CACHE_PATH)))
 
     rows, totals = [], {"found": 0, "missed": 0, "false_matches": 0}
     for meal, label_row in zip(meals, labels, strict=True):
-        gold = [set(g.split("|")) for g in label_row["gold"].split(";") if g]
+        items = [g for g in label_row["gold"].split(";") if g]
+        gold = [set(g.split("|")) for g in items if not g.startswith("?")]
+        optional = [set(g[1:].split("|")) for g in items if g.startswith("?")]
         result = analyzer.analyze(meal)
         matched = [i.food_id for i in result.items if i.food_id is not None]
-        scored = score(gold, matched)
+        scored = score(gold, matched, optional)
         for key in totals:
             totals[key] += len(scored[key])
         rows.append(
@@ -110,6 +128,7 @@ def main() -> None:
 
     gold_total = totals["found"] + totals["missed"]
     summary = {
+        "set": parsed.set,
         "label": label,
         "meals": len(meals),
         "gold_foods": gold_total,
@@ -125,7 +144,7 @@ def main() -> None:
                 f"false={row['false_matches']}"
             )
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    out = RESULTS_DIR / f"v02_dev_{label}.json"
+    out = RESULTS_DIR / f"v02_{parsed.set}_{label}.json"
     out.write_text(
         json.dumps({"summary": summary, "meals": rows}, ensure_ascii=False, indent=1),
         encoding="utf-8",
