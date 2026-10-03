@@ -62,6 +62,7 @@ class Food:
     density_g_per_ml: float | None
     source: str
     note: str = ""
+    count_as_portion: bool = True  # see FoodPortions; False for FNDDS dishes
 
 
 class FoodTable:
@@ -98,6 +99,7 @@ class FoodTable:
             default_grams=food.default_grams,
             unit_grams=self._units.get(food_id, {}),
             density_g_per_ml=food.density_g_per_ml,
+            count_as_portion=food.count_as_portion,
         )
 
     def with_user_foods(
@@ -255,4 +257,5 @@ def _to_food(row: dict[str, str]) -> Food:
         density_g_per_ml=float(density) if density else None,
         source=source,
         note=row.get("note", ""),
+        count_as_portion=(row.get("bare_count") or "portion") == "portion",
     )

@@ -159,6 +159,9 @@ class FoodPortions:
     default_grams: float  # one typical serving
     unit_grams: Mapping[Unit, float] = field(default_factory=dict)
     density_g_per_ml: float | None = None  # only for liquids
+    # A bare count ("2") without a piece size means that many default portions,
+    # unless the default portion is a piece of the wrong size (US FNDDS dishes).
+    count_as_portion: bool = True
 
 
 @dataclass(frozen=True)
@@ -238,6 +241,27 @@ def parse_amount(text: str, item_name: str | None = None) -> ParsedAmount:
     return ParsedAmount(AmountKind.QUANTITY, value * factor, unit, notes)
 
 
+def ungrounded_numbers(amount_text: str, meal_text: str) -> list[float]:
+    """Numbers in an amount that the user never wrote in the meal text.
+
+    The parser sometimes invents a quantity ("2 adet" for a plain "köfte");
+    such a number is not a measurement. Numbers are compared by value, so
+    "iki", "2" and "two" are the same, "yarım" is 0.5 and "a cup" means 1. A 1
+    also counts as written when its unit is in the text ("kase mercimek").
+    """
+    meal_tokens = _tokens(meal_text)
+    written = set(_number_values(meal_tokens))
+    if set(meal_tokens) & _ARTICLES:
+        written.add(1.0)
+    amount_tokens = _tokens(_PARENTHESES.sub(" ", amount_text))
+    unit_written = any(t in _UNIT_ALIASES and t in meal_tokens for t in amount_tokens)
+    return [
+        value
+        for value in _number_values(amount_tokens, combine_halves=False)
+        if value not in written and not (value == 1.0 and unit_written)
+    ]
+
+
 def ground_note_weight(amount: ParsedAmount, meal_text: str) -> ParsedAmount:
     """Replace the amount with a parenthetical mass/volume the user wrote.
 
@@ -290,7 +314,14 @@ def to_grams(amount: ParsedAmount, portions: FoodPortions) -> GramsResult:
         return GramsResult(AmountStatus.MEASURED, _round(value), detail)
     if unit is None:
         # A bare count: pieces if the food is countable, otherwise portions.
-        unit = Unit.PIECE if Unit.PIECE in portions.unit_grams else Unit.PORTION
+        if Unit.PIECE in portions.unit_grams:
+            unit = Unit.PIECE
+        elif portions.count_as_portion:
+            unit = Unit.PORTION
+        else:
+            return GramsResult(
+                AmountStatus.UNCONVERTIBLE, None, "a count, but no known piece size"
+            )
     if unit == Unit.PORTION:
         return GramsResult(
             AmountStatus.CONVERTED,
@@ -316,6 +347,36 @@ def to_grams(amount: ParsedAmount, portions: FoodPortions) -> GramsResult:
     return GramsResult(
         AmountStatus.UNCONVERTIBLE, None, f"no gram data for unit '{unit}'"
     )
+
+
+def _tokens(text: str) -> list[str]:
+    """Folded tokens, normalized the way parse_amount reads an amount."""
+    for symbol, replacement in _UNICODE_FRACTIONS.items():
+        text = text.replace(symbol, replacement)
+    text = _DECIMAL_COMMA.sub(r"\1.\2", fold(text))
+    for phrase, alias in _UNIT_PHRASES.items():
+        text = re.sub(rf"\b{phrase}\b", alias, text)
+    return _TOKEN.findall(text)
+
+
+def _number_values(tokens: list[str], combine_halves: bool = True) -> list[float]:
+    """Values of the numbers in tokens; with ``combine_halves``, "iki buçuk"
+    and "one and a half" also give 2.5 and 1.5."""
+    values: list[float] = []
+    for i, token in enumerate(tokens):
+        if token[0].isdigit() or token in _NUMBER_WORDS:
+            number = _to_number(token)
+            if number is None:
+                continue
+            values.append(number)
+            following = tokens[i + 1 : i + 4]
+            if combine_halves and (_BUCUK in following or _HALF_WORDS & set(following)):
+                values.append(number + 0.5)
+        elif token in _HALF_WORDS:
+            values.append(0.5)
+        elif token in _QUARTER_WORDS:
+            values.append(0.25)
+    return values
 
 
 def _drop_item_name(tokens: list[str], item_name: str) -> list[str]:

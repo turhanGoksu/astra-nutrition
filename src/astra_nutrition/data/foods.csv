@@ -1,142 +1,142 @@
-id,fdc_id,usda_description,name_en,name_tr,aliases,kcal_100g,protein_100g,carbs_100g,fat_100g,default_grams,density_g_per_ml,note,source
-egg,171287,"Egg, whole, raw, fresh",Egg,Yumurta,eggs|whole egg,143.0,12.56,0.72,9.51,50.0,,,"USDA SR Legacy, fdc_id 171287"
-egg_boiled,173424,"Egg, whole, cooked, hard-boiled",Hard-boiled egg,Haşlanmış yumurta,boiled egg|katı yumurta|rafadan yumurta,155.0,12.58,1.12,10.61,50.0,,,"USDA SR Legacy, fdc_id 173424"
-egg_fried,173423,"Egg, whole, cooked, fried",Fried egg,Sahanda yumurta,yağda yumurta|kızarmış yumurta,196.0,13.61,0.83,14.84,46.0,,,"USDA SR Legacy, fdc_id 173423"
-chicken_breast,171477,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",Chicken breast,Tavuk göğsü,tavuk fileto|chicken fillet,165.0,31.02,0.0,3.57,120.0,,,"USDA SR Legacy, fdc_id 171477"
-chicken_thigh,172388,"Chicken, broilers or fryers, thigh, meat only, cooked, roasted",Chicken thigh,Tavuk but,tavuk budu,179.0,24.76,0.0,8.15,100.0,,,"USDA SR Legacy, fdc_id 172388"
-ground_beef,171799,"Beef, ground, 80% lean meat / 20% fat, crumbles, cooked, pan-browned",Ground beef,Dana kıyma,kıyma|minced beef|beef mince,272.0,27.0,0.0,17.36,100.0,,80% lean; cooked,"USDA SR Legacy, fdc_id 171799"
-beef_steak,168729,"Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8"" fat, choice, cooked, broiled",Beef steak,Biftek,dana biftek|steak|sirloin steak,257.0,26.8,0.0,15.75,150.0,,,"USDA SR Legacy, fdc_id 168729"
-ground_lamb,172544,"Lamb, ground, cooked, broiled",Ground lamb,Kuzu kıyma,minced lamb,283.0,24.75,0.0,19.65,100.0,,,"USDA SR Legacy, fdc_id 172544"
-salmon,175168,"Fish, salmon, Atlantic, farmed, cooked, dry heat",Salmon,Somon,somon balığı|salmon fillet,206.0,22.1,0.0,12.35,150.0,,,"USDA SR Legacy, fdc_id 175168"
-tuna_canned,173709,"Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",Canned tuna,Ton balığı,konserve ton balığı|tuna,86.0,19.44,0.0,0.96,100.0,,canned in water; drained,"USDA SR Legacy, fdc_id 173709"
-anchovy,174182,"Fish, anchovy, european, raw",Anchovy,Hamsi,hamsi balığı|european anchovy,131.0,20.35,0.0,4.84,150.0,,raw values; fried hamsi also has coating and oil,"USDA SR Legacy, fdc_id 174182"
-sardines,175139,"Fish, sardine, Atlantic, canned in oil, drained solids with bone",Sardines,Sardalya,sardine|sardalya balığı,208.0,24.62,0.0,11.45,90.0,,canned in oil; drained,"USDA SR Legacy, fdc_id 175139"
-mackerel,175120,"Fish, mackerel, Atlantic, cooked, dry heat",Mackerel,Uskumru,uskumru balığı,262.0,23.85,0.0,17.81,150.0,,,"USDA SR Legacy, fdc_id 175120"
-sea_bass,173694,"Fish, sea bass, mixed species, cooked, dry heat",Sea bass,Levrek,levrek balığı,124.0,23.63,0.0,2.56,150.0,,,"USDA SR Legacy, fdc_id 173694"
-turkey_breast,171496,"Turkey, whole, breast, meat only, cooked, roasted",Turkey breast,Hindi göğsü,hindi fileto|hindi,147.0,30.13,0.0,2.08,100.0,,,"USDA SR Legacy, fdc_id 171496"
-milk_whole,171265,"Milk, whole, 3.25% milkfat, with added vitamin D",Whole milk,Tam yağlı süt,süt|milk|inek sütü,61.0,3.15,4.8,3.25,200.0,1.031,,"USDA SR Legacy, fdc_id 171265"
-milk_reduced_fat,171267,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",Reduced-fat milk,Yarım yağlı süt,light süt|low-fat milk|2% milk,50.0,3.3,4.8,1.98,200.0,1.031,USDA 2% milk; Turkish semi-skimmed is about 1.5%,"USDA SR Legacy, fdc_id 171267"
-yogurt,171284,"Yogurt, plain, whole milk",Plain yogurt,Yoğurt,yogurt|yoghurt|sade yoğurt|tam yağlı yoğurt,61.0,3.47,4.66,3.25,150.0,,bowl and glass are assumptions,"USDA SR Legacy, fdc_id 171284"
-yogurt_low_fat,170886,"Yogurt, plain, low fat",Low-fat yogurt,Az yağlı yoğurt,light yoğurt|low-fat yogurt,63.0,5.25,7.04,1.55,150.0,,bowl and glass are assumptions,"USDA SR Legacy, fdc_id 170886"
-greek_yogurt,171304,"Yogurt, Greek, plain, whole milk",Greek yogurt,Süzme yoğurt,strained yogurt|greek yoghurt,97.0,9.0,3.98,5.0,150.0,,bowl is an assumption,"USDA SR Legacy, fdc_id 171304"
-feta,173420,"Cheese, feta",Feta cheese,Beyaz peynir,feta|white cheese|ezine peyniri|peynir,265.0,14.21,3.88,21.49,30.0,,slice is an assumption (Turkish breakfast slice); generic Turkish 'peynir' defaults to beyaz peynir,"USDA SR Legacy, fdc_id 173420"
-mozzarella,170845,"Cheese, mozzarella, whole milk",Mozzarella,Mozzarella peyniri,mozarella|dil peyniri|örgü peyniri|string cheese,299.0,22.17,2.4,22.14,30.0,,also stands in for Turkish dil/örgü peyniri (stretched-curd cheeses),"USDA SR Legacy, fdc_id 170845"
-cream_cheese,173418,"Cheese, cream",Cream cheese,Krem peynir,labne|labne peyniri,350.0,6.15,5.52,34.44,30.0,,Turkish labne is a cream-cheese-style spread,"USDA SR Legacy, fdc_id 173418"
-cheddar,173414,"Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",Cheddar cheese,Çedar peyniri,cheddar|cheese,403.0,22.87,3.37,33.31,30.0,,generic English 'cheese' defaults to cheddar,"USDA SR Legacy, fdc_id 173414"
-kasar,170850,"Cheese, provolone",Kasar cheese,Kaşar peyniri,kaşar|kashkaval|provolone,351.0,25.58,2.14,26.62,30.0,,USDA provolone used as a stand-in for Turkish kaşar (both stretched-curd cheeses),"USDA SR Legacy, fdc_id 170850"
-lor,171248,"Cheese, ricotta, part skim milk",Ricotta (part-skim),Lor peyniri,lor|ricotta,138.0,11.39,5.14,7.91,50.0,,USDA part-skim ricotta used as a stand-in for Turkish lor (both whey cheeses),"USDA SR Legacy, fdc_id 171248"
-cottage_cheese,172182,"Cheese, cottage, lowfat, 2% milkfat",Cottage cheese,Cottage peyniri,cottage,81.0,10.45,4.76,2.27,100.0,,low-fat (2%),"USDA SR Legacy, fdc_id 172182"
-goat_cheese,173433,"Cheese, goat, semisoft type",Goat cheese,Keçi peyniri,,364.0,21.58,0.12,29.84,30.0,,semisoft type,"USDA SR Legacy, fdc_id 173433"
-parmesan,171247,"Cheese, parmesan, grated",Parmesan,Parmesan peyniri,parmigiano|grated parmesan,420.0,28.42,13.91,27.84,10.0,,grated,"USDA SR Legacy, fdc_id 171247"
-gouda,171241,"Cheese, gouda",Gouda cheese,Gouda peyniri,gouda,356.0,24.94,2.22,27.44,30.0,,,"USDA SR Legacy, fdc_id 171241"
-butter,173410,"Butter, salted",Butter,Tereyağı,tereyağ,717.0,0.85,0.06,81.11,10.0,,tsp is an assumption,"USDA SR Legacy, fdc_id 173410"
-kefir,170904,"Kefir, lowfat, plain, LIFEWAY",Kefir,Kefir,,43.0,3.79,4.77,1.02,200.0,1.027,,"USDA SR Legacy, fdc_id 170904"
-ice_cream,167575,"Ice creams, vanilla",Vanilla ice cream,Dondurma,ice cream|vanilyalı dondurma,207.0,3.5,23.6,11.0,100.0,,,"USDA SR Legacy, fdc_id 167575"
-rice,168878,"Rice, white, long-grain, regular, enriched, cooked",Cooked white rice,Pirinç pilavı,pilav|pirinç|beyaz pirinç|rice|white rice,130.0,2.69,28.17,0.28,150.0,,pilav approximated as plain cooked rice (no added butter or oil); bowl and plate are assumptions,"USDA SR Legacy, fdc_id 168878"
-brown_rice,169704,"Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",Cooked brown rice,Esmer pirinç,kahverengi pirinç|brown rice,123.0,2.74,25.58,0.97,150.0,,plate is an assumption,"USDA SR Legacy, fdc_id 169704"
-bulgur,170287,"Bulgur, cooked",Cooked bulgur,Bulgur pilavı,bulgur,83.0,3.08,18.58,0.24,150.0,,approximated as plain cooked bulgur (no added oil); plate is an assumption,"USDA SR Legacy, fdc_id 170287"
-pasta,169737,"Pasta, cooked, enriched, without added salt",Cooked pasta,Makarna,pasta|spaghetti|spagetti,158.0,5.8,30.86,0.93,180.0,,plain cooked pasta (no sauce); plate is an assumption,"USDA SR Legacy, fdc_id 169737"
-couscous,169700,"Couscous, cooked",Cooked couscous,Kuskus,couscous,112.0,3.79,23.22,0.16,150.0,,,"USDA SR Legacy, fdc_id 169700"
-oats,173904,"Cereals, oats, regular and quick, not fortified, dry",Rolled oats (dry),Yulaf ezmesi,yulaf|rolled oats,379.0,13.15,67.7,6.52,40.0,,dry weight; cooked oatmeal is not in the table; tbsp is an assumption,"USDA SR Legacy, fdc_id 173904"
-white_bread,174924,"Bread, white, commercially prepared (includes soft bread crumbs)",White bread,Beyaz ekmek,ekmek|bread|francala|somun ekmek,266.0,8.85,49.42,3.33,50.0,,,"USDA SR Legacy, fdc_id 174924"
-whole_wheat_bread,172688,"Bread, whole-wheat, commercially prepared",Whole-wheat bread,Tam buğday ekmeği,kepekli ekmek|tam buğdaylı ekmek|whole wheat bread,252.0,12.45,42.71,3.5,60.0,,,"USDA SR Legacy, fdc_id 172688"
-pita,174915,"Bread, pita, white, enriched",Pita bread,Pita ekmeği,pita|pide ekmeği,275.0,9.1,55.7,1.2,60.0,,,"USDA SR Legacy, fdc_id 174915"
-bagel,174899,"Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)",Bagel,Bagel,bagels,264.0,10.56,52.38,1.32,99.0,,,"USDA SR Legacy, fdc_id 174899"
-lentils,172421,"Lentils, mature seeds, cooked, boiled, without salt",Cooked lentils,Haşlanmış mercimek,mercimek|lentils|yeşil mercimek,116.0,9.02,20.13,0.38,150.0,,,"USDA SR Legacy, fdc_id 172421"
-chickpeas,173757,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",Cooked chickpeas,Haşlanmış nohut,nohut|chickpeas|garbanzo beans,164.0,8.86,27.42,2.59,150.0,,,"USDA SR Legacy, fdc_id 173757"
-white_beans,175203,"Beans, white, mature seeds, cooked, boiled, without salt",Cooked white beans,Haşlanmış kuru fasulye,kuru fasulye|beyaz fasulye|white beans|navy beans,139.0,9.73,25.09,0.35,180.0,,kuru fasulye dish approximated as boiled beans (no added oil or tomato paste); plate is an assumption,"USDA SR Legacy, fdc_id 175203"
-kidney_beans,173740,"Beans, kidney, all types, mature seeds, cooked, boiled, without salt",Cooked kidney beans,Haşlanmış kırmızı fasulye,kırmızı fasulye|kidney beans,127.0,8.67,22.8,0.5,150.0,,,"USDA SR Legacy, fdc_id 173740"
-hummus,174289,"Hummus, commercial",Hummus,Humus,hummus,237.0,7.78,15.0,17.82,50.0,,,"USDA SR Legacy, fdc_id 174289"
-tomato,170457,"Tomatoes, red, ripe, raw, year round average",Tomato,Domates,tomatoes,18.0,0.88,3.89,0.2,123.0,,,"USDA SR Legacy, fdc_id 170457"
-cucumber,168409,"Cucumber, with peel, raw",Cucumber,Salatalık,hıyar|cucumbers,15.0,0.65,3.63,0.11,120.0,,piece is an assumption (Turkish cucumbers are smaller than the USDA 301 g reference),"USDA SR Legacy, fdc_id 168409"
-green_pepper,170427,"Peppers, sweet, green, raw",Green bell pepper,Yeşil dolmalık biber,dolmalık biber|yeşil biber|green bell pepper,20.0,0.86,4.64,0.17,119.0,,,"USDA SR Legacy, fdc_id 170427"
-red_pepper,170108,"Peppers, sweet, red, raw",Red bell pepper,Kırmızı kapya biber,kapya biber|red bell pepper,26.0,0.99,6.03,0.3,119.0,,,"USDA SR Legacy, fdc_id 170108"
-onion,170000,"Onions, raw",Onion,Soğan,kuru soğan|onions,40.0,1.1,9.34,0.1,50.0,,,"USDA SR Legacy, fdc_id 170000"
-potato_boiled,170438,"Potatoes, boiled, cooked in skin, flesh, without salt",Boiled potato,Haşlanmış patates,haşlama patates|boiled potatoes,87.0,1.87,20.13,0.1,136.0,,,"USDA SR Legacy, fdc_id 170438"
-potato_baked,170093,"Potatoes, baked, flesh and skin, without salt",Baked potato,Fırında patates,fırın patates|baked potatoes,93.0,2.5,21.15,0.13,173.0,,,"USDA SR Legacy, fdc_id 170093"
-french_fries,170698,"Fast foods, potato, french fried in vegetable oil",French fries,Patates kızartması,kızarmış patates|fries,312.0,3.43,41.44,14.73,117.0,,,"USDA SR Legacy, fdc_id 170698"
-carrot,170393,"Carrots, raw",Carrot,Havuç,carrots,41.0,0.93,9.58,0.24,61.0,,,"USDA SR Legacy, fdc_id 170393"
-lettuce,169247,"Lettuce, cos or romaine, raw",Romaine lettuce,Marul,lettuce|göbek marul,17.0,1.23,3.29,0.3,50.0,,,"USDA SR Legacy, fdc_id 169247"
-spinach,168463,"Spinach, cooked, boiled, drained, without salt",Cooked spinach,Ispanak,spinach|haşlanmış ıspanak,23.0,2.97,3.75,0.26,150.0,,plain boiled spinach (no added oil),"USDA SR Legacy, fdc_id 168463"
-eggplant,169229,"Eggplant, cooked, boiled, drained, without salt",Cooked eggplant,Patlıcan,eggplant|aubergine,35.0,0.83,8.73,0.23,100.0,,plain boiled eggplant (no added oil),"USDA SR Legacy, fdc_id 169229"
-zucchini,169291,"Squash, summer, zucchini, includes skin, raw",Zucchini,Kabak,sakız kabağı|courgette,17.0,1.21,3.11,0.32,100.0,,,"USDA SR Legacy, fdc_id 169291"
-broccoli,170379,"Broccoli, raw",Broccoli,Brokoli,,34.0,2.82,6.64,0.37,90.0,,,"USDA SR Legacy, fdc_id 170379"
-cauliflower,169986,"Cauliflower, raw",Cauliflower,Karnabahar,,25.0,1.92,4.97,0.28,100.0,,,"USDA SR Legacy, fdc_id 169986"
-cabbage,169975,"Cabbage, raw",Cabbage,Lahana,beyaz lahana,25.0,1.28,5.8,0.1,90.0,,,"USDA SR Legacy, fdc_id 169975"
-mushrooms,169251,"Mushrooms, white, raw",Mushrooms,Mantar,kültür mantarı|champignon,22.0,3.09,3.26,0.34,70.0,,,"USDA SR Legacy, fdc_id 169251"
-green_beans,169141,"Beans, snap, green, cooked, boiled, drained, without salt",Cooked green beans,Taze fasulye,green beans|string beans,35.0,1.89,7.88,0.28,150.0,,plain boiled beans (no added olive oil); plate is an assumption,"USDA SR Legacy, fdc_id 169141"
-corn,169214,"Corn, sweet, yellow, canned, whole kernel, drained solids",Sweet corn (canned),Mısır,konserve mısır|corn|sweet corn,67.0,2.29,14.34,1.22,80.0,,,"USDA SR Legacy, fdc_id 169214"
-peas,170017,"Peas, green, frozen, cooked, boiled, drained, without salt",Green peas,Bezelye,peas|green peas,78.0,5.15,14.26,0.27,80.0,,,"USDA SR Legacy, fdc_id 170017"
-garlic,169230,"Garlic, raw",Garlic,Sarımsak,,149.0,6.36,33.06,0.5,3.0,,,"USDA SR Legacy, fdc_id 169230"
-parsley,170416,"Parsley, fresh",Parsley,Maydanoz,,36.0,2.97,6.33,0.79,10.0,,,"USDA SR Legacy, fdc_id 170416"
-black_olives,169094,"Olives, ripe, canned (small-extra large)",Black olives,Siyah zeytin,black olives,116.0,0.84,6.04,10.9,30.0,,,"USDA SR Legacy, fdc_id 169094"
-green_olives,169096,"Olives, pickled, canned or bottled, green",Green olives,Yeşil zeytin,green olives,145.0,1.03,3.84,15.32,30.0,,,"USDA SR Legacy, fdc_id 169096"
-arugula,169387,"Arugula, raw",Arugula,Roka,rocket,25.0,2.58,3.65,0.66,20.0,,,"USDA SR Legacy, fdc_id 169387"
-leek,169246,"Leeks, (bulb and lower leaf-portion), raw",Leek,Pırasa,leeks,61.0,1.5,14.15,0.3,89.0,,,"USDA SR Legacy, fdc_id 169246"
-apple,171688,"Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",Apple,Elma,apples,52.0,0.26,13.81,0.17,182.0,,,"USDA SR Legacy, fdc_id 171688"
-banana,173944,"Bananas, raw",Banana,Muz,bananas,89.0,1.09,22.84,0.33,118.0,,,"USDA SR Legacy, fdc_id 173944"
-orange,169097,"Oranges, raw, all commercial varieties",Orange,Portakal,oranges,47.0,0.94,11.75,0.12,131.0,,,"USDA SR Legacy, fdc_id 169097"
-mandarin,169105,"Tangerines, (mandarin oranges), raw",Mandarin,Mandalina,tangerine|mandarin orange,53.0,0.81,13.34,0.31,88.0,,,"USDA SR Legacy, fdc_id 169105"
-grapes,174683,"Grapes, red or green (European type, such as Thompson seedless), raw",Grapes,Üzüm,yaş üzüm,69.0,0.72,18.1,0.16,150.0,,handful is an assumption,"USDA SR Legacy, fdc_id 174683"
-watermelon,167765,"Watermelon, raw",Watermelon,Karpuz,,30.0,0.61,7.55,0.15,286.0,,slice = USDA wedge (1/16 of a melon),"USDA SR Legacy, fdc_id 167765"
-melon,169911,"Melons, honeydew, raw",Melon,Kavun,honeydew|honeydew melon,36.0,0.54,9.09,0.14,160.0,,slice = USDA wedge; honeydew used for Turkish kavun,"USDA SR Legacy, fdc_id 169911"
-strawberries,167762,"Strawberries, raw",Strawberries,Çilek,strawberry,32.0,0.67,7.68,0.3,150.0,,,"USDA SR Legacy, fdc_id 167762"
-cherries,171719,"Cherries, sweet, raw",Sweet cherries,Kiraz,cherries,63.0,1.06,16.01,0.2,140.0,,handful is an assumption,"USDA SR Legacy, fdc_id 171719"
-peach,169928,"Peaches, yellow, raw",Peach,Şeftali,peaches,39.0,0.91,9.54,0.25,150.0,,,"USDA SR Legacy, fdc_id 169928"
-pear,169118,"Pears, raw",Pear,Armut,pears,57.0,0.36,15.23,0.14,178.0,,,"USDA SR Legacy, fdc_id 169118"
-apricot,171697,"Apricots, raw",Apricot,Kayısı,taze kayısı|apricots,48.0,1.4,11.12,0.39,105.0,,,"USDA SR Legacy, fdc_id 171697"
-dried_apricots,173941,"Apricots, dried, sulfured, uncooked",Dried apricots,Kuru kayısı,gün kurusu kayısı|dried apricot,241.0,3.39,62.64,0.51,30.0,,piece = 2 x USDA half (3.5 g),"USDA SR Legacy, fdc_id 173941"
-fig,173021,"Figs, raw",Fig,İncir,taze incir|figs,74.0,0.75,19.18,0.3,50.0,,,"USDA SR Legacy, fdc_id 173021"
-dried_figs,174665,"Figs, dried, uncooked",Dried figs,Kuru incir,dried fig,249.0,3.3,63.87,0.93,40.0,,,"USDA SR Legacy, fdc_id 174665"
-dates,168191,"Dates, medjool",Medjool dates,Hurma,dates|medjool,277.0,1.81,74.97,0.15,24.0,,,"USDA SR Legacy, fdc_id 168191"
-pomegranate,169134,"Pomegranates, raw",Pomegranate,Nar,,83.0,1.67,18.7,1.17,150.0,,,"USDA SR Legacy, fdc_id 169134"
-kiwi,168153,"Kiwifruit, green, raw",Kiwi,Kivi,kiwifruit,61.0,1.14,14.66,0.52,69.0,,,"USDA SR Legacy, fdc_id 168153"
-plum,169949,"Plums, raw",Plum,Erik,plums,46.0,0.7,11.42,0.28,100.0,,,"USDA SR Legacy, fdc_id 169949"
-avocado,171705,"Avocados, raw, all commercial varieties",Avocado,Avokado,,160.0,2.0,8.53,14.66,100.0,,,"USDA SR Legacy, fdc_id 171705"
-walnuts,170187,"Nuts, walnuts, english",Walnuts,Ceviz,ceviz içi|walnut,654.0,15.23,13.71,65.21,30.0,,piece = 2 x USDA half (100 g per 50 halves); handful is an assumption,"USDA SR Legacy, fdc_id 170187"
-almonds,170567,"Nuts, almonds",Almonds,Badem,almond,579.0,21.15,21.55,49.93,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170567"
-hazelnuts,170581,"Nuts, hazelnuts or filberts",Hazelnuts,Fındık,fındık içi|hazelnut|filbert,628.0,14.95,16.7,60.75,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170581"
-pistachios,170185,"Nuts, pistachio nuts, dry roasted, without salt added",Pistachios,Antep fıstığı,pistachio|şam fıstığı,572.0,21.05,28.28,45.82,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170185"
-peanuts,173806,"Peanuts, all types, dry-roasted, without salt",Peanuts,Yer fıstığı,peanut,587.0,24.35,21.26,49.66,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 173806"
-sunflower_seeds,170562,"Seeds, sunflower seed kernels, dried",Sunflower seeds,Ay çekirdeği,ayçekirdeği|çekirdek,584.0,20.78,20.0,51.46,30.0,,kernel weight; in-shell weights include inedible hulls; handful is an assumption,"USDA SR Legacy, fdc_id 170562"
-pumpkin_seeds,170557,"Seeds, pumpkin and squash seed kernels, roasted, without salt",Pumpkin seeds,Kabak çekirdeği,pepitas,574.0,29.84,14.71,49.05,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170557"
-tahini,170189,"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",Tahini,Tahin,tahina,595.0,17.0,21.19,53.76,15.0,,,"USDA SR Legacy, fdc_id 170189"
-peanut_butter,172470,"Peanut butter, smooth style, without salt",Peanut butter,Fıstık ezmesi,,598.0,22.21,22.31,51.36,16.0,,,"USDA SR Legacy, fdc_id 172470"
-olive_oil,171413,"Oil, olive, salad or cooking",Olive oil,Zeytinyağı,zeytin yağı,884.0,0.0,0.0,100.0,10.0,0.913,,"USDA SR Legacy, fdc_id 171413"
-sunflower_oil,171025,"Oil, sunflower, linoleic, (approx. 65%)",Sunflower oil,Ayçiçek yağı,ayçiçeği yağı|sıvı yağ|vegetable oil,884.0,0.0,0.0,100.0,10.0,0.921,,"USDA SR Legacy, fdc_id 171025"
-sugar,169655,"Sugars, granulated",Sugar,Şeker,toz şeker|granulated sugar,387.0,0.0,99.98,0.0,5.0,,piece = one sugar cube,"USDA SR Legacy, fdc_id 169655"
-honey,169640,Honey,Honey,Bal,,304.0,0.3,82.4,0.0,21.0,,,"USDA SR Legacy, fdc_id 169640"
-jam,169641,Jams and preserves,Jam,Reçel,marmelat|preserves,278.0,0.37,68.86,0.07,20.0,,,"USDA SR Legacy, fdc_id 169641"
-milk_chocolate,167587,"Candies, milk chocolate",Milk chocolate,Sütlü çikolata,,535.0,7.65,59.4,29.66,40.0,,piece = one 44 g bar,"USDA SR Legacy, fdc_id 167587"
-dark_chocolate,170273,"Chocolate, dark, 70-85% cacao solids",Dark chocolate,Bitter çikolata,,598.0,7.79,45.9,42.63,30.0,,piece = one 101 g bar,"USDA SR Legacy, fdc_id 170273"
-molasses,168820,Molasses,Molasses,Pekmez,üzüm pekmezi,290.0,0.0,74.73,0.1,20.0,,cane molasses used as a stand-in for Turkish grape pekmez (similar sugar content),"USDA SR Legacy, fdc_id 168820"
-mayonnaise,171009,"Salad dressing, mayonnaise, regular",Mayonnaise,Mayonez,mayo,680.0,0.96,0.57,74.85,14.0,,,"USDA SR Legacy, fdc_id 171009"
-ketchup,168556,Catsup,Ketchup,Ketçap,catsup,101.0,1.04,27.4,0.1,17.0,,,"USDA SR Legacy, fdc_id 168556"
-black_tea,173227,"Beverages, tea, black, brewed, prepared with tap water",Black tea,Çay,siyah çay|tea,1.0,0.0,0.3,0.0,100.0,1.002,glass = Turkish tea glass (about 100 ml; assumption); no sugar,"USDA SR Legacy, fdc_id 173227"
-green_tea,171917,"Beverages, tea, green, brewed, regular",Green tea,Yeşil çay,,1.0,0.22,0.0,0.0,200.0,1.036,,"USDA SR Legacy, fdc_id 171917"
-coffee,171890,"Beverages, coffee, brewed, prepared with tap water",Brewed coffee,Filtre kahve,kahve|coffee|black coffee|americano,1.0,0.12,0.0,0.02,200.0,1.002,no milk or sugar,"USDA SR Legacy, fdc_id 171890"
-water,173647,"Beverages, water, tap, drinking",Water,Su,içme suyu|drinking water,0.0,0.0,0.0,0.0,200.0,1.002,,"USDA SR Legacy, fdc_id 173647"
-orange_juice,169098,"Orange juice, raw (Includes foods for USDA's Food Distribution Program)",Orange juice,Portakal suyu,taze sıkma portakal suyu,45.0,0.7,10.4,0.2,200.0,1.048,,"USDA SR Legacy, fdc_id 169098"
-apple_juice,173933,"Apple juice, canned or bottled, unsweetened, without added ascorbic acid",Apple juice,Elma suyu,,46.0,0.1,11.3,0.13,200.0,1.048,,"USDA SR Legacy, fdc_id 173933"
-cola,174852,"Beverages, carbonated, cola, regular",Cola,Kola,cola|soda,42.0,0.0,10.36,0.25,330.0,1.038,,"USDA SR Legacy, fdc_id 174852"
-beer,168746,"Alcoholic beverage, beer, regular, all",Beer,Bira,,43.0,0.46,3.55,0.0,330.0,1.004,,"USDA SR Legacy, fdc_id 168746"
-red_wine,173190,"Alcoholic beverage, wine, table, red",Red wine,Kırmızı şarap,şarap|wine,85.0,0.07,2.61,0.0,150.0,0.994,,"USDA SR Legacy, fdc_id 173190"
-chicken_broth,174536,"Soup, chicken broth, ready-to-serve",Chicken broth,Tavuk suyu,chicken stock,6.0,0.64,0.44,0.21,250.0,1.052,bowl is an assumption,"USDA SR Legacy, fdc_id 174536"
-chicken_noodle_soup,172909,"Soup, chicken noodle, canned, prepared with equal volume water",Chicken noodle soup,Şehriyeli tavuk çorbası,tavuk çorbası|tavuk suyu çorbası|chicken soup,24.0,1.16,2.97,0.76,250.0,1.048,canned soup; bowl is an assumption,"USDA SR Legacy, fdc_id 172909"
-tomato_soup,171176,"Soup, tomato, canned, prepared with equal volume water, commercial",Tomato soup,Domates çorbası,,32.0,0.71,7.45,0.21,250.0,1.048,canned soup; bowl is an assumption,"USDA SR Legacy, fdc_id 171176"
-hamburger,170693,"Fast foods, hamburger; single, regular patty; plain",Hamburger,Hamburger,burger,297.0,16.52,31.5,12.01,78.0,,fast-food single patty; plain,"USDA SR Legacy, fdc_id 170693"
-pizza,170317,"Pizza, cheese topping, regular crust, frozen, cooked",Cheese pizza,Peynirli pizza,pizza,268.0,10.36,29.02,12.28,150.0,,slice = 1/9 of a 24 oz frozen pizza,"USDA SR Legacy, fdc_id 170317"
-potato_chips,169677,"Snacks, potato chips, plain, salted",Potato chips,Cips,patates cipsi,532.0,6.39,53.83,33.98,30.0,,,"USDA SR Legacy, fdc_id 169677"
-baklava,2708044,Baklava,Baklava,Baklava,,440.0,6.58,37.55,29.34,80.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2708044"
-grape_leaves_rice,2709064,Grape leaves stuffed with rice,Stuffed grape leaves with rice,Zeytinyağlı yaprak sarma,yaprak sarma|sarma|zeytinyağlı sarma|yaprak dolması,168.0,2.28,13.88,11.95,56.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709064"
-grape_leaves_beef,2706621,Stuffed grape leaves with beef and rice,Stuffed grape leaves with beef and rice,Etli yaprak sarma,etli sarma|etli yaprak dolması,228.0,8.15,11.3,17.03,202.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2706621"
-stuffed_pepper_meat,2709073,"Stuffed pepper, with rice and meat",Stuffed pepper with meat and rice,Etli biber dolması,,178.0,7.83,9.93,11.66,99.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709073"
-stuffed_pepper_rice,2709074,"Stuffed pepper, with rice, meatless",Stuffed pepper with rice,Zeytinyağlı biber dolması,,166.0,3.75,12.02,11.28,99.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709074"
-falafel,2707408,Falafel,Falafel,Falafel,,514.0,8.28,28.96,41.19,28.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2707408"
-tabbouleh,2709131,Tabbouleh,Tabbouleh,Tabule,tabouleh|tabbouli,127.0,1.64,9.65,9.66,80.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709131"
-mercimek_corbasi,,"Recipe: 300 g Lentils, pink or red, raw; 110 g Onions, raw; 60 g Carrots, raw; 27 g Oil, sunflower, linoleic (less than 60%); 8 g Wheat flour, white, all-purpose, enriched, bleached; 14 g Butter, salted; 1600 g Beverages, water, tap, drinking; 6 g Salt, table",Turkish red lentil soup,Mercimek çorbası,kırmızı mercimek çorbası|red lentil soup,83.93,4.14,11.75,2.51,250.0,,Home-style recipe (assumption); bowl and plate are a 250 g soup bowl (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 1800 g of 2125 g raw (assumption: about 15% of the raw weight evaporates in 30 minutes of simmering)
-ayran,,"Recipe: 500 g Yogurt, plain, whole milk; 500 g Beverages, water, tap, drinking; 3 g Salt, table",Ayran (yogurt drink),Ayran,yogurt drink,30.41,1.73,2.32,1.62,200.0,,Home-style 1:1 yogurt and water (assumption); glass is a 200 ml Turkish water glass (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 1003 g of 1003 g raw (no cooking: the final weight is the raw total)
-coban_salatasi,,"Recipe: 300 g Tomatoes, red, ripe, raw, year round average; 200 g Cucumber, with peel, raw; 50 g Peppers, sweet, green, raw; 80 g Onions, raw; 20 g Parsley, fresh; 27 g Oil, olive, salad or cooking; 30 g Lemon juice, raw; 6 g Salt, table",Shepherd's salad,Çoban salatası,çoban salata|shepherd salad,53.08,0.83,4.5,3.96,150.0,,Home-style recipe (assumption); bowl and plate are a 150 g side salad (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 713 g of 713 g raw (no cooking: the final weight is the raw total)
-menemen,,"Recipe: 150 g Egg, whole, raw, fresh; 300 g Tomatoes, red, ripe, raw, year round average; 100 g Peppers, sweet, green, raw; 27 g Oil, sunflower, linoleic (less than 60%); 3 g Salt, table",Menemen (eggs with tomatoes and peppers),Menemen,,117.15,4.96,3.86,9.34,225.0,,"Home-style recipe without onion (assumption); plate is half the pan, 225 g (assumption)",Recipe from USDA SR Legacy ingredients; cooked weight 450 g of 580 g raw (assumption: about 22% of the raw weight evaporates as the tomatoes cook down)
-izgara_kofte,,"Recipe: 335 g Beef, ground, 80% lean meat / 20% fat, patty, cooked, broiled; 100 g Onions, raw; 30 g Bread, crumbs, dry, grated, plain; 3 g Spices, cumin seed; 5 g Salt, table",Grilled Turkish meatballs,Izgara köfte,köfte|ızgara köfte,253.96,21.73,7.63,14.64,180.0,,"Grilled: fat drips away, so the meat is USDA's cooked patty, not raw mince (Design K2); piece 30 g and plate of 6 are assumptions; 'köfte' alone means this dish",Recipe from USDA SR Legacy ingredients; cooked weight 423 g of 473 g raw (assumption: the beef is USDA's measured broiled patty; the onion loses about half its weight on the grill)
-lahmacun,,"Recipe: 400 g Wheat flour, white, all-purpose, enriched, bleached; 240 g Beverages, water, tap, drinking; 5 g Leavening agents, yeast, baker's, active dry; 6 g Salt, table; 250 g Beef, ground, 80% lean meat / 20% fat, raw; 100 g Onions, raw; 150 g Tomatoes, red, ripe, raw, year round average; 50 g Peppers, sweet, green, raw; 20 g Parsley, fresh; 30 g Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program); 3 g Spices, pepper, red or cayenne; 3 g Salt, table",Lahmacun (flatbread with minced meat),Lahmacun,,222.56,9.14,33.34,5.56,125.0,,"Home-style recipe for 8 pieces (assumption); baked on the dough, the meat's fat stays in the dish, so raw mince is used; piece is 1/8 of the batch (assumption)",Recipe from USDA SR Legacy ingredients; cooked weight 1000 g of 1257 g raw (assumption: about 20% of the raw weight evaporates in a hot oven)
+id,fdc_id,usda_description,name_en,name_tr,aliases,kcal_100g,protein_100g,carbs_100g,fat_100g,default_grams,density_g_per_ml,note,source,bare_count
+egg,171287,"Egg, whole, raw, fresh",Egg,Yumurta,eggs|whole egg,143.0,12.56,0.72,9.51,50.0,,,"USDA SR Legacy, fdc_id 171287",portion
+egg_boiled,173424,"Egg, whole, cooked, hard-boiled",Hard-boiled egg,Haşlanmış yumurta,boiled egg|katı yumurta|rafadan yumurta,155.0,12.58,1.12,10.61,50.0,,,"USDA SR Legacy, fdc_id 173424",portion
+egg_fried,173423,"Egg, whole, cooked, fried",Fried egg,Sahanda yumurta,yağda yumurta|kızarmış yumurta,196.0,13.61,0.83,14.84,46.0,,,"USDA SR Legacy, fdc_id 173423",portion
+chicken_breast,171477,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",Chicken breast,Tavuk göğsü,tavuk fileto|chicken fillet,165.0,31.02,0.0,3.57,120.0,,,"USDA SR Legacy, fdc_id 171477",portion
+chicken_thigh,172388,"Chicken, broilers or fryers, thigh, meat only, cooked, roasted",Chicken thigh,Tavuk but,tavuk budu,179.0,24.76,0.0,8.15,100.0,,,"USDA SR Legacy, fdc_id 172388",portion
+ground_beef,171799,"Beef, ground, 80% lean meat / 20% fat, crumbles, cooked, pan-browned",Ground beef,Dana kıyma,kıyma|minced beef|beef mince,272.0,27.0,0.0,17.36,100.0,,80% lean; cooked,"USDA SR Legacy, fdc_id 171799",portion
+beef_steak,168729,"Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8"" fat, choice, cooked, broiled",Beef steak,Biftek,dana biftek|steak|sirloin steak,257.0,26.8,0.0,15.75,150.0,,,"USDA SR Legacy, fdc_id 168729",portion
+ground_lamb,172544,"Lamb, ground, cooked, broiled",Ground lamb,Kuzu kıyma,minced lamb,283.0,24.75,0.0,19.65,100.0,,,"USDA SR Legacy, fdc_id 172544",portion
+salmon,175168,"Fish, salmon, Atlantic, farmed, cooked, dry heat",Salmon,Somon,somon balığı|salmon fillet,206.0,22.1,0.0,12.35,150.0,,,"USDA SR Legacy, fdc_id 175168",portion
+tuna_canned,173709,"Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",Canned tuna,Ton balığı,konserve ton balığı|tuna,86.0,19.44,0.0,0.96,100.0,,canned in water; drained,"USDA SR Legacy, fdc_id 173709",portion
+anchovy,174182,"Fish, anchovy, european, raw",Anchovy,Hamsi,hamsi balığı|european anchovy,131.0,20.35,0.0,4.84,150.0,,raw values; fried hamsi also has coating and oil,"USDA SR Legacy, fdc_id 174182",portion
+sardines,175139,"Fish, sardine, Atlantic, canned in oil, drained solids with bone",Sardines,Sardalya,sardine|sardalya balığı,208.0,24.62,0.0,11.45,90.0,,canned in oil; drained,"USDA SR Legacy, fdc_id 175139",portion
+mackerel,175120,"Fish, mackerel, Atlantic, cooked, dry heat",Mackerel,Uskumru,uskumru balığı,262.0,23.85,0.0,17.81,150.0,,,"USDA SR Legacy, fdc_id 175120",portion
+sea_bass,173694,"Fish, sea bass, mixed species, cooked, dry heat",Sea bass,Levrek,levrek balığı,124.0,23.63,0.0,2.56,150.0,,,"USDA SR Legacy, fdc_id 173694",portion
+turkey_breast,171496,"Turkey, whole, breast, meat only, cooked, roasted",Turkey breast,Hindi göğsü,hindi fileto|hindi,147.0,30.13,0.0,2.08,100.0,,,"USDA SR Legacy, fdc_id 171496",portion
+milk_whole,171265,"Milk, whole, 3.25% milkfat, with added vitamin D",Whole milk,Tam yağlı süt,süt|milk|inek sütü,61.0,3.15,4.8,3.25,200.0,1.031,,"USDA SR Legacy, fdc_id 171265",portion
+milk_reduced_fat,171267,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",Reduced-fat milk,Yarım yağlı süt,light süt|low-fat milk|2% milk,50.0,3.3,4.8,1.98,200.0,1.031,USDA 2% milk; Turkish semi-skimmed is about 1.5%,"USDA SR Legacy, fdc_id 171267",portion
+yogurt,171284,"Yogurt, plain, whole milk",Plain yogurt,Yoğurt,yogurt|yoghurt|sade yoğurt|tam yağlı yoğurt,61.0,3.47,4.66,3.25,150.0,,bowl and glass are assumptions,"USDA SR Legacy, fdc_id 171284",portion
+yogurt_low_fat,170886,"Yogurt, plain, low fat",Low-fat yogurt,Az yağlı yoğurt,light yoğurt|low-fat yogurt,63.0,5.25,7.04,1.55,150.0,,bowl and glass are assumptions,"USDA SR Legacy, fdc_id 170886",portion
+greek_yogurt,171304,"Yogurt, Greek, plain, whole milk",Greek yogurt,Süzme yoğurt,strained yogurt|greek yoghurt,97.0,9.0,3.98,5.0,150.0,,bowl is an assumption,"USDA SR Legacy, fdc_id 171304",portion
+feta,173420,"Cheese, feta",Feta cheese,Beyaz peynir,feta|white cheese|ezine peyniri|peynir,265.0,14.21,3.88,21.49,30.0,,slice is an assumption (Turkish breakfast slice); generic Turkish 'peynir' defaults to beyaz peynir,"USDA SR Legacy, fdc_id 173420",portion
+mozzarella,170845,"Cheese, mozzarella, whole milk",Mozzarella,Mozzarella peyniri,mozarella|dil peyniri|örgü peyniri|string cheese,299.0,22.17,2.4,22.14,30.0,,also stands in for Turkish dil/örgü peyniri (stretched-curd cheeses),"USDA SR Legacy, fdc_id 170845",portion
+cream_cheese,173418,"Cheese, cream",Cream cheese,Krem peynir,labne|labne peyniri,350.0,6.15,5.52,34.44,30.0,,Turkish labne is a cream-cheese-style spread,"USDA SR Legacy, fdc_id 173418",portion
+cheddar,173414,"Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",Cheddar cheese,Çedar peyniri,cheddar|cheese,403.0,22.87,3.37,33.31,30.0,,generic English 'cheese' defaults to cheddar,"USDA SR Legacy, fdc_id 173414",portion
+kasar,170850,"Cheese, provolone",Kasar cheese,Kaşar peyniri,kaşar|kashkaval|provolone,351.0,25.58,2.14,26.62,30.0,,USDA provolone used as a stand-in for Turkish kaşar (both stretched-curd cheeses),"USDA SR Legacy, fdc_id 170850",portion
+lor,171248,"Cheese, ricotta, part skim milk",Ricotta (part-skim),Lor peyniri,lor|ricotta,138.0,11.39,5.14,7.91,50.0,,USDA part-skim ricotta used as a stand-in for Turkish lor (both whey cheeses),"USDA SR Legacy, fdc_id 171248",portion
+cottage_cheese,172182,"Cheese, cottage, lowfat, 2% milkfat",Cottage cheese,Cottage peyniri,cottage,81.0,10.45,4.76,2.27,100.0,,low-fat (2%),"USDA SR Legacy, fdc_id 172182",portion
+goat_cheese,173433,"Cheese, goat, semisoft type",Goat cheese,Keçi peyniri,,364.0,21.58,0.12,29.84,30.0,,semisoft type,"USDA SR Legacy, fdc_id 173433",portion
+parmesan,171247,"Cheese, parmesan, grated",Parmesan,Parmesan peyniri,parmigiano|grated parmesan,420.0,28.42,13.91,27.84,10.0,,grated,"USDA SR Legacy, fdc_id 171247",portion
+gouda,171241,"Cheese, gouda",Gouda cheese,Gouda peyniri,gouda,356.0,24.94,2.22,27.44,30.0,,,"USDA SR Legacy, fdc_id 171241",portion
+butter,173410,"Butter, salted",Butter,Tereyağı,tereyağ,717.0,0.85,0.06,81.11,10.0,,tsp is an assumption,"USDA SR Legacy, fdc_id 173410",portion
+kefir,170904,"Kefir, lowfat, plain, LIFEWAY",Kefir,Kefir,,43.0,3.79,4.77,1.02,200.0,1.027,,"USDA SR Legacy, fdc_id 170904",portion
+ice_cream,167575,"Ice creams, vanilla",Vanilla ice cream,Dondurma,ice cream|vanilyalı dondurma,207.0,3.5,23.6,11.0,100.0,,,"USDA SR Legacy, fdc_id 167575",portion
+rice,168878,"Rice, white, long-grain, regular, enriched, cooked",Cooked white rice,Pirinç pilavı,pilav|pirinç|beyaz pirinç|rice|white rice,130.0,2.69,28.17,0.28,150.0,,pilav approximated as plain cooked rice (no added butter or oil); bowl and plate are assumptions,"USDA SR Legacy, fdc_id 168878",portion
+brown_rice,169704,"Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",Cooked brown rice,Esmer pirinç,kahverengi pirinç|brown rice,123.0,2.74,25.58,0.97,150.0,,plate is an assumption,"USDA SR Legacy, fdc_id 169704",portion
+bulgur,170287,"Bulgur, cooked",Cooked bulgur,Bulgur pilavı,bulgur,83.0,3.08,18.58,0.24,150.0,,approximated as plain cooked bulgur (no added oil); plate is an assumption,"USDA SR Legacy, fdc_id 170287",portion
+pasta,169737,"Pasta, cooked, enriched, without added salt",Cooked pasta,Makarna,pasta|spaghetti|spagetti,158.0,5.8,30.86,0.93,180.0,,plain cooked pasta (no sauce); plate is an assumption,"USDA SR Legacy, fdc_id 169737",portion
+couscous,169700,"Couscous, cooked",Cooked couscous,Kuskus,couscous,112.0,3.79,23.22,0.16,150.0,,,"USDA SR Legacy, fdc_id 169700",portion
+oats,173904,"Cereals, oats, regular and quick, not fortified, dry",Rolled oats (dry),Yulaf ezmesi,yulaf|rolled oats,379.0,13.15,67.7,6.52,40.0,,dry weight; cooked oatmeal is not in the table; tbsp is an assumption,"USDA SR Legacy, fdc_id 173904",portion
+white_bread,174924,"Bread, white, commercially prepared (includes soft bread crumbs)",White bread,Beyaz ekmek,ekmek|bread|francala|somun ekmek,266.0,8.85,49.42,3.33,50.0,,,"USDA SR Legacy, fdc_id 174924",portion
+whole_wheat_bread,172688,"Bread, whole-wheat, commercially prepared",Whole-wheat bread,Tam buğday ekmeği,kepekli ekmek|tam buğdaylı ekmek|whole wheat bread,252.0,12.45,42.71,3.5,60.0,,,"USDA SR Legacy, fdc_id 172688",portion
+pita,174915,"Bread, pita, white, enriched",Pita bread,Pita ekmeği,pita|pide ekmeği,275.0,9.1,55.7,1.2,60.0,,,"USDA SR Legacy, fdc_id 174915",portion
+bagel,174899,"Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)",Bagel,Bagel,bagels,264.0,10.56,52.38,1.32,99.0,,,"USDA SR Legacy, fdc_id 174899",portion
+lentils,172421,"Lentils, mature seeds, cooked, boiled, without salt",Cooked lentils,Haşlanmış mercimek,mercimek|lentils|yeşil mercimek,116.0,9.02,20.13,0.38,150.0,,,"USDA SR Legacy, fdc_id 172421",portion
+chickpeas,173757,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",Cooked chickpeas,Haşlanmış nohut,nohut|chickpeas|garbanzo beans,164.0,8.86,27.42,2.59,150.0,,,"USDA SR Legacy, fdc_id 173757",portion
+white_beans,175203,"Beans, white, mature seeds, cooked, boiled, without salt",Cooked white beans,Haşlanmış kuru fasulye,kuru fasulye|beyaz fasulye|white beans|navy beans,139.0,9.73,25.09,0.35,180.0,,kuru fasulye dish approximated as boiled beans (no added oil or tomato paste); plate is an assumption,"USDA SR Legacy, fdc_id 175203",portion
+kidney_beans,173740,"Beans, kidney, all types, mature seeds, cooked, boiled, without salt",Cooked kidney beans,Haşlanmış kırmızı fasulye,kırmızı fasulye|kidney beans,127.0,8.67,22.8,0.5,150.0,,,"USDA SR Legacy, fdc_id 173740",portion
+hummus,174289,"Hummus, commercial",Hummus,Humus,hummus,237.0,7.78,15.0,17.82,50.0,,,"USDA SR Legacy, fdc_id 174289",portion
+tomato,170457,"Tomatoes, red, ripe, raw, year round average",Tomato,Domates,tomatoes,18.0,0.88,3.89,0.2,123.0,,,"USDA SR Legacy, fdc_id 170457",portion
+cucumber,168409,"Cucumber, with peel, raw",Cucumber,Salatalık,hıyar|cucumbers,15.0,0.65,3.63,0.11,120.0,,piece is an assumption (Turkish cucumbers are smaller than the USDA 301 g reference),"USDA SR Legacy, fdc_id 168409",portion
+green_pepper,170427,"Peppers, sweet, green, raw",Green bell pepper,Yeşil dolmalık biber,dolmalık biber|yeşil biber|green bell pepper,20.0,0.86,4.64,0.17,119.0,,,"USDA SR Legacy, fdc_id 170427",portion
+red_pepper,170108,"Peppers, sweet, red, raw",Red bell pepper,Kırmızı kapya biber,kapya biber|red bell pepper,26.0,0.99,6.03,0.3,119.0,,,"USDA SR Legacy, fdc_id 170108",portion
+onion,170000,"Onions, raw",Onion,Soğan,kuru soğan|onions,40.0,1.1,9.34,0.1,50.0,,,"USDA SR Legacy, fdc_id 170000",portion
+potato_boiled,170438,"Potatoes, boiled, cooked in skin, flesh, without salt",Boiled potato,Haşlanmış patates,haşlama patates|boiled potatoes,87.0,1.87,20.13,0.1,136.0,,,"USDA SR Legacy, fdc_id 170438",portion
+potato_baked,170093,"Potatoes, baked, flesh and skin, without salt",Baked potato,Fırında patates,fırın patates|baked potatoes,93.0,2.5,21.15,0.13,173.0,,,"USDA SR Legacy, fdc_id 170093",portion
+french_fries,170698,"Fast foods, potato, french fried in vegetable oil",French fries,Patates kızartması,kızarmış patates|fries,312.0,3.43,41.44,14.73,117.0,,,"USDA SR Legacy, fdc_id 170698",portion
+carrot,170393,"Carrots, raw",Carrot,Havuç,carrots,41.0,0.93,9.58,0.24,61.0,,,"USDA SR Legacy, fdc_id 170393",portion
+lettuce,169247,"Lettuce, cos or romaine, raw",Romaine lettuce,Marul,lettuce|göbek marul,17.0,1.23,3.29,0.3,50.0,,,"USDA SR Legacy, fdc_id 169247",portion
+spinach,168463,"Spinach, cooked, boiled, drained, without salt",Cooked spinach,Ispanak,spinach|haşlanmış ıspanak,23.0,2.97,3.75,0.26,150.0,,plain boiled spinach (no added oil),"USDA SR Legacy, fdc_id 168463",portion
+eggplant,169229,"Eggplant, cooked, boiled, drained, without salt",Cooked eggplant,Patlıcan,eggplant|aubergine,35.0,0.83,8.73,0.23,100.0,,plain boiled eggplant (no added oil),"USDA SR Legacy, fdc_id 169229",portion
+zucchini,169291,"Squash, summer, zucchini, includes skin, raw",Zucchini,Kabak,sakız kabağı|courgette,17.0,1.21,3.11,0.32,100.0,,,"USDA SR Legacy, fdc_id 169291",portion
+broccoli,170379,"Broccoli, raw",Broccoli,Brokoli,,34.0,2.82,6.64,0.37,90.0,,,"USDA SR Legacy, fdc_id 170379",portion
+cauliflower,169986,"Cauliflower, raw",Cauliflower,Karnabahar,,25.0,1.92,4.97,0.28,100.0,,,"USDA SR Legacy, fdc_id 169986",portion
+cabbage,169975,"Cabbage, raw",Cabbage,Lahana,beyaz lahana,25.0,1.28,5.8,0.1,90.0,,,"USDA SR Legacy, fdc_id 169975",portion
+mushrooms,169251,"Mushrooms, white, raw",Mushrooms,Mantar,kültür mantarı|champignon,22.0,3.09,3.26,0.34,70.0,,,"USDA SR Legacy, fdc_id 169251",portion
+green_beans,169141,"Beans, snap, green, cooked, boiled, drained, without salt",Cooked green beans,Taze fasulye,green beans|string beans,35.0,1.89,7.88,0.28,150.0,,plain boiled beans (no added olive oil); plate is an assumption,"USDA SR Legacy, fdc_id 169141",portion
+corn,169214,"Corn, sweet, yellow, canned, whole kernel, drained solids",Sweet corn (canned),Mısır,konserve mısır|corn|sweet corn,67.0,2.29,14.34,1.22,80.0,,,"USDA SR Legacy, fdc_id 169214",portion
+peas,170017,"Peas, green, frozen, cooked, boiled, drained, without salt",Green peas,Bezelye,peas|green peas,78.0,5.15,14.26,0.27,80.0,,,"USDA SR Legacy, fdc_id 170017",portion
+garlic,169230,"Garlic, raw",Garlic,Sarımsak,,149.0,6.36,33.06,0.5,3.0,,,"USDA SR Legacy, fdc_id 169230",portion
+parsley,170416,"Parsley, fresh",Parsley,Maydanoz,,36.0,2.97,6.33,0.79,10.0,,,"USDA SR Legacy, fdc_id 170416",portion
+black_olives,169094,"Olives, ripe, canned (small-extra large)",Black olives,Siyah zeytin,black olives,116.0,0.84,6.04,10.9,30.0,,,"USDA SR Legacy, fdc_id 169094",portion
+green_olives,169096,"Olives, pickled, canned or bottled, green",Green olives,Yeşil zeytin,green olives,145.0,1.03,3.84,15.32,30.0,,,"USDA SR Legacy, fdc_id 169096",portion
+arugula,169387,"Arugula, raw",Arugula,Roka,rocket,25.0,2.58,3.65,0.66,20.0,,,"USDA SR Legacy, fdc_id 169387",portion
+leek,169246,"Leeks, (bulb and lower leaf-portion), raw",Leek,Pırasa,leeks,61.0,1.5,14.15,0.3,89.0,,,"USDA SR Legacy, fdc_id 169246",portion
+apple,171688,"Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",Apple,Elma,apples,52.0,0.26,13.81,0.17,182.0,,,"USDA SR Legacy, fdc_id 171688",portion
+banana,173944,"Bananas, raw",Banana,Muz,bananas,89.0,1.09,22.84,0.33,118.0,,,"USDA SR Legacy, fdc_id 173944",portion
+orange,169097,"Oranges, raw, all commercial varieties",Orange,Portakal,oranges,47.0,0.94,11.75,0.12,131.0,,,"USDA SR Legacy, fdc_id 169097",portion
+mandarin,169105,"Tangerines, (mandarin oranges), raw",Mandarin,Mandalina,tangerine|mandarin orange,53.0,0.81,13.34,0.31,88.0,,,"USDA SR Legacy, fdc_id 169105",portion
+grapes,174683,"Grapes, red or green (European type, such as Thompson seedless), raw",Grapes,Üzüm,yaş üzüm,69.0,0.72,18.1,0.16,150.0,,handful is an assumption,"USDA SR Legacy, fdc_id 174683",portion
+watermelon,167765,"Watermelon, raw",Watermelon,Karpuz,,30.0,0.61,7.55,0.15,286.0,,slice = USDA wedge (1/16 of a melon),"USDA SR Legacy, fdc_id 167765",portion
+melon,169911,"Melons, honeydew, raw",Melon,Kavun,honeydew|honeydew melon,36.0,0.54,9.09,0.14,160.0,,slice = USDA wedge; honeydew used for Turkish kavun,"USDA SR Legacy, fdc_id 169911",portion
+strawberries,167762,"Strawberries, raw",Strawberries,Çilek,strawberry,32.0,0.67,7.68,0.3,150.0,,,"USDA SR Legacy, fdc_id 167762",portion
+cherries,171719,"Cherries, sweet, raw",Sweet cherries,Kiraz,cherries,63.0,1.06,16.01,0.2,140.0,,handful is an assumption,"USDA SR Legacy, fdc_id 171719",portion
+peach,169928,"Peaches, yellow, raw",Peach,Şeftali,peaches,39.0,0.91,9.54,0.25,150.0,,,"USDA SR Legacy, fdc_id 169928",portion
+pear,169118,"Pears, raw",Pear,Armut,pears,57.0,0.36,15.23,0.14,178.0,,,"USDA SR Legacy, fdc_id 169118",portion
+apricot,171697,"Apricots, raw",Apricot,Kayısı,taze kayısı|apricots,48.0,1.4,11.12,0.39,105.0,,,"USDA SR Legacy, fdc_id 171697",portion
+dried_apricots,173941,"Apricots, dried, sulfured, uncooked",Dried apricots,Kuru kayısı,gün kurusu kayısı|dried apricot,241.0,3.39,62.64,0.51,30.0,,piece = 2 x USDA half (3.5 g),"USDA SR Legacy, fdc_id 173941",portion
+fig,173021,"Figs, raw",Fig,İncir,taze incir|figs,74.0,0.75,19.18,0.3,50.0,,,"USDA SR Legacy, fdc_id 173021",portion
+dried_figs,174665,"Figs, dried, uncooked",Dried figs,Kuru incir,dried fig,249.0,3.3,63.87,0.93,40.0,,,"USDA SR Legacy, fdc_id 174665",portion
+dates,168191,"Dates, medjool",Medjool dates,Hurma,dates|medjool,277.0,1.81,74.97,0.15,24.0,,,"USDA SR Legacy, fdc_id 168191",portion
+pomegranate,169134,"Pomegranates, raw",Pomegranate,Nar,,83.0,1.67,18.7,1.17,150.0,,,"USDA SR Legacy, fdc_id 169134",portion
+kiwi,168153,"Kiwifruit, green, raw",Kiwi,Kivi,kiwifruit,61.0,1.14,14.66,0.52,69.0,,,"USDA SR Legacy, fdc_id 168153",portion
+plum,169949,"Plums, raw",Plum,Erik,plums,46.0,0.7,11.42,0.28,100.0,,,"USDA SR Legacy, fdc_id 169949",portion
+avocado,171705,"Avocados, raw, all commercial varieties",Avocado,Avokado,,160.0,2.0,8.53,14.66,100.0,,,"USDA SR Legacy, fdc_id 171705",portion
+walnuts,170187,"Nuts, walnuts, english",Walnuts,Ceviz,ceviz içi|walnut,654.0,15.23,13.71,65.21,30.0,,piece = 2 x USDA half (100 g per 50 halves); handful is an assumption,"USDA SR Legacy, fdc_id 170187",portion
+almonds,170567,"Nuts, almonds",Almonds,Badem,almond,579.0,21.15,21.55,49.93,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170567",portion
+hazelnuts,170581,"Nuts, hazelnuts or filberts",Hazelnuts,Fındık,fındık içi|hazelnut|filbert,628.0,14.95,16.7,60.75,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170581",portion
+pistachios,170185,"Nuts, pistachio nuts, dry roasted, without salt added",Pistachios,Antep fıstığı,pistachio|şam fıstığı,572.0,21.05,28.28,45.82,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170185",portion
+peanuts,173806,"Peanuts, all types, dry-roasted, without salt",Peanuts,Yer fıstığı,peanut,587.0,24.35,21.26,49.66,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 173806",portion
+sunflower_seeds,170562,"Seeds, sunflower seed kernels, dried",Sunflower seeds,Ay çekirdeği,ayçekirdeği|çekirdek,584.0,20.78,20.0,51.46,30.0,,kernel weight; in-shell weights include inedible hulls; handful is an assumption,"USDA SR Legacy, fdc_id 170562",portion
+pumpkin_seeds,170557,"Seeds, pumpkin and squash seed kernels, roasted, without salt",Pumpkin seeds,Kabak çekirdeği,pepitas,574.0,29.84,14.71,49.05,30.0,,handful is an assumption,"USDA SR Legacy, fdc_id 170557",portion
+tahini,170189,"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",Tahini,Tahin,tahina,595.0,17.0,21.19,53.76,15.0,,,"USDA SR Legacy, fdc_id 170189",portion
+peanut_butter,172470,"Peanut butter, smooth style, without salt",Peanut butter,Fıstık ezmesi,,598.0,22.21,22.31,51.36,16.0,,,"USDA SR Legacy, fdc_id 172470",portion
+olive_oil,171413,"Oil, olive, salad or cooking",Olive oil,Zeytinyağı,zeytin yağı,884.0,0.0,0.0,100.0,10.0,0.913,,"USDA SR Legacy, fdc_id 171413",portion
+sunflower_oil,171025,"Oil, sunflower, linoleic, (approx. 65%)",Sunflower oil,Ayçiçek yağı,ayçiçeği yağı|sıvı yağ|vegetable oil,884.0,0.0,0.0,100.0,10.0,0.921,,"USDA SR Legacy, fdc_id 171025",portion
+sugar,169655,"Sugars, granulated",Sugar,Şeker,toz şeker|granulated sugar,387.0,0.0,99.98,0.0,5.0,,piece = one sugar cube,"USDA SR Legacy, fdc_id 169655",portion
+honey,169640,Honey,Honey,Bal,,304.0,0.3,82.4,0.0,21.0,,,"USDA SR Legacy, fdc_id 169640",portion
+jam,169641,Jams and preserves,Jam,Reçel,marmelat|preserves,278.0,0.37,68.86,0.07,20.0,,,"USDA SR Legacy, fdc_id 169641",portion
+milk_chocolate,167587,"Candies, milk chocolate",Milk chocolate,Sütlü çikolata,,535.0,7.65,59.4,29.66,40.0,,piece = one 44 g bar,"USDA SR Legacy, fdc_id 167587",portion
+dark_chocolate,170273,"Chocolate, dark, 70-85% cacao solids",Dark chocolate,Bitter çikolata,,598.0,7.79,45.9,42.63,30.0,,piece = one 101 g bar,"USDA SR Legacy, fdc_id 170273",portion
+molasses,168820,Molasses,Molasses,Pekmez,üzüm pekmezi,290.0,0.0,74.73,0.1,20.0,,cane molasses used as a stand-in for Turkish grape pekmez (similar sugar content),"USDA SR Legacy, fdc_id 168820",portion
+mayonnaise,171009,"Salad dressing, mayonnaise, regular",Mayonnaise,Mayonez,mayo,680.0,0.96,0.57,74.85,14.0,,,"USDA SR Legacy, fdc_id 171009",portion
+ketchup,168556,Catsup,Ketchup,Ketçap,catsup,101.0,1.04,27.4,0.1,17.0,,,"USDA SR Legacy, fdc_id 168556",portion
+black_tea,173227,"Beverages, tea, black, brewed, prepared with tap water",Black tea,Çay,siyah çay|tea,1.0,0.0,0.3,0.0,100.0,1.002,glass = Turkish tea glass (about 100 ml; assumption); no sugar,"USDA SR Legacy, fdc_id 173227",portion
+green_tea,171917,"Beverages, tea, green, brewed, regular",Green tea,Yeşil çay,,1.0,0.22,0.0,0.0,200.0,1.036,,"USDA SR Legacy, fdc_id 171917",portion
+coffee,171890,"Beverages, coffee, brewed, prepared with tap water",Brewed coffee,Filtre kahve,kahve|coffee|black coffee|americano,1.0,0.12,0.0,0.02,200.0,1.002,no milk or sugar,"USDA SR Legacy, fdc_id 171890",portion
+water,173647,"Beverages, water, tap, drinking",Water,Su,içme suyu|drinking water,0.0,0.0,0.0,0.0,200.0,1.002,,"USDA SR Legacy, fdc_id 173647",portion
+orange_juice,169098,"Orange juice, raw (Includes foods for USDA's Food Distribution Program)",Orange juice,Portakal suyu,taze sıkma portakal suyu,45.0,0.7,10.4,0.2,200.0,1.048,,"USDA SR Legacy, fdc_id 169098",portion
+apple_juice,173933,"Apple juice, canned or bottled, unsweetened, without added ascorbic acid",Apple juice,Elma suyu,,46.0,0.1,11.3,0.13,200.0,1.048,,"USDA SR Legacy, fdc_id 173933",portion
+cola,174852,"Beverages, carbonated, cola, regular",Cola,Kola,cola|soda,42.0,0.0,10.36,0.25,330.0,1.038,,"USDA SR Legacy, fdc_id 174852",portion
+beer,168746,"Alcoholic beverage, beer, regular, all",Beer,Bira,,43.0,0.46,3.55,0.0,330.0,1.004,,"USDA SR Legacy, fdc_id 168746",portion
+red_wine,173190,"Alcoholic beverage, wine, table, red",Red wine,Kırmızı şarap,şarap|wine,85.0,0.07,2.61,0.0,150.0,0.994,,"USDA SR Legacy, fdc_id 173190",portion
+chicken_broth,174536,"Soup, chicken broth, ready-to-serve",Chicken broth,Tavuk suyu,chicken stock,6.0,0.64,0.44,0.21,250.0,1.052,bowl is an assumption,"USDA SR Legacy, fdc_id 174536",portion
+chicken_noodle_soup,172909,"Soup, chicken noodle, canned, prepared with equal volume water",Chicken noodle soup,Şehriyeli tavuk çorbası,tavuk çorbası|tavuk suyu çorbası|chicken soup,24.0,1.16,2.97,0.76,250.0,1.048,canned soup; bowl is an assumption,"USDA SR Legacy, fdc_id 172909",portion
+tomato_soup,171176,"Soup, tomato, canned, prepared with equal volume water, commercial",Tomato soup,Domates çorbası,,32.0,0.71,7.45,0.21,250.0,1.048,canned soup; bowl is an assumption,"USDA SR Legacy, fdc_id 171176",portion
+hamburger,170693,"Fast foods, hamburger; single, regular patty; plain",Hamburger,Hamburger,burger,297.0,16.52,31.5,12.01,78.0,,fast-food single patty; plain,"USDA SR Legacy, fdc_id 170693",portion
+pizza,170317,"Pizza, cheese topping, regular crust, frozen, cooked",Cheese pizza,Peynirli pizza,pizza,268.0,10.36,29.02,12.28,150.0,,slice = 1/9 of a 24 oz frozen pizza,"USDA SR Legacy, fdc_id 170317",portion
+potato_chips,169677,"Snacks, potato chips, plain, salted",Potato chips,Cips,patates cipsi,532.0,6.39,53.83,33.98,30.0,,,"USDA SR Legacy, fdc_id 169677",portion
+baklava,2708044,Baklava,Baklava,Baklava,,440.0,6.58,37.55,29.34,80.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2708044",unknown
+grape_leaves_rice,2709064,Grape leaves stuffed with rice,Stuffed grape leaves with rice,Zeytinyağlı yaprak sarma,yaprak sarma|sarma|zeytinyağlı sarma|yaprak dolması,168.0,2.28,13.88,11.95,56.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709064",unknown
+grape_leaves_beef,2706621,Stuffed grape leaves with beef and rice,Stuffed grape leaves with beef and rice,Etli yaprak sarma,etli sarma|etli yaprak dolması,228.0,8.15,11.3,17.03,202.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2706621",unknown
+stuffed_pepper_meat,2709073,"Stuffed pepper, with rice and meat",Stuffed pepper with meat and rice,Etli biber dolması,,178.0,7.83,9.93,11.66,99.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709073",unknown
+stuffed_pepper_rice,2709074,"Stuffed pepper, with rice, meatless",Stuffed pepper with rice,Zeytinyağlı biber dolması,,166.0,3.75,12.02,11.28,99.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709074",unknown
+falafel,2707408,Falafel,Falafel,Falafel,,514.0,8.28,28.96,41.19,28.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2707408",unknown
+tabbouleh,2709131,Tabbouleh,Tabbouleh,Tabule,tabouleh|tabbouli,127.0,1.64,9.65,9.66,80.0,,"FNDDS dish; US piece sizes, so only weight and volume measures","USDA FNDDS (FoodData Central 2024-10-31), fdc_id 2709131",unknown
+mercimek_corbasi,,"Recipe: 300 g Lentils, pink or red, raw; 110 g Onions, raw; 60 g Carrots, raw; 27 g Oil, sunflower, linoleic (less than 60%); 8 g Wheat flour, white, all-purpose, enriched, bleached; 14 g Butter, salted; 1600 g Beverages, water, tap, drinking; 6 g Salt, table",Turkish red lentil soup,Mercimek çorbası,kırmızı mercimek çorbası|red lentil soup,83.93,4.14,11.75,2.51,250.0,,Home-style recipe (assumption); bowl and plate are a 250 g soup bowl (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 1800 g of 2125 g raw (assumption: about 15% of the raw weight evaporates in 30 minutes of simmering),portion
+ayran,,"Recipe: 500 g Yogurt, plain, whole milk; 500 g Beverages, water, tap, drinking; 3 g Salt, table",Ayran (yogurt drink),Ayran,yogurt drink,30.41,1.73,2.32,1.62,200.0,,Home-style 1:1 yogurt and water (assumption); glass is a 200 ml Turkish water glass (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 1003 g of 1003 g raw (no cooking: the final weight is the raw total),portion
+coban_salatasi,,"Recipe: 300 g Tomatoes, red, ripe, raw, year round average; 200 g Cucumber, with peel, raw; 50 g Peppers, sweet, green, raw; 80 g Onions, raw; 20 g Parsley, fresh; 27 g Oil, olive, salad or cooking; 30 g Lemon juice, raw; 6 g Salt, table",Shepherd's salad,Çoban salatası,çoban salata|shepherd salad,53.08,0.83,4.5,3.96,150.0,,Home-style recipe (assumption); bowl and plate are a 150 g side salad (assumption),Recipe from USDA SR Legacy ingredients; cooked weight 713 g of 713 g raw (no cooking: the final weight is the raw total),portion
+menemen,,"Recipe: 150 g Egg, whole, raw, fresh; 300 g Tomatoes, red, ripe, raw, year round average; 100 g Peppers, sweet, green, raw; 27 g Oil, sunflower, linoleic (less than 60%); 3 g Salt, table",Menemen (eggs with tomatoes and peppers),Menemen,,117.15,4.96,3.86,9.34,225.0,,"Home-style recipe without onion (assumption); plate is half the pan, 225 g (assumption)",Recipe from USDA SR Legacy ingredients; cooked weight 450 g of 580 g raw (assumption: about 22% of the raw weight evaporates as the tomatoes cook down),portion
+izgara_kofte,,"Recipe: 335 g Beef, ground, 80% lean meat / 20% fat, patty, cooked, broiled; 100 g Onions, raw; 30 g Bread, crumbs, dry, grated, plain; 3 g Spices, cumin seed; 5 g Salt, table",Grilled Turkish meatballs,Izgara köfte,köfte|ızgara köfte,253.96,21.73,7.63,14.64,180.0,,"Grilled: fat drips away, so the meat is USDA's cooked patty, not raw mince (Design K2); piece 30 g and plate of 6 are assumptions; 'köfte' alone means this dish",Recipe from USDA SR Legacy ingredients; cooked weight 423 g of 473 g raw (assumption: the beef is USDA's measured broiled patty; the onion loses about half its weight on the grill),portion
+lahmacun,,"Recipe: 400 g Wheat flour, white, all-purpose, enriched, bleached; 240 g Beverages, water, tap, drinking; 5 g Leavening agents, yeast, baker's, active dry; 6 g Salt, table; 250 g Beef, ground, 80% lean meat / 20% fat, raw; 100 g Onions, raw; 150 g Tomatoes, red, ripe, raw, year round average; 50 g Peppers, sweet, green, raw; 20 g Parsley, fresh; 30 g Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program); 3 g Spices, pepper, red or cayenne; 3 g Salt, table",Lahmacun (flatbread with minced meat),Lahmacun,,222.56,9.14,33.34,5.56,125.0,,"Home-style recipe for 8 pieces (assumption); baked on the dough, the meat's fat stays in the dish, so raw mince is used; piece is 1/8 of the batch (assumption)",Recipe from USDA SR Legacy ingredients; cooked weight 1000 g of 1257 g raw (assumption: about 20% of the raw weight evaporates in a hot oven),portion

@@ -175,3 +175,27 @@ def test_with_judge_explains_the_missing_extra(monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.setitem(sys.modules, "sentence_transformers", None)
     with pytest.raises(ImportError, match=r"astra-nutrition\[judge\]"):
         Analyzer.with_judge("groq", api_key="k", model="m")
+
+
+def test_amount_the_user_never_wrote_is_an_estimate() -> None:
+    invented = ANALYZER.analyze_items(
+        [("Köfte", "2 adet")], meal_text="çoban salatası ve köfte"
+    ).items[0]
+    written = ANALYZER.analyze_items([("Köfte", "2 adet")], meal_text="2 köfte").items[
+        0
+    ]
+    assert (invented.status, invented.grams) == (ItemStatus.ESTIMATED, 180.0)
+    assert (
+        invented.amount_detail == "'2 adet' is not in the meal text -> default portion"
+    )
+    assert (written.status, written.grams) == (ItemStatus.OK, 60.0)
+
+
+def test_a_count_of_us_sized_dishes_is_unknown_but_local_pieces_count() -> None:
+    items = ANALYZER.analyze_items(
+        [("Baklava", "2"), ("Lahmacun", "2")], meal_text="2 baklava, 2 lahmacun"
+    ).items
+    assert [(i.status, i.grams) for i in items] == [
+        (ItemStatus.AMOUNT_UNKNOWN, None),  # FNDDS: one piece is 80 g in the US
+        (ItemStatus.OK, 250.0),  # recipe: a piece is 1/8 of the batch
+    ]

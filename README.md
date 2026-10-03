@@ -171,8 +171,8 @@ docker compose logs -f api        # first start: model download, then "startup c
 | Status | Meaning | Counted in totals |
 |---|---|---|
 | `ok` | Food found; grams measured or converted from a household unit | yes |
-| `estimated` | Food found; the amount was missing or vague (`biraz`, `some`), so the food's default portion is used | yes, and `totals.includes_estimates` is true |
-| `amount_unknown` | Food found, but the amount could not be read (`bir tutam`) | no (a guess could be 100× off) |
+| `estimated` | Food found; the amount was missing or vague (`biraz`, `some`), or the parser wrote a number the user never wrote (`2 adet` for a plain `köfte`), so the food's default portion is used | yes, and `totals.includes_estimates` is true |
+| `amount_unknown` | Food found, but the amount could not be read (`bir tutam`), or it is a count of a dish whose only piece size is a US one (`2 baklava`) | no (a guess could be 100× off) |
 | `unmatched` | The food is not in the table | no |
 
 `totals.complete` is false when any item is not counted. An unmatched item is

@@ -11,6 +11,7 @@ from astra_nutrition.amounts import (
     ground_note_weight,
     parse_amount,
     to_grams,
+    ungrounded_numbers,
 )
 
 Q = AmountKind.QUANTITY
@@ -194,3 +195,31 @@ def test_known_limitation_weight_of_another_item_grounds_the_note() -> None:
         parse_amount("0.5 adet (30g)"), "yarım simit ve 30 g zeytin"
     )
     assert to_grams(amount, SIMIT).grams == 30
+
+
+@pytest.mark.parametrize(
+    ("amount", "meal_text", "missing"),
+    [
+        ("2 adet", "çoban salatası ve köfte", [2.0]),  # invented by the parser
+        ("1 porsiyon (250ml)", "mercimek çorbası", [1.0]),
+        ("2 adet", "akşam 2 köfte", []),
+        ("2", "iki yumurta", []),  # number words
+        ("0.5 adet", "yarım ekmek", []),
+        ("2.5 dilim", "iki buçuk dilim ekmek", []),
+        ("1.5 cups", "one and a half cups of rice", []),
+        ("1 cup", "a cup of milk", []),  # an article means 1
+        ("1 kase", "kase mercimek çorbası", []),  # the unit is written
+        ("1,5 porsiyon", "1,5 porsiyon pilav", []),
+        ("200 gr", "200gr tavuk", []),
+        ("biraz", "biraz peynir", []),
+    ],
+)
+def test_ungrounded_numbers(amount: str, meal_text: str, missing: list[float]) -> None:
+    assert ungrounded_numbers(amount, meal_text) == missing
+
+
+def test_bare_count_without_a_trusted_piece_size_is_unknown() -> None:
+    us_pieces = FoodPortions(default_grams=80, count_as_portion=False)
+    result = to_grams(parse_amount("2"), us_pieces)
+    assert (result.status, result.grams) == (AmountStatus.UNCONVERTIBLE, None)
+    assert to_grams(parse_amount("200 g"), us_pieces).grams == 200

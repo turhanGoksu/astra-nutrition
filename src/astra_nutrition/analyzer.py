@@ -17,10 +17,14 @@ from typing import TYPE_CHECKING
 from pydantic import BaseModel, Field
 
 from astra_nutrition.amounts import (
+    AmountKind,
     AmountStatus,
+    GramsResult,
+    ParsedAmount,
     ground_note_weight,
     parse_amount,
     to_grams,
+    ungrounded_numbers,
 )
 from astra_nutrition.embeddings import Embedder
 from astra_nutrition.foods import FoodTable
@@ -264,9 +268,25 @@ class Analyzer:
 
         food = self.table.get(match.food_id)
         amount = parse_amount(item.amount, item_name=item.name)
+        invented = False
         if meal_text is not None:
             amount = ground_note_weight(amount, meal_text)
+            # A quantity the user never wrote is the parser's guess, not a
+            # measurement: use the default portion and flag it as an estimate.
+            invented = (
+                amount.kind == AmountKind.QUANTITY
+                and not amount.from_note
+                and bool(ungrounded_numbers(item.amount, meal_text))
+            )
+            if invented:
+                amount = ParsedAmount(AmountKind.MISSING, notes=amount.notes)
         grams = to_grams(amount, self.table.portions(food.id))
+        if invented:
+            grams = GramsResult(
+                grams.status,
+                grams.grams,
+                f"'{item.amount}' is not in the meal text -> default portion",
+            )
         result = ItemResult(
             name=item.name,
             amount=item.amount,

@@ -284,6 +284,8 @@ def build() -> list[str]:
                     "density_g_per_ml": density,
                     "note": row["note"],
                     "source": f"{dataset.label}, fdc_id {fdc_id}",
+                    # FNDDS defaults are US pieces: "2 baklava" must not mean 2 x 80 g.
+                    "bare_count": "unknown" if dataset is FNDDS else "portion",
                 }
             )
 
@@ -377,6 +379,7 @@ def _recipe_food(
             f"{float(row['cooked_grams']):g} g of {raw_grams:g} g raw "
             f"({row['cooked_grams_source']})"
         ),
+        "bare_count": "portion",
     }
 
 

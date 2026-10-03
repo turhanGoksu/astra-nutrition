@@ -24,7 +24,12 @@ A released version is never changed: fixes ship as a new version.
   dolması, falafel, tabule. FNDDS pieces are US sizes, so these dishes have
   only weight and volume measures: `1 dilim baklava` is `amount_unknown`,
   `100 g baklava` is counted. They change no evaluation decision.
-- `foods.csv` has a `source` column naming the dataset and FDC id.
+- `foods.csv` has a `source` column naming the dataset and FDC id, and a
+  `bare_count` column: a bare count of an FNDDS dish (`2 baklava`) is
+  `amount_unknown` instead of two US-sized default portions.
+- Amount check: a number in the parsed amount that the user never wrote
+  (the parser's `2 adet` for a plain `köfte`) is treated as a missing amount,
+  so the item is `estimated` with the default portion and says why.
 - Turkish recipe dishes computed from SR Legacy ingredients
   (`data/recipes.csv`, `data/recipe_ingredients.csv`). Macros are divided by
   the cooked weight, which each recipe states with its source; the build
