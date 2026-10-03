@@ -78,7 +78,7 @@ Exit codes: `0` analyzed, `1` the parser could not read the meal, `2` bad input
 A small Gradio page (`demo/`) with example meals. It installs the released
 v0.2.0 wheel (hash-checked) and runs offline, without the LLM judge:
 
-![The browser demo: one item ok, one estimated from a default portion, one unmatched and left out of the total](docs/demo.png)
+![The browser demo: lahmacun and ayran (recipe dishes) ok, pilav estimated from a default portion, cacık unmatched and left out of the total](docs/demo.png)
 
 ```bash
 docker build -t astra-nutrition-demo demo/
