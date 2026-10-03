@@ -9,11 +9,16 @@ A released version is never changed: fixes ship as a new version.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-03
+
+Turkish dishes, stricter checks on the parser's output, and an honest
+held-out measurement.
+
 ### Added
 
 - Browser demo with Gradio (`demo/`), run locally with one Docker command
   and also ready as a Hugging Face Docker Space. It installs the hash-checked
-  v0.1.0 wheel and runs offline, without the LLM judge.
+  release wheel and runs offline, without the LLM judge.
 - Grounding check in the parser: every word of an item name must appear in
   the meal text, so an invented food is rejected with a reason instead of
   counted. On by default (`MealParser(..., check_grounding=False)` turns it
@@ -121,5 +126,6 @@ First public release (alpha).
 - Fuzzy matching can match a modified dish to its base food
   (`Etli Kuru Fasulye`).
 
-[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.2.0
 [0.1.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.1.0

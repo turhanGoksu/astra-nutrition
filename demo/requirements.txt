@@ -1,5 +1,5 @@
-# The released wheel, verified by its SHA-256 (the hash in the v0.1.0 notes):
+# The released wheel, verified by its SHA-256 (the hash in the v0.2.0 notes):
 # pip refuses the file if a single byte differs. To move the demo to a new
 # release, change the version in the URL and the hash together.
-astra-nutrition @ https://github.com/turhanGoksu/astra-nutrition/releases/download/v0.1.0/astra_nutrition-0.1.0-py3-none-any.whl#sha256=d7502e08b2d617bf9899d81f0698baedbaa5e01ab19f8f2e4f2bf77aa14a9ec8
+astra-nutrition @ https://github.com/turhanGoksu/astra-nutrition/releases/download/v0.2.0/astra_nutrition-0.2.0-py3-none-any.whl#sha256=7eeebc1e36b6883f86c9f3411eab3c21d98a30dbc0b12c27433fef3600e7212a
 gradio==6.29.0

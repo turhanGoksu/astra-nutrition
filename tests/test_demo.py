@@ -1,7 +1,9 @@
 """Tests for the demo's table and totals (no Gradio, no model)."""
 
 from astra_nutrition import Analyzer
+from astra_nutrition.parser import MealParser
 from demo.app import result_rows, summary
+from tests.test_parser import FakeLlm
 
 ANALYZER = Analyzer()
 
@@ -32,3 +34,13 @@ def test_summary_of_a_complete_meal_has_no_caveats() -> None:
 
 def test_summary_without_items_shows_the_parser_status() -> None:
     assert summary(ANALYZER.analyze_items([])).startswith("No food items found")
+
+
+def test_summary_names_rejected_items() -> None:
+    fake = FakeLlm(
+        '{"items": [{"name": "Muz", "amount": "1"}, {"name": "Ekmek", "amount": "1"}]}'
+    )
+    result = Analyzer(parser=MealParser(fake)).analyze("1 muz")
+    text = summary(result)
+    assert "1 rejected by the parser checks" in text
+    assert "Rejected: `Ekmek` (not in the meal text: ekmek)" in text

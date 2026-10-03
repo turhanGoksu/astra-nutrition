@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "astra-nutrition"
-version = "0.1.0"
+version = "0.2.0"
 description = "Turkish/English meal text to foods, grams and nutrition: offline GGUF parser, deterministic amounts, traceable USDA-based food table."
 readme = "README.md"
 requires-python = ">=3.12"

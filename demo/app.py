@@ -1,7 +1,7 @@
 """Gradio demo of astra-nutrition (local Docker, or a Hugging Face Space).
 
 The demo installs the released wheel (see requirements.txt), not this
-repository, so it shows exactly what `pip install ...@v0.1.0` gives. It runs
+repository, so it shows exactly what `pip install ...@v0.2.0` gives. It runs
 offline on the CPU: no LLM judge, no API keys, and the meal text is not
 stored. A public demo with the judge would spend one shared key for every
 visitor and give different results at busy times.
@@ -21,12 +21,13 @@ STATUS_LABEL = {
     ItemStatus.AMOUNT_UNKNOWN: "amount unknown",
     ItemStatus.UNMATCHED: "unmatched",
 }
-# Two meals the table covers fully, two that show estimates and gaps honestly.
+# Two meals the table covers fully, two that show estimates, an unreadable
+# amount and a gap honestly.
 EXAMPLES = [
     "1 kase yoğurt, bir avuç ceviz ve 2 yemek kaşığı bal",
     "2 boiled eggs, 100 g rice and an apple",
-    "kahvaltıda 2 yumurta, biraz beyaz peynir, 1 kase mercimek çorbası ve bir muz",
-    "öğlen 1 tabak pilav, 200 g tavuk göğsü ve bir bardak ayran",
+    "öğlen 1 kase mercimek çorbası, biraz pilav ve 1 dilim baklava",
+    "akşam 2 lahmacun, 1 bardak ayran ve biraz cacık",
 ]
 INTRO = """\
 # astra-nutrition
@@ -68,10 +69,14 @@ def summary(result: AnalysisResult) -> str:
     if t.includes_estimates:
         lines.append(f"\\* {t.estimated} item(s) use a default portion (estimate).")
     if not t.complete:
+        rejected = f", {t.rejected} rejected by the parser checks" if t.rejected else ""
         lines.append(
             f"Not counted: {t.unmatched} unmatched (not in the food table yet), "
-            f"{t.amount_unknown} with an unreadable amount."
+            f"{t.amount_unknown} with an unreadable amount{rejected}."
         )
+    for item in result.rejected_items:
+        name = item.raw.get("name") if isinstance(item.raw, dict) else item.raw
+        lines.append(f"Rejected: `{name}` ({item.reason})")
     return "\n\n".join(lines)
 
 
