@@ -293,7 +293,7 @@ and `python -m eval.run_eval report`; judge answers are cached in
 
 | Part | Source | License |
 |---|---|---|
-| Food table (136 foods, 479 names) | USDA FoodData Central: SR Legacy (2018-04) for single foods and recipe ingredients, FNDDS (2024-10-31) for 7 mixed dishes; curated | public domain (CC0) |
+| Food table (141 foods, 494 names) | USDA FoodData Central: SR Legacy (2018-04) for single foods and recipe ingredients, FNDDS (2024-10-31) for 7 mixed dishes; curated | public domain (CC0) |
 | Parser model | [Turhan123/astra-meal-parser-gguf](https://huggingface.co/Turhan123/astra-meal-parser-gguf) (Qwen2.5-1.5B, Q4_K_M) | Apache-2.0 |
 | Embeddings (judge only) | `intfloat/multilingual-e5-small` | MIT |
 | Code | this repository | Apache-2.0 |
@@ -320,14 +320,29 @@ assumption), and the build refuses a cooked weight above the raw total.
 Mercimek çorbası comes out at 84 kcal per 100 g; FNDDS's US lentil soup, a
 different recipe, is 60.
 
+Grilling breaks the "macros stay in the pot" rule: fat drips away. USDA
+measured it for 80/20 ground beef: 100 g raw becomes about 67 g broiled, and
+about 8 of its 20 g of fat are gone. So ızgara köfte uses USDA's broiled patty
+as its meat (254 kcal per 100 g; raw mince would give about 340), while
+lahmacun, baked with the mince on the dough, keeps the fat and uses raw mince.
+
+| Recipe | kcal / 100 g | Cooked weight |
+|---|---|---|
+| Mercimek çorbası | 84 | 1800 g of 2125 g raw (assumption) |
+| Ayran | 30 | raw total (no cooking) |
+| Çoban salatası | 53 | raw total (no cooking) |
+| Menemen | 117 | 450 g of 580 g raw (assumption) |
+| Izgara köfte | 254 | 423 g of 473 g, meat already cooked (assumption) |
+| Lahmacun | 223 | 1000 g of 1257 g raw (assumption) |
+
 TürKomp (the Turkish national food composition database) is **not** used: its
 terms restrict copying and commercial use, which is incompatible with
 redistributing the data in an open-source package.
 
 ## Limitations
 
-- **Coverage.** Many Turkish dishes are not in the table yet (menemen,
-  lahmacun, mantı, köfte, ayran …); they are reported as `unmatched`.
+- **Coverage.** Many Turkish dishes are not in the table yet (mantı, tavuk
+  döner, iskender, gözleme, karnıyarık …); they are reported as `unmatched`.
 - **Recipes are one home style.** A recipe dish stands for one documented
   recipe; home versions vary (more butter, less water), and the cooked weight
   is an assumption until measured.
@@ -356,9 +371,8 @@ redistributing the data in an open-source package.
 
 ## Roadmap
 
-- **v0.2:** more Turkish recipes (lahmacun, ayran, menemen, köfte …) and a
-  larger evaluation set. (FNDDS dishes and the first recipe, mercimek çorbası,
-  are already in the table.)
+- **v0.2:** a larger evaluation set for the new dishes, then the release.
+  (7 FNDDS dishes and 6 recipes are already in the table.)
 - Send fuzzy matches that add words to the alias (`Etli Kuru Fasulye`) to the
   judge; measure on a new dataset.
 

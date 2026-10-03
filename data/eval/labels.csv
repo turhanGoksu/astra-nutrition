@@ -5,16 +5,16 @@ Zeytin,black_olives|green_olives,tr,generic olive: both colors acceptable
 Çay,black_tea,tr,
 Mercimek Çorbası,mercimek_corbasi,tr,"soup is a different dish from plain lentils; gold was none until the v0.2 recipe"
 Yarım Ekmek,white_bread,tr;noise,amount word leaked into the name
-Izgara Köfte,none,tr,
+Izgara Köfte,izgara_kofte,tr,gold was none until the v0.2 recipe
 Pilav,rice,tr,table maps pilav to cooked rice (documented approximation)
-Çoban Salata,none,tr,mixed salad
+Çoban Salata,coban_salatasi,tr,mixed salad; gold was none until the v0.2 recipe
 Yoğurt,yogurt,tr,
 Ceviz,walnuts,tr,
-Menemen,none,tr,
+Menemen,menemen,tr,gold was none until the v0.2 recipe
 Ekme,white_bread,tr;typo;noise,"parser truncated ""ekmek"""
 Mantı,none,tr,
-Ayran,none,tr,
-Lahmacun,none,tr,
+Ayran,ayran,tr,gold was none until the v0.2 recipe
+Lahmacun,lahmacun,tr,gold was none until the v0.2 recipe
 Tavuk Sote,none,tr,chicken dish with vegetables and oil
 Bulgur Pilavı,bulgur,tr,
 Cacık,none,tr,
@@ -124,7 +124,7 @@ Patates Haşlama,potato_boiled,tr,word order differs from the alias
 Sucuklu Yumurta,none,tr;hard_negative,eggs with sucuk
 Ekmek,white_bread,tr,
 Zeytinyağ,olive_oil,tr,
-Çoban Salatası,none,tr,mixed salad
+Çoban Salatası,coban_salatasi,tr,mixed salad; gold was none until the v0.2 recipe
 Tahin Pekmez,none,tr;noise,two foods merged without a conjunction
 Kaşar,kasar,tr,
 Elma Çayı,none,tr;hard_negative,"apple tea, not apple or black tea"

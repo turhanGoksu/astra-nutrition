@@ -5,16 +5,16 @@ Zeytin,black_olives|green_olives,tr,natural,food:black_olives,test
 Çay,black_tea,tr,natural,food:black_tea,test
 Mercimek Çorbası,mercimek_corbasi,tr,natural,none:mercimek,dev
 Yarım Ekmek,white_bread,tr;noise,natural;variants,food:white_bread,test
-Izgara Köfte,none,tr,natural,none:izgara,dev
+Izgara Köfte,izgara_kofte,tr,natural,none:izgara,dev
 Pilav,rice,tr,natural;variants,food:rice,dev
-Çoban Salata,none,tr,natural,none:coban,dev
+Çoban Salata,coban_salatasi,tr,natural,none:coban,dev
 Yoğurt,yogurt,tr,natural;variants,food:yogurt,dev
 Ceviz,walnuts,tr,natural,food:walnuts,dev
-Menemen,none,tr,natural,none:menemen,dev
+Menemen,menemen,tr,natural,none:menemen,dev
 Ekme,white_bread,tr;typo;noise,natural,food:white_bread,test
 Mantı,none,tr,natural,none:manti,dev
-Ayran,none,tr,natural;variants,none:ayran,dev
-Lahmacun,none,tr,natural,none:lahmacun,dev
+Ayran,ayran,tr,natural;variants,none:ayran,dev
+Lahmacun,lahmacun,tr,natural,none:lahmacun,dev
 Tavuk Sote,none,tr,natural,none:tavuk,dev
 Bulgur Pilavı,bulgur,tr,natural,food:bulgur,dev
 Cacık,none,tr,natural;variants,none:cacik,test
@@ -124,7 +124,7 @@ Patates Haşlama,potato_boiled,tr,variants,food:potato_boiled,dev
 Sucuklu Yumurta,none,tr;hard_negative,variants,none:sucuklu,test
 Ekmek,white_bread,tr,variants,food:white_bread,test
 Zeytinyağ,olive_oil,tr,variants,food:olive_oil,dev
-Çoban Salatası,none,tr,variants,none:coban,dev
+Çoban Salatası,coban_salatasi,tr,variants,none:coban,dev
 Tahin Pekmez,none,tr;noise,variants,none:tahin,dev
 Kaşar,kasar,tr,variants,food:kasar,dev
 Elma Çayı,none,tr;hard_negative,variants,none:elma,test

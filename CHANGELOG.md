@@ -28,8 +28,9 @@ A released version is never changed: fixes ship as a new version.
 - Turkish recipe dishes computed from SR Legacy ingredients
   (`data/recipes.csv`, `data/recipe_ingredients.csv`). Macros are divided by
   the cooked weight, which each recipe states with its source; the build
-  refuses a cooked weight above the raw total. First recipe: mercimek çorbası
-  (84 kcal per 100 g).
+  refuses a cooked weight above the raw total. Recipes: mercimek çorbası,
+  ayran, çoban salatası, menemen, ızgara köfte, lahmacun. Grilled meat drips
+  fat, so ızgara köfte uses USDA's measured broiled patty instead of raw mince.
 
 ### Changed
 
@@ -38,8 +39,10 @@ A released version is never changed: fixes ship as a new version.
 - CI runs on a pinned `ubuntu-24.04` instead of the moving `ubuntu-latest`.
 - PostgreSQL `foods.fdc_id` may be NULL (recipe dishes); ingest upgrades a
   database created by v0.1.0.
-- Evaluation: two dev names (`Mercimek Çorbası`, `Mercimek Corbisi`) now have
-  the recipe as their gold food instead of none; no test name changed.
+- Evaluation: eight dev names (mercimek çorbası, köfte, çoban salatası,
+  menemen, ayran, lahmacun) now have their recipe as the gold food instead of
+  none; dishes were chosen from dev names and the request log only, and no
+  test name changed.
 
 ## [0.1.0] - 2026-10-02
 
