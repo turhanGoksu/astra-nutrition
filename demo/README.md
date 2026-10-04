@@ -15,7 +15,7 @@ Try [astra-nutrition](https://github.com/turhanGoksu/astra-nutrition) in the
 browser: write a meal in Turkish or English and get foods, grams and
 nutrition, with a status for every item.
 
-- Runs the released **v0.2.0** wheel (hash-checked) on this Space's CPU.
+- Runs the released **v0.3.0** wheel (hash-checked) on this Space's CPU.
 - Offline: the optional LLM judge is off, there are no API keys, and the meal
   text is not stored. Install the library to use the judge with your own key.
 - One model on a small CPU: requests wait in line. The first request after the

@@ -9,6 +9,11 @@ A released version is never changed: fixes ship as a new version.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-04
+
+Seventeen common Turkish dishes. Results change for meals that mention them,
+hence a minor version.
+
 ### Added
 
 - 17 Turkish recipes, computed like the earlier ones (macros divided by the
@@ -163,7 +168,8 @@ First public release (alpha).
 - Fuzzy matching can match a modified dish to its base food
   (`Etli Kuru Fasulye`).
 
-[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.3.0
 [0.2.1]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.2.1
 [0.2.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.2.0
 [0.1.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.1.0

@@ -1,7 +1,7 @@
 """Gradio demo of astra-nutrition (local Docker, or a Hugging Face Space).
 
 The demo installs the released wheel (see requirements.txt), not this
-repository, so it shows exactly what `pip install ...@v0.2.0` gives. It runs
+repository, so it shows exactly what `pip install astra-nutrition==0.3.0` gives. It runs
 offline on the CPU: no LLM judge, no API keys, and the meal text is not
 stored. A public demo with the judge would spend one shared key for every
 visitor and give different results at busy times.
