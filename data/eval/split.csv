@@ -12,15 +12,15 @@ Yoğurt,yogurt,tr,natural;variants,food:yogurt,dev
 Ceviz,walnuts,tr,natural,food:walnuts,dev
 Menemen,menemen,tr,natural,none:menemen,dev
 Ekme,white_bread,tr;typo;noise,natural,food:white_bread,test
-Mantı,none,tr,natural,none:manti,dev
+Mantı,manti,tr,natural,none:manti,dev
 Ayran,ayran,tr,natural;variants,none:ayran,dev
 Lahmacun,lahmacun,tr,natural,none:lahmacun,dev
 Tavuk Sote,none,tr,natural,none:tavuk,dev
 Bulgur Pilavı,bulgur,tr,natural,food:bulgur,dev
-Cacık,none,tr,natural;variants,none:cacik,test
+Cacık,cacik,tr,natural;variants,none:cacik,test
 Araböğün,none,tr;noise,natural,none:arabogun,dev
 Badem,almonds,tr,natural,food:almonds,dev
-Simit,none,tr,natural,none:simit,dev
+Simit,simit,tr,natural,none:simit,dev
 Kaşar Peyniri,kasar,tr,natural,food:kasar,dev
 Domates,tomato,tr,natural,food:tomato,test
 Salatalık,cucumber,tr,natural,food:cucumber,dev
@@ -29,13 +29,13 @@ Haşlanmış Brokoli,broccoli,tr,natural,food:broccoli,test
 Bal,honey,tr,natural,food:honey,dev
 Somon,salmon,tr,natural,food:salmon,test
 Roka Salatası,arugula,tr,natural,food:arugula,test
-Kuru Fasulye,white_beans,tr,natural,food:white_beans,dev
+Kuru Fasulye,kuru_fasulye,tr,natural,food:white_beans,dev
 Turşu,none,tr,natural,none:tursu,test
 Türk Kahvesi,coffee,tr,natural;variants,food:coffee,test
 Lokum,none,tr,natural,none:lokum,dev
-Iskender Kebap,none,tr,natural,none:iskender,dev
+Iskender Kebap,iskender,tr,natural,none:iskender,dev
 Karpuz,watermelon,tr,natural,food:watermelon,dev
-Kaşarlı Tost,none,tr,natural,none:kasarli,dev
+Kaşarlı Tost,kasarli_tost,tr,natural,none:kasarli,dev
 Portakal Suyu,orange_juice,tr,natural,food:orange_juice,test
 Yumurta,egg,tr,natural,food:egg,dev
 Peynir,feta,tr,natural,food:feta,dev
@@ -109,7 +109,7 @@ Kırmızı Mercimek Haşlaması,lentils,tr,variants,food:lentils,test
 Fırın Tavuk But,chicken_thigh,tr,variants,food:chicken_breast,dev
 Patates Püresi,none,tr,variants,none:patates,test
 Roka,arugula,tr,variants,food:arugula,test
-Su Böreği,none,tr;hard_negative,variants,none:su,dev
+Su Böreği,su_boregi,tr;hard_negative,variants,none:su,dev
 Demli Çay,black_tea,tr,variants,food:black_tea,test
 Yer Elması,none,tr;hard_negative,variants,none:yer,dev
 Muzlu Süt,none,tr;hard_negative,variants,none:muzlu,test
@@ -118,10 +118,10 @@ Dondurma,ice_cream,tr,variants,food:ice_cream,dev
 Kepekli Ekmek,whole_wheat_bread,tr,variants,food:whole_wheat_bread,test
 Lor,lor,tr,variants,food:lor,dev
 Domatesler,tomato,tr,variants,food:tomato,test
-Tavuk Döner Dürüm,none,tr,variants,none:tavuk,dev
+Tavuk Döner Dürüm,tavuk_doner,tr,variants,none:tavuk,dev
 Izgara Piliç Fileto,chicken_breast,tr,variants,food:chicken_breast,dev
 Patates Haşlama,potato_boiled,tr,variants,food:potato_boiled,dev
-Sucuklu Yumurta,none,tr;hard_negative,variants,none:sucuklu,test
+Sucuklu Yumurta,sucuklu_yumurta,tr;hard_negative,variants,none:sucuklu,test
 Ekmek,white_bread,tr,variants,food:white_bread,test
 Zeytinyağ,olive_oil,tr,variants,food:olive_oil,dev
 Çoban Salatası,coban_salatasi,tr,variants,none:coban,dev
@@ -130,10 +130,10 @@ Kaşar,kasar,tr,variants,food:kasar,dev
 Elma Çayı,none,tr;hard_negative,variants,none:elma,test
 Kurabiye,none,tr,variants,none:kurabiye,dev
 Sütlaç,none,tr;hard_negative,variants,none:sutlac,dev
-Peynirli Gözleme,none,tr,variants,none:peynirli,dev
+Peynirli Gözleme,gozleme,tr,variants,none:peynirli,dev
 Kokoreç,none,tr,variants,none:kokorec,test
-Öğlen Kısır,none,tr;noise,variants,none:oglen,test
-Karnıyarık,none,tr,variants,none:karniyarik,dev
+Öğlen Kısır,kisir,tr;noise,variants,none:oglen,test
+Karnıyarık,karniyarik,tr,variants,none:karniyarik,dev
 Hamsi Tava,none,tr;hard_negative,variants,none:hamsi,dev
 Mısır Ekmeği,none,tr;hard_negative,variants,none:misir,dev
 Patlıcan Kızartması,none,tr;hard_negative,variants,none:patlican,dev
@@ -185,7 +185,7 @@ Beyz Peynir,feta,tr;typo,variants,food:feta,dev
 Zeytn,black_olives|green_olives,tr;typo,variants,food:black_olives,test
 Sunny Side Up Yumurta,egg_fried,tr,variants,food:egg,dev
 Sourdough Ekmek,white_bread,tr,variants,food:white_bread,test
-Tavuk Döner,none,tr,variants,none:tavuk,dev
+Tavuk Döner,tavuk_doner,tr,variants,none:tavuk,dev
 Diet Kola,none,tr;hard_negative,variants,none:diet,dev
 grilled levrek,sea_bass,tr,variants,food:sea_bass,dev
 roka salad,arugula,tr,variants,food:arugula,test

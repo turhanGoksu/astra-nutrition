@@ -40,3 +40,124 @@ lahmacun,170416,20,"parsley (topping)"
 lahmacun,170459,30,"tomato paste, 2 tbsp (topping)"
 lahmacun,170932,3,"red pepper flakes (topping)"
 lahmacun,173468,3,"salt (topping)"
+simit,168894,500,flour
+simit,173647,280,water
+simit,175043,7,dry yeast
+simit,173468,8,salt
+simit,169655,5,sugar
+simit,168820,40,grape molasses for dipping
+simit,170150,80,sesame seeds
+pogaca,168894,400,flour
+pogaca,171284,100,yogurt
+pogaca,171017,100,sunflower oil
+pogaca,171265,100,milk
+pogaca,171287,65,"egg, and a yolk for the top"
+pogaca,175043,7,dry yeast
+pogaca,173468,6,salt
+pogaca,173420,150,white cheese filling
+pogaca,170416,10,parsley
+kasarli_tost,174924,70,"white bread, 2 slices"
+kasarli_tost,170850,40,kaşar cheese
+kasarli_tost,173410,7,butter outside
+sucuklu_yumurta,171287,100,"eggs, 2"
+sucuklu_yumurta,170606,50,sucuk (approximation: USDA smoked beef sausage)
+sucuklu_yumurta,173410,5,butter
+cilbir,171287,100,"eggs, 2, poached"
+cilbir,171284,150,yogurt
+cilbir,169230,3,garlic
+cilbir,173410,15,butter for the sauce
+cilbir,170932,2,red pepper flakes
+manti,168894,300,flour (dough)
+manti,171287,50,egg (dough)
+manti,173647,100,water (dough)
+manti,173468,3,salt (dough)
+manti,174036,150,ground beef 80/20 (filling)
+manti,170000,50,onion (filling)
+manti,173647,120,boiling water the dough absorbs
+manti,171284,300,yogurt with garlic
+manti,169230,5,garlic
+manti,173410,40,butter sauce
+manti,170932,3,red pepper flakes
+tavuk_doner,167535,70,lavaş (approximation: USDA flour tortilla)
+tavuk_doner,172388,120,"chicken thigh, roasted (döner meat)"
+tavuk_doner,170457,40,tomato
+tavuk_doner,169248,20,lettuce
+tavuk_doner,170000,15,onion
+tavuk_doner,171009,15,mayonnaise sauce
+et_doner,167535,70,lavaş (approximation: USDA flour tortilla)
+et_doner,171797,120,"beef 80/20, broiled (döner meat approximation)"
+et_doner,170457,40,tomato
+et_doner,170000,20,onion
+et_doner,170416,5,parsley
+iskender,174915,60,pide bread (approximation: USDA pita)
+iskender,171797,150,"beef 80/20, broiled (döner meat approximation)"
+iskender,170459,15,tomato paste
+iskender,173647,30,water for the sauce
+iskender,173410,20,melted butter
+iskender,171284,100,yogurt
+karniyarik,169228,900,"eggplants, 6"
+karniyarik,171017,80,frying oil the eggplants absorb
+karniyarik,174036,250,ground beef 80/20
+karniyarik,170000,150,onion
+karniyarik,170457,300,"tomatoes, filling and top"
+karniyarik,170427,100,green peppers
+karniyarik,170459,15,tomato paste
+karniyarik,173647,200,water for the oven
+karniyarik,173468,5,salt
+kuru_fasulye,175202,300,dry white beans
+kuru_fasulye,173647,1200,water
+kuru_fasulye,170000,100,onion
+kuru_fasulye,170459,30,tomato paste
+kuru_fasulye,171017,40,sunflower oil
+kuru_fasulye,173468,6,salt
+gozleme,168894,100,flour
+gozleme,173647,60,water
+gozleme,173468,2,salt
+gozleme,173420,50,white cheese
+gozleme,170416,10,parsley
+gozleme,173410,10,butter brushed on
+pide,168894,150,flour
+pide,173647,90,water
+pide,175043,3,dry yeast
+pide,173468,3,salt
+pide,171017,10,oil
+pide,174036,100,ground beef 80/20
+pide,170000,40,onion
+pide,170457,40,tomato
+pide,170427,20,green pepper
+pide,170416,5,parsley
+pide,173410,10,butter on top
+su_boregi,172791,500,yufka (approximation: USDA phyllo dough)
+su_boregi,173647,150,boiling water the layers absorb
+su_boregi,171287,150,"eggs, 3"
+su_boregi,171265,150,milk
+su_boregi,173410,125,butter
+su_boregi,173420,300,white cheese
+su_boregi,170416,20,parsley
+ezogelin,174284,200,red lentils
+ezogelin,170688,40,bulgur
+ezogelin,168877,30,rice
+ezogelin,170000,100,onion
+ezogelin,170459,30,tomato paste
+ezogelin,173410,30,butter
+ezogelin,172239,3,dried mint
+ezogelin,170932,3,red pepper flakes
+ezogelin,173647,2000,water
+ezogelin,173468,8,salt
+cacik,171284,500,yogurt
+cacik,168409,200,cucumber
+cacik,173647,150,cold water
+cacik,169230,5,garlic
+cacik,172239,2,dried mint
+cacik,171413,10,olive oil
+cacik,173468,4,salt
+kisir,170688,200,fine bulgur
+kisir,173647,250,hot water the bulgur absorbs
+kisir,170459,30,tomato paste
+kisir,170000,60,green onion
+kisir,170457,100,tomato
+kisir,170416,40,parsley
+kisir,171413,50,olive oil
+kisir,167747,30,lemon juice
+kisir,170932,3,red pepper flakes
+kisir,173468,6,salt

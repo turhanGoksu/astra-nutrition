@@ -1,5 +1,5 @@
 line,meal,gold,not_in_table,note
-1,sabah 2 gevrekle peynir,feta,gevrek,peynir: documented default feta; gevrek is İzmir simit
+1,sabah 2 gevrekle peynir,feta;simit,,peynir: documented default feta; gevrek is İzmir simit; gold updated when the v0.3 recipes were added
 2,1 porsiyon pad thai,,pad thai,
 3,aksam ciger sis pilav,rice,ciğer şiş,two foods without a conjunction
 4,2-3 yaprak sarma atistirdim,grape_leaves_rice,,yaprak sarma: documented default with rice
@@ -17,9 +17,9 @@ line,meal,gold,not_in_table,note
 16,aksam 2 biber dolma yogurtlu,stuffed_pepper_meat|stuffed_pepper_rice;?yogurt,,biber dolma: meat or rice; the yogurt on top is optional
 17,1 porsiyon lahmacun bol sumakli sogan,lahmacun;?onion,,the sumac onion on the side is optional
 18,1 bowl chia puding,,chia puding,
-19,sabah 1 simit biraz tulum peyniri,,simit;tulum peyniri,tulum is a different cheese from beyaz peynir
+19,sabah 1 simit biraz tulum peyniri,simit,tulum peyniri,tulum is a different cheese from beyaz peynir; gold updated when the v0.3 recipes were added
 20,oglen 1 porsiyon falafel salata,?falafel,falafel salata,falafel salad or falafel and salad: falafel optional
-21,aksam kayseri mantisi bol yoğurtlu,?yogurt,kayseri mantısı,the yogurt on mantı is optional
+21,aksam kayseri mantisi bol yoğurtlu,manti;?yogurt,,the yogurt on mantı is optional; gold updated when the v0.3 recipes were added
 22,kahvaltida menemen ve çay,menemen;black_tea,,
 23,1 dilim baklava kahve yanina,baklava;coffee,,
 24,oglen 1 biber dolmasi biraz pilav,stuffed_pepper_meat|stuffed_pepper_rice;rice,,
@@ -45,10 +45,10 @@ line,meal,gold,not_in_table,note
 44,oglen 2 tane lahmacun acili,lahmacun,,
 45,1 tabak ev yapımı yaprak sarması,grape_leaves_rice,,homemade yaprak sarma
 46,aksam 150gr cızbız köfte pilav,izgara_kofte;rice,,cızbız köfte is a grilled köfte
-47,kahvaltida çılbır 1 dilim siyez ekmeği,,çılbır;siyez ekmeği,siyez bread is not white bread
+47,kahvaltida çılbır 1 dilim siyez ekmeği,cilbir,siyez ekmeği,siyez bread is not white bread; gold updated when the v0.3 recipes were added
 48,oglen dim sum karisik,,dim sum,
 49,1 dilim cevizli baklava,baklava,,
-50,2 adet biber dolması yanina cacik,stuffed_pepper_meat|stuffed_pepper_rice,cacık,
+50,2 adet biber dolması yanina cacik,stuffed_pepper_meat|stuffed_pepper_rice;cacik,,gold updated when the v0.3 recipes were added
 51,oglen 1 porsiyon tacos carne asada,,tacos,
 52,3-4 tane zeytinyağlı sarma,grape_leaves_rice,,
 53,1 kase mercimek corba bol pulbiber,mercimek_corbasi,,

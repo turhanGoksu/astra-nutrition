@@ -12,15 +12,15 @@ Yoğurt,yogurt,tr,
 Ceviz,walnuts,tr,
 Menemen,menemen,tr,gold was none until the v0.2 recipe
 Ekme,white_bread,tr;typo;noise,"parser truncated ""ekmek"""
-Mantı,none,tr,
+Mantı,manti,tr,gold updated when the v0.3 recipes were added
 Ayran,ayran,tr,gold was none until the v0.2 recipe
 Lahmacun,lahmacun,tr,gold was none until the v0.2 recipe
 Tavuk Sote,none,tr,chicken dish with vegetables and oil
 Bulgur Pilavı,bulgur,tr,
-Cacık,none,tr,
+Cacık,cacik,tr,gold updated when the v0.3 recipes were added
 Araböğün,none,tr;noise,"parser turned ""ara öğün"" (snack) into a food name"
 Badem,almonds,tr,
-Simit,none,tr,near miss: bagel is in the table but is a different bread
+Simit,simit,tr,near miss: bagel is in the table but is a different bread; gold updated when the v0.3 recipes were added
 Kaşar Peyniri,kasar,tr,table v2 adds kaşar (USDA provolone stand-in)
 Domates,tomato,tr,
 Salatalık,cucumber,tr,
@@ -29,13 +29,13 @@ Haşlanmış Brokoli,broccoli,tr,raw broccoli values are a close stand-in
 Bal,honey,tr,
 Somon,salmon,tr,
 Roka Salatası,arugula,tr,salad is mostly arugula; dressing not counted
-Kuru Fasulye,white_beans,tr,table maps kuru fasulye to boiled white beans (documented approximation)
+Kuru Fasulye,kuru_fasulye,tr,table maps kuru fasulye to boiled white beans (documented approximation); gold updated when the v0.3 recipes were added
 Turşu,none,tr,
 Türk Kahvesi,coffee,tr,brewed coffee is a close stand-in (both near zero kcal)
 Lokum,none,tr,
-Iskender Kebap,none,tr,
+Iskender Kebap,iskender,tr,gold updated when the v0.3 recipes were added
 Karpuz,watermelon,tr,
-Kaşarlı Tost,none,tr,
+Kaşarlı Tost,kasarli_tost,tr,gold updated when the v0.3 recipes were added
 Portakal Suyu,orange_juice,tr,
 Yumurta,egg,tr,
 Peynir,feta,tr,table v2 maps generic Turkish 'peynir' to beyaz peynir (documented default)
@@ -109,7 +109,7 @@ Kırmızı Mercimek Haşlaması,lentils,tr,
 Fırın Tavuk But,chicken_thigh,tr,
 Patates Püresi,none,tr,mashed with butter and milk
 Roka,arugula,tr,
-Su Böreği,none,tr;hard_negative,"pastry, shares the word 'su' with water"
+Su Böreği,su_boregi,tr;hard_negative,"pastry, shares the word 'su' with water; gold updated when the v0.3 recipes were added"
 Demli Çay,black_tea,tr,
 Yer Elması,none,tr;hard_negative,"jerusalem artichoke, not apple"
 Muzlu Süt,none,tr;hard_negative,banana milk drink
@@ -118,10 +118,10 @@ Dondurma,ice_cream,tr,
 Kepekli Ekmek,whole_wheat_bread,tr,
 Lor,lor,tr,
 Domatesler,tomato,tr,plural
-Tavuk Döner Dürüm,none,tr,
+Tavuk Döner Dürüm,tavuk_doner,tr,gold updated when the v0.3 recipes were added
 Izgara Piliç Fileto,chicken_breast,tr,piliç is a synonym of tavuk
 Patates Haşlama,potato_boiled,tr,word order differs from the alias
-Sucuklu Yumurta,none,tr;hard_negative,eggs with sucuk
+Sucuklu Yumurta,sucuklu_yumurta,tr;hard_negative,eggs with sucuk; gold updated when the v0.3 recipes were added
 Ekmek,white_bread,tr,
 Zeytinyağ,olive_oil,tr,
 Çoban Salatası,coban_salatasi,tr,mixed salad; gold was none until the v0.2 recipe
@@ -130,10 +130,10 @@ Kaşar,kasar,tr,
 Elma Çayı,none,tr;hard_negative,"apple tea, not apple or black tea"
 Kurabiye,none,tr,
 Sütlaç,none,tr;hard_negative,"rice pudding, not milk"
-Peynirli Gözleme,none,tr,
+Peynirli Gözleme,gozleme,tr,gold updated when the v0.3 recipes were added
 Kokoreç,none,tr,
-Öğlen Kısır,none,tr;noise,time word leaked into the name
-Karnıyarık,none,tr,
+Öğlen Kısır,kisir,tr;noise,time word leaked into the name; gold updated when the v0.3 recipes were added
+Karnıyarık,karniyarik,tr,gold updated when the v0.3 recipes were added
 Hamsi Tava,none,tr;hard_negative,fried with coating and oil; table has raw anchovy
 Mısır Ekmeği,none,tr;hard_negative,"corn bread, not corn"
 Patlıcan Kızartması,none,tr;hard_negative,"deep-fried, far more fat than boiled eggplant"
@@ -185,7 +185,7 @@ Beyz Peynir,feta,tr;typo,
 Zeytn,black_olives|green_olives,tr;typo,generic olive
 Sunny Side Up Yumurta,egg_fried,tr,mixed language
 Sourdough Ekmek,white_bread,tr,mixed language
-Tavuk Döner,none,tr,
+Tavuk Döner,tavuk_doner,tr,gold updated when the v0.3 recipes were added
 Diet Kola,none,tr;hard_negative,"zero-calorie, unlike cola"
 grilled levrek,sea_bass,tr,mixed language
 roka salad,arugula,tr,mixed language

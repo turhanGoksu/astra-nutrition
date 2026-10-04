@@ -44,7 +44,7 @@ pita,174915,Pita bread,Pita ekmeği,pita|pide ekmeği,60,"piece=usda:pita, large
 bagel,174899,Bagel,Bagel,bagels,99,"piece=usda:bagel",
 lentils,172421,Cooked lentils,Haşlanmış mercimek,mercimek|lentils|yeşil mercimek,150,"cup=usda:cup;tbsp=usda:tbsp",
 chickpeas,173757,Cooked chickpeas,Haşlanmış nohut,nohut|chickpeas|garbanzo beans,150,"cup=usda:cup",
-white_beans,175203,Cooked white beans,Haşlanmış kuru fasulye,kuru fasulye|beyaz fasulye|white beans|navy beans,180,"cup=usda:cup;tbsp=usda:tbsp;plate=250",kuru fasulye dish approximated as boiled beans (no added oil or tomato paste); plate is an assumption
+white_beans,175203,Cooked white beans,Haşlanmış kuru fasulye,beyaz fasulye|white beans|navy beans,180,cup=usda:cup;tbsp=usda:tbsp;plate=250,boiled white beans; the kuru fasulye dish is a recipe since v0.3
 kidney_beans,173740,Cooked kidney beans,Haşlanmış kırmızı fasulye,kırmızı fasulye|kidney beans,150,"cup=usda:cup;tbsp=usda:tbsp",
 hummus,174289,Hummus,Humus,hummus,50,"tbsp=usda:tbsp;cup=usda:cup",
 tomato,170457,Tomato,Domates,tomatoes,123,"piece=usda:medium whole;slice=usda:slice, medium;cup=usda:cup, chopped or sliced",

@@ -9,6 +9,27 @@ A released version is never changed: fixes ship as a new version.
 
 ## [Unreleased]
 
+### Added
+
+- 17 Turkish recipes, computed like the earlier ones (macros divided by the
+  cooked weight, every amount a marked assumption): simit, poğaça, kaşarlı
+  tost, sucuklu yumurta, çılbır, mantı, tavuk döner, et döner, İskender,
+  karnıyarık, kuru fasulye, gözleme, pide, su böreği, ezogelin çorbası, cacık,
+  kısır. The table has 158 foods.
+- One kind per dish: a plain name means a documented default (`pide` is
+  kıymalı, `gözleme` peynirli, `döner` a dürüm); another kind (`patatesli
+  gözleme`) stays `unmatched` instead of matching the default. Where USDA has
+  no exact ingredient a stated approximation stands in (sucuk, lavaş, yufka).
+
+### Changed
+
+- `kuru fasulye` is now a recipe (beans cooked with onion, tomato paste and
+  oil) instead of plain boiled beans.
+- Evaluation labels: names that were `none` because their dish was missing now
+  have the new recipe as gold (13 v0.1 names, 9 v0.2 dev meals, 5 v0.2 test
+  meals). The v0.2 test set has been seen and is not reported again as a
+  held-out result; v0.2 dev meals: 109 of 115 foods found.
+
 ## [0.2.1] - 2026-10-04
 
 Packaging only: the code, the food table and every result are the same as in

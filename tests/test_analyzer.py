@@ -240,10 +240,30 @@ def test_foods_listed_without_a_conjunction_are_split() -> None:
     ("name", "food_id"),
     [
         ("Sebzeli Pilav", None),  # "sebzeli" is no food: a different dish
-        ("Su Böreği", None),  # "su" is water, "böreği" no food
-        ("Kuru Fasulye", "white_beans"),  # a table name as a whole
+        ("Su Muhallebisi", None),  # "su" is water, "muhallebisi" no food
+        ("Kuru Fasulye", "kuru_fasulye"),  # a table name as a whole
     ],
 )
 def test_names_that_are_not_lists_stay_whole(name: str, food_id: str | None) -> None:
     items = _parsed((name, "")).analyze(name.lower()).items
     assert [(i.name, i.food_id) for i in items] == [(name, food_id)]
+
+
+@pytest.mark.parametrize(
+    ("name", "food_id"),
+    [
+        # Design V1: a plain name means the documented default kind
+        ("Pide", "pide"),  # with minced meat
+        ("Gözleme", "gozleme"),  # with cheese
+        ("Tost", "kasarli_tost"),
+        ("Tavuk Döner", "tavuk_doner"),  # as a dürüm
+        ("Döner", "et_doner"),
+        ("Gevrek", "simit"),  # the İzmir name
+        # another kind is never matched to the default: it stays unmatched
+        ("Patatesli Gözleme", None),
+        ("Kaşarlı Pide", None),
+        ("Etli Kuru Fasulye", None),
+    ],
+)
+def test_dish_kinds_default_or_stay_unmatched(name: str, food_id: str | None) -> None:
+    assert ANALYZER.analyze_items([(name, "")]).items[0].food_id == food_id

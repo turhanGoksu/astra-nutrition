@@ -350,7 +350,7 @@ not a wrong food. Rerun: `python -m eval.v02 --set test --label final`.
 
 | Part | Source | License |
 |---|---|---|
-| Food table (141 foods, 494 names) | USDA FoodData Central: SR Legacy (2018-04) for single foods and recipe ingredients, FNDDS (2024-10-31) for 7 mixed dishes; curated | public domain (CC0) |
+| Food table (158 foods, 561 names) | USDA FoodData Central: SR Legacy (2018-04) for single foods and recipe ingredients, FNDDS (2024-10-31) for 7 mixed dishes; curated | public domain (CC0) |
 | Parser model | [Turhan123/astra-meal-parser-gguf](https://huggingface.co/Turhan123/astra-meal-parser-gguf) (Qwen2.5-1.5B, Q4_K_M) | Apache-2.0 |
 | Embeddings (judge only) | `intfloat/multilingual-e5-small` | MIT |
 | Code | this repository | Apache-2.0 |
@@ -358,9 +358,9 @@ not a wrong food. Rerun: `python -m eval.v02 --set test --label final`.
 Every gram value in `food_portions.csv` is either a USDA household measure
 (the source text is stored) or an explicit, labeled assumption (for example a
 Turkish tea glass of 100 ml). Some Turkish dishes are mapped to their base
-ingredient and documented as approximations: `pilav` → plain cooked rice,
-`kuru fasulye` → boiled white beans (added oil is not counted). Generic words
-have documented defaults: `peynir` → white cheese (feta), `cheese` → cheddar.
+ingredient and documented as approximations: `pilav` → plain cooked rice.
+Generic words have documented defaults: `peynir` → white cheese (feta),
+`cheese` → cheddar.
 
 **FNDDS dishes** (baklava, yaprak sarma, biber dolması, falafel, tabule) keep
 only weight and volume measures: FNDDS pieces are US sizes (one piece of
@@ -382,15 +382,43 @@ measured it for 80/20 ground beef: 100 g raw becomes about 67 g broiled, and
 about 8 of its 20 g of fat are gone. So ızgara köfte uses USDA's broiled patty
 as its meat (254 kcal per 100 g; raw mince would give about 340), while
 lahmacun, baked with the mince on the dough, keeps the fat and uses raw mince.
+The same reasoning puts USDA's roasted chicken thigh and broiled beef in the
+döner and İskender recipes.
 
-| Recipe | kcal / 100 g | Cooked weight |
-|---|---|---|
-| Mercimek çorbası | 84 | 1800 g of 2125 g raw (assumption) |
-| Ayran | 30 | raw total (no cooking) |
-| Çoban salatası | 53 | raw total (no cooking) |
-| Menemen | 117 | 450 g of 580 g raw (assumption) |
-| Izgara köfte | 254 | 423 g of 473 g, meat already cooked (assumption) |
-| Lahmacun | 223 | 1000 g of 1257 g raw (assumption) |
+**One kind per dish.** A plain name means a documented default kind: `pide` is
+kıymalı; `gözleme`, `poğaça` and `su böreği` are peynirli; `tost` is kaşarlı;
+`döner` and `tavuk döner` are a dürüm; mantı comes with its yogurt and butter
+sauce. Another kind (`patatesli gözleme`, `kaşarlı pide`, `etli kuru fasulye`)
+is not matched to the default, since it adds a word to the name: it stays
+`unmatched` until it is added. Where USDA has no exact ingredient, a stated
+approximation stands in (sucuk: smoked beef sausage; lavaş: flour tortilla;
+yufka: phyllo dough).
+
+| Recipe | kcal / 100 g | Default portion | Cooked weight |
+|---|---|---|---|
+| Mercimek çorbası | 84 | 250 g | 1800 g of 2125 g raw (assumption) |
+| Ayran | 30 | 200 g | raw total (no cooking) |
+| Çoban salatası | 53 | 150 g | raw total (no cooking) |
+| Menemen | 117 | 225 g | 450 g of 580 g raw (assumption) |
+| Izgara köfte | 254 | 180 g | 423 g of 473 g raw (assumption) |
+| Lahmacun | 223 | 125 g | 1000 g of 1257 g raw (assumption) |
+| Simit | 323 | 94 g | 754 g of 920 g raw (assumption) |
+| Peynirli poğaça | 361 | 69 g | 825 g of 938 g raw (assumption) |
+| Kaşarlı tost | 322 | 117 g | raw total (no cooking) |
+| Sucuklu yumurta | 239 | 140 g | 140 g of 155 g raw (assumption) |
+| Çılbır | 131 | 270 g | raw total (no cooking) |
+| Mantı | 183 | 280 g | raw total, absorbed water counted |
+| Tavuk döner dürüm | 193 | 280 g | raw total (assembled) |
+| Et döner dürüm | 215 | 255 g | raw total (assembled) |
+| İskender | 221 | 356 g | 356 g of 375 g raw (assumption) |
+| Karnıyarık | 114 | 250 g | 1500 g of 2000 g raw (assumption) |
+| Kuru fasulye | 106 | 250 g | 1341 g of 1676 g raw (assumption) |
+| Peynirli gözleme | 274 | 209 g | 209 g of 232 g raw (assumption) |
+| Kıymalı pide | 250 | 400 g | 400 g of 471 g raw (assumption) |
+| Su böreği | 279 | 157 g | 1256 g of 1395 g raw (assumption) |
+| Ezogelin çorbası | 61 | 250 g | 2077 g of 2444 g raw (assumption) |
+| Cacık | 50 | 200 g | raw total (no cooking) |
+| Kısır | 159 | 150 g | raw total (no cooking) |
 
 TürKomp (the Turkish national food composition database) is **not** used: its
 terms restrict copying and commercial use, which is incompatible with
@@ -398,8 +426,9 @@ redistributing the data in an open-source package.
 
 ## Limitations
 
-- **Coverage.** Many Turkish dishes are not in the table yet (mantı, tavuk
-  döner, iskender, gözleme, karnıyarık …); they are reported as `unmatched`.
+- **Coverage.** 23 Turkish recipes and 7 FNDDS dishes are in the table, one
+  kind each. Other kinds and dishes (`patatesli gözleme`, `etli kuru fasulye`,
+  `tarhana`, `Türk kahvesi`, `kokoreç` …) are reported as `unmatched`.
 - **Recipes are one home style.** A recipe dish stands for one documented
   recipe; home versions vary (more butter, less water), and the cooked weight
   is an assumption until measured.
@@ -432,10 +461,13 @@ redistributing the data in an open-source package.
 
 ## Roadmap
 
-- **v0.3:** descriptive words in names (`acılı`, `bol köpüklü`, `ev yapımı`,
+- **v0.4:** descriptive words in names (`acılı`, `bol köpüklü`, `ev yapımı`,
   `yanında X`), the main source of misses on the v0.2 test meals; keep a food
   the parser put in the amount when the name is only a meal time. Measure on
-  a new test set, since the v0.2 test set has now been seen.
+  a new test set with a written labeling guideline, since the v0.2 test set
+  has been seen.
+- More kinds and dishes: other pide, gözleme and börek kinds, `etli kuru
+  fasulye`, `tarhana`, and `Türk kahvesi` with a `fincan` unit.
 
 ## Repository layout and development
 
