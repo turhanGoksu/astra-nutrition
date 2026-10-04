@@ -9,6 +9,22 @@ A released version is never changed: fixes ship as a new version.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-10-04
+
+Packaging only: the code, the food table and every result are the same as in
+0.2.0.
+
+### Added
+
+- Published on PyPI: `pip install astra-nutrition`. A GitHub release is
+  uploaded to TestPyPI and, after a maintainer approves, to PyPI by
+  `.github/workflows/publish.yml`, with trusted publishing (no API tokens). The
+  uploaded files are the ones attached to the release, not a rebuild.
+
+### Fixed
+
+- README links are absolute, so the image and the changelog link work on PyPI.
+
 ## [0.2.0] - 2026-10-03
 
 Turkish dishes, stricter checks on the parser's output, and an honest
@@ -126,6 +142,7 @@ First public release (alpha).
 - Fuzzy matching can match a modified dish to its base food
   (`Etli Kuru Fasulye`).
 
-[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/turhanGoksu/astra-nutrition/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.2.1
 [0.2.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.2.0
 [0.1.0]: https://github.com/turhanGoksu/astra-nutrition/releases/tag/v0.1.0

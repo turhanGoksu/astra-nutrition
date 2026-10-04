@@ -1,0 +1,79 @@
+# Publishes a GitHub release to TestPyPI and then, after a maintainer approves
+# the "pypi" environment, to PyPI.
+#
+# The uploaded files are the ones attached to the release (Design B): the same
+# bytes the release page lists and the demo hash-checks, never a rebuild. No
+# API tokens: PyPI trusts this workflow through OIDC ("trusted publishing"),
+# configured on PyPI for this repository, this file and the environment names.
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to publish, for example v0.2.1"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  files:
+    runs-on: ubuntu-24.04
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - name: Download the wheel and sdist attached to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern '*.whl' --pattern '*.tar.gz' --dir dist
+          sha256sum dist/*
+      - name: Check that the files are this tag's version, and only those
+        run: |
+          version="${TAG#v}"
+          test -f "dist/astra_nutrition-${version}-py3-none-any.whl"
+          test -f "dist/astra_nutrition-${version}.tar.gz"
+          test "$(ls dist | wc -l)" -eq 2
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  testpypi:
+    needs: files
+    runs-on: ubuntu-24.04
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/astra-nutrition
+    permissions:
+      id-token: write  # the OIDC identity that TestPyPI checks
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@v1.14.2
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          # A rehearsal: a rerun after a failed PyPI step may find the files
+          # already there. PyPI itself never skips.
+          skip-existing: true
+
+  pypi:
+    needs: testpypi
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi  # waits for a required reviewer to approve
+      url: https://pypi.org/p/astra-nutrition
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@v1.14.2
